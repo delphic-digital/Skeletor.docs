@@ -1,0 +1,13 @@
+---
+aliases:
+- /doc/roadmap/
+- /meta/roadmap/
+lastmod: 2015-02-16
+date: 2013-07-01
+menu:
+  main:
+    parent: about
+notoc: true
+title: Hugo Roadmap
+weight: 20
+---

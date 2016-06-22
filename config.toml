@@ -1,0 +1,37 @@
+title = "The Skeletor Project"
+baseurl = "localhost"
+MetaDataFormat = "yaml"
+pluralizeListTitles = false
+theme = "skeletor"
+
+[blackfriday]
+  plainIDAnchors = true
+
+[params]
+  description = "Documentation of Hugo, a fast and flexible static site generator built with love by spf13, bep and friends in Go"
+  author = "Steve Francia (spf13) and friends"
+
+[taxonomies]
+  tag = "tags"
+  group = "groups"
+
+[[menu.main]]
+    name = "About Skeletor"
+    identifier = "about"
+    pre = ""
+    weight = -110
+[[menu.main]]
+    name = "Getting Started"
+    identifier = "getting started"
+    pre = ""
+    weight = -100
+[[menu.main]]
+    name = "Tutorials"
+    identifier = "tutorials"
+    pre = ""
+    weight = -40
+[[menu.main]]
+    name = "Troubleshooting"
+    identifier = "troubleshooting"
+    pre = ""
+    weight = -30
