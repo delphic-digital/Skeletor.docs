@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+html,body { height: 100%; }
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
@@ -21,24 +23,28 @@ header {
 }
 
 header h1 {
-	font-size: 20px;
+	margin-left: 300px;
+	font-size: 22px;
 	font-weight: 400;
+	line-height: 1;
 }
 
 main{
 	position: relative;
-	margin: 64px auto;
+	margin: 0 auto;
+	max-width: 1200px;
+	height: 100%;
+}
+
+.header-content-wrap {
+	margin: auto;
 	max-width: 1200px;
 }
 
-.content-wrap {
-	/* margin: auto;
-	max-width: 800px; */
-}
-
 .content-section {
-	margin-left: 260px;
-	padding: 40px;
+	margin: 0 0 0 260px;
+	padding: 100px 40px;
+	height: 100%;
 	background: #37474f;
 	box-shadow: 0 1.5px 3px rgba(0,0,0,.3),0 3px 8px rgba(0,0,0,.1);
 }
@@ -91,7 +97,7 @@ pre code {
 #sidebar {
 	position: fixed;
 	overflow-y: auto;
-	margin-top: 40px;
+	margin-top: 100px;
 	width: 260px;
 	height: 100%;
 }

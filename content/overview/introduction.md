@@ -6,7 +6,7 @@ menu:
   main:
     parent: getting started
 next: /overview/quickstart
-title: Introduction to Hugo
+title: Introduction to Skeletor
 weight: 5
 ---
 

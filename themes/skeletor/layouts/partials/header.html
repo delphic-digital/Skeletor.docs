@@ -21,13 +21,13 @@
 	<body>
 		<!-- container section start -->
 		<header>
-			<section class="content-wrap">
+			<div class="header-content-wrap">
 			<!-- 	<div class="toggle-nav">Menu</div> -->
 				<h1 class="page-title">{{ .Scratch.Get "title" }}</h1>
-			</section>
+			</div>
 		</header>
 
 		<!--main content start-->
 		<main>
 			{{ partial "menu.html" . }}
-			<section class="content-wrap content-section">
+			<section class="content-section">
