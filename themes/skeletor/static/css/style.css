@@ -4,7 +4,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	color: #e8e8e9;
 	background: #263238;
 }
@@ -232,23 +232,6 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 }
 
 /* Footer panel */
-.footer-panel {
-	width: 100%;
-	border-top:1px #efefef solid;
-	line-height: 30px;
-	padding: 25px 0px 15px;
-	margin-top: 15px;
-	background: #f9f9f9;
-	display: inline-block;
-	float: left;
-}
-
-.footer-panel p {
-	padding-left: 20px;
-	padding-right: 20px;
-	font-size: medium;
-	font-style: italic;
-}
 
 
 /* Search form */
