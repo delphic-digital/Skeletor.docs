@@ -81,7 +81,7 @@ code {
 }
 
 pre {
-	margin: 0 -40px;
+	margin: 0 -40px 20px;
 	padding: 40px;
 	background: rgba(0, 0, 0, .2);
 }
@@ -90,7 +90,7 @@ pre code {
 	display: block;
 	margin: 0;
 	padding: 0;
-	background: rgba(0, 0, 0, 0.03) !important;
+	background: rgba(0, 0, 0, 0.2) !important;
 	box-shadow: none;
 }
 
