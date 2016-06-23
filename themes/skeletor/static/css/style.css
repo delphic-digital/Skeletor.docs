@@ -57,7 +57,7 @@ h1 { margin: 0; }
 p { margin: 0 0 20px; }
 
 a {
-	color: #9861ca;
+	color: #a466dc;
 	text-decoration: none;
 			-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -207,7 +207,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 }
 
 #sidebar > ul > li > ul.sub a {
-	border-left: 2px solid #8a61ae;
+	border-left: 2px solid #a466dc;
 }
 
 #sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
@@ -241,7 +241,7 @@ ul.sidebar-menu li ul.sub li a {
 }
 
 ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
-	color: #8a61ae;
+	color: #a466dc;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -280,7 +280,7 @@ ul.sidebar-menu li.sub-menu:after{
   position: absolute;
   right: 50px;
   top: 8px;
-  color:#8a61ae;
+  color:#a466dc;
   -webkit-transition: transform .2s ease-in-out;
   -o-transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
@@ -311,7 +311,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-	color: #8a61ae;
+	color: #a466dc;
 	display: block;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
