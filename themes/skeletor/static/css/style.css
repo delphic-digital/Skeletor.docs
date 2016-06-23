@@ -19,7 +19,7 @@ header {
 	padding: 20px;
 	width: 100%;
 	color: #fff;
-	background: #00acc1;
+	background: #59488e;
 	box-shadow: 0 1.5px 3px rgba(0,0,0,.24),0 3px 8px rgba(0,0,0,.05);
 }
 
@@ -57,8 +57,17 @@ h1 { margin: 0; }
 p { margin: 0 0 20px; }
 
 a {
-	color: #00acc1;
+	color: #9861ca;
 	text-decoration: none;
+			-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+a:hover {
+	/* color: #e3c376; */
 }
 
 code {
@@ -116,16 +125,41 @@ pre code {
 	display: block;
 	margin: 0 0 20px 10px;
 	width: 70px;
+
 }
 
 .site-logo .hood {
 	fill: #37474f;
+	/* fill: #664385; */
+		-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .site-logo .shadow {
-	fill: #020202
+	fill: #020202;
+		-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .site-logo .skull {
-	fill: #fff
+	fill: #fff;
+		-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.site-logo:hover .hood {
+	fill: #59488e;
+}
+
+.site-logo:hover .skull {
+	fill: #e3c376;
 }
 
 /*sidebar navigation*/
@@ -173,7 +207,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 }
 
 #sidebar > ul > li > ul.sub a {
-	border-left: 2px solid #00acc1;
+	border-left: 2px solid #8a61ae;
 }
 
 #sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
@@ -207,7 +241,7 @@ ul.sidebar-menu li ul.sub li a {
 }
 
 ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
-	color: #00acc1;
+	color: #8a61ae;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -246,7 +280,7 @@ ul.sidebar-menu li.sub-menu:after{
   position: absolute;
   right: 50px;
   top: 8px;
-  color:#00acc1;
+  color:#8a61ae;
   -webkit-transition: transform .2s ease-in-out;
   -o-transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
@@ -277,7 +311,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-	color: #00acc1;
+	color: #8a61ae;
 	display: block;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
