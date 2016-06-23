@@ -94,8 +94,8 @@ pre code {
 .admonition p { margin: 0; }
 
 .admonition .admonition-title {
-	padding: 10px 40px;
-  font-size: 17px;
+	padding: 20px 40px;
+  font-size: 20px;
   line-height: 20px;
   background: #0288d1;
 }
@@ -109,7 +109,7 @@ pre code {
 }
 
 .admonition .admonition-desc {
-	padding: 10px 40px;
+	padding: 0 40px 20px;
 }
 
 .site-logo {
