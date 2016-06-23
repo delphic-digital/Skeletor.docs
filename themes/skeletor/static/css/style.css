@@ -7,6 +7,7 @@ html,body { height: 100%; }
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
+	line-height: 2;
 	color: #e8e8e9;
 	background: #263238;
 }
@@ -44,7 +45,7 @@ main{
 .content-section {
 	margin: 0 0 0 260px;
 	padding: 100px 40px;
-	height: 100%;
+	min-height: 100%;
 	background: #37474f;
 	box-shadow: 0 1.5px 3px rgba(0,0,0,.3),0 3px 8px rgba(0,0,0,.1);
 }
@@ -53,10 +54,59 @@ h1,h2,h3,h4,h5,h6 { margin: 0 0 40px; }
 
 h1 { margin: 0; }
 
+p { margin: 0 0 20px; }
 
-pre code {
+a {
+	color: #00acc1;
+	text-decoration: none;
+}
+
+code {
+	margin: 0 4px;
+	padding: 2px 4px;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 12px;
+	background: rgba(0, 0, 0, .15);
+/* 	box-shadow: 0px 1px 4px rgba(0,0,0,.75); */
+	border-radius: 1px;
+}
+
+pre {
+	margin: 0 -40px;
+	padding: 40px;
+	background: rgba(0, 0, 0, .2);
+}
+
+pre code {
+	display: block;
+	margin: 0;
+	padding: 0;
+	background: rgba(0, 0, 0, 0.03) !important;
+	box-shadow: none;
+}
+
+.admonition {
+	margin: 0 -40px 20px;
+/* 	padding: 20px 40px; */
+  /* background: #0288d1; */
+  background: rgba(0, 0, 0, .3);
+  color: #fff;
+}
+.admonition p { margin: 0; }
+
+.admonition .admonition-title {
+	padding: 10px 40px;
+  font-size: 17px;
+  line-height: 20px;
+  background: #0288d1;
+}
+
+.admonition.warning .admonition-title {
+  background: #d1023c;
+}
+
+.admonition .admonition-desc {
+	padding: 10px 40px;
 }
 
 .site-logo {
@@ -86,6 +136,7 @@ pre code {
 	top: 15px;
 	left: 90px;
 	font-size: 12px;
+	line-height: 1;
 	color: #747577;
 	font-weight: 300;
 }

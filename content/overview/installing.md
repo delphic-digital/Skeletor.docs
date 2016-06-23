@@ -7,8 +7,6 @@ date: 2013-07-01
 menu:
   main:
     parent: getting started
-next: /overview/usage
-prev: /overview/quickstart
 title: Installing Skeletor
 weight: 20
 ---
@@ -30,8 +28,18 @@ Skeletor uses open source tools for its workflow. If you haven't installed these
 
 Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code.
 
-```bash
-skeletor
+{{< note title="Note" >}}
+Nothing to see here, move along.
+{{< /note >}}
+
+A sentence
+
+{{< warning title="Don't try this at home" >}}
+Nothing to see here, move along.
+{{< /warning >}}
+
+
+{{< nohighlight >}}skeletor
 |-- Static
 |   |-- assets
 |   |   |-- images
@@ -91,8 +99,6 @@ skeletor
 |-- gulpfile.js
 |-- index.html
 |-- package.json
-|-- README.md
-
-```
+|-- README.md{{< /nohighlight >}}
 
 Next: see [Usage](usage) for explanation of `gulp` command
