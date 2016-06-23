@@ -105,11 +105,21 @@ pre code {
 
 ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 10px;
+	list-style: none;
+
 }
 
 #sidebar > ul > li > ul.sub {
 	display: none;
+	position: relative;
+}
+#sidebar > ul > li > a {
+	margin-bottom: 10px;
+}
+
+#sidebar > ul > li > ul.sub a {
+	border-left: 2px solid #00acc1;
 }
 
 #sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
@@ -117,6 +127,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 }
 
 ul.sidebar-menu li ul.sub li{
+	padding-top: 10px 0;
 	margin-bottom: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -129,7 +140,7 @@ ul.sidebar-menu li ul.sub li:last-child{
 
 ul.sidebar-menu li ul.sub li a {
 	font-size: 12px;
-	padding: 0 0 0 32px;
+	padding: 0 0 0 20px;
 	line-height: 35px;
 	height: 35px;
 	-webkit-transition: all 0.3s ease;
@@ -156,8 +167,39 @@ ul.sidebar-menu li{
 }
 
 ul.sidebar-menu li.sub-menu{
+	position: relative;
+	margin-bottom: 10px;
 	line-height: 15px;
 	font-size: 16px;
+}
+ul.sidebar-menu li.sub-menu:hover,ul.sidebar-menu li.sub-menu.active{
+ /*background: rgba(0,0,0,.1);*/
+}
+
+ul.sidebar-menu li.sub-menu:hover:after{
+/* display: block;*/
+}
+
+ul.sidebar-menu li.sub-menu:after{
+	display: none;
+	content: "\f2fb";
+  font-family: 'Material-Design-Iconic-Font';
+  font-size: 16px;
+  font-weight: 200;
+  speak: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  right: 50px;
+  top: 8px;
+  color:#00acc1;
+  -webkit-transition: transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+}
+
+ul.sidebar-menu li.sub-menu.open:after{
+	transform: rotate(90deg);
 }
 
 ul.sidebar-menu li a span{

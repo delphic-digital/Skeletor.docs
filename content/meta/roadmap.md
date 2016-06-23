@@ -8,6 +8,6 @@ menu:
   main:
     parent: about
 notoc: true
-title: Hugo Roadmap
+title: Skeletor Roadmap
 weight: 20
 ---

@@ -32,9 +32,7 @@
 			  {{end}}
 			  </li>
 		  {{end}}
-			{{ if .IsPage }}
-			{{ $File := .File }}  {{with $File.Path }}<li><a href="https://github.com/spf13/hugo/edit/master/docs/content/{{ $File.Dir }}{{ $File.LogicalName }}" target="blank">Refine this Page</a> </li>{{end}}
-			{{ end }}
+			
 		</ul>
 		<!-- sidebar menu end-->
 	</div>
