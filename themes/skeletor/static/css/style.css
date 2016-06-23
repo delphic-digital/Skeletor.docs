@@ -87,9 +87,8 @@ pre code {
 
 .admonition {
 	margin: 0 -40px 20px;
-/* 	padding: 20px 40px; */
-  /* background: #0288d1; */
   background: rgba(0, 0, 0, .3);
+  background: #0288d1;
   color: #fff;
 }
 .admonition p { margin: 0; }
@@ -101,8 +100,12 @@ pre code {
   background: #0288d1;
 }
 
+.admonition.warning  {
+  background: #b94136;
+}
+
 .admonition.warning .admonition-title {
-  background: #d1023c;
+  background: #b94136;
 }
 
 .admonition .admonition-desc {
