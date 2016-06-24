@@ -3,36 +3,16 @@ date: 2016-06-24T16:37:49-04:00
 menu:
   main:
     parent: contribute
-title: Writing a plugin
+title: Creating a plugin
 weight: 5
 ---
 
-A generic plugin factory method for creating Mobify plugins.
+Creating a plugin for Skeletor is easy. There is a plugin factory included in `Skeletor.core`,
 
 
 ## Requirements
 
 * Skeletor.core
-
-## Installation
-
-The plugin can be installed using bower:
-
-```bash
-bower install plugin
-```
-
-## Usage with Skeletor boilerplate
-
-Skeletor will auto wire it up to your require.js config file:
-
-```
-{
-  'paths': {
-    'plugin': 'bower_components/plugin'
-  }
-}
-```
 
 
 ## Usage
@@ -166,3 +146,22 @@ var enabled = $buttons.button('isEnabled'); // returns original set of elements
 ```
 
 This behaviour is intentional, as it's assumed that it's unlikely to be calling methods against a set of elements when expecting primitive values in return.
+
+
+## Usage with Skeletor boilerplate
+
+The plugin can be installed using bower:
+
+```bash
+bower install plugin
+```
+
+Skeletor will auto wire it up to your require.js config file:
+
+```
+{
+  'paths': {
+    'plugin': 'bower_components/plugin'
+  }
+}
+```
