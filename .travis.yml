@@ -10,4 +10,4 @@ install:
 script:
     - hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
 script:
-    - ./scripts/deploy.sh
+    - ./deploy.sh
