@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/localhost/</loc>
+    <lastmod>2015-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/troubleshooting/overview/</loc>
+    <lastmod>2015-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/troubleshooting/strange-eof-error/</loc>
+    <lastmod>2015-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/overview/introduction/</loc>
+    <lastmod>2016-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/how-to-contribute-to-hugo/</loc>
+    <lastmod>2016-04-03T13:21:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/hosting-on-bitbucket/</loc>
+    <lastmod>2016-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/creating-a-new-theme/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/create-a-multilingual-site/</loc>
+    <lastmod>2015-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/installing-on-windows/</loc>
+    <lastmod>2016-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/installing-on-mac/</loc>
+    <lastmod>2016-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/automated-deployments/</loc>
+    <lastmod>2015-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/troubleshooting/categories-with-accented-characters/</loc>
+    <lastmod>2015-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/github-pages-blog/</loc>
+    <lastmod>2016-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/mathjax/</loc>
+    <lastmod>2015-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/tutorials/migrate-from-jekyll/</loc>
+    <lastmod>2015-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/overview/quickstart/</loc>
+    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/meta/release-notes/</loc>
+    <lastmod>2016-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/overview/installing/</loc>
+    <lastmod>2016-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/meta/roadmap/</loc>
+    <lastmod>2015-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/overview/usage/</loc>
+    <lastmod>2015-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/overview/configuration/</loc>
+    <lastmod>2015-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/meta/license/</loc>
+    <lastmod>2015-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/localhost/overview/source-directory/</loc>
+    <lastmod>2015-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>
