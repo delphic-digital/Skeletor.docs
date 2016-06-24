@@ -27,13 +27,11 @@ bower install plugin
 Skeletor will auto wire it up to your require.js config file:
 
 ```
-
 {
-	'paths': {
-		'plugin': 'bower_components/plugin'
-	}
+  'paths': {
+    'plugin': 'bower_components/plugin'
+  }
 }
-
 ```
 
 
