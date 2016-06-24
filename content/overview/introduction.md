@@ -1,5 +1,4 @@
 ---
-date: 2016-6-24
 linktitle: Introduction
 menu:
   main:
