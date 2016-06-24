@@ -5,18 +5,17 @@
     <link>https://delphic-digital.github.io/Skeletor.docs/overview/</link>
     <description>Recent content in Overview on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/overview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a directory structure and Gulpfile designed as an easy starting point for front end development of projects. Mainly it was developed for projects at Delphic Digital, but it was designed to be agnostic, so any project is capable of using it. It is designed to give you a quick and organized way to start developing web sites with best practices in mind.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a power framework designed as an easy starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices in mind. Skeletor makes use of the latest and greatest technology with performance always in mind.&lt;/p&gt;
 
 &lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
 
@@ -37,7 +36,8 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Javascript AMD modules and optimization with requirejs&lt;/li&gt;
 &lt;li&gt;Bower for client side package management&lt;/li&gt;
-&lt;li&gt;Static file serving with automated reloading&lt;/li&gt;
+&lt;li&gt;Zurb Foundation &lt;em&gt;like&lt;/em&gt; JavaScript framework&lt;/li&gt;
+&lt;li&gt;Live reloading during development&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;get-started&#34;&gt;Get started&lt;/h3&gt;
@@ -58,20 +58,11 @@
     </item>
     
     <item>
-      <title>Hugo Quickstart Guide</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/quickstart/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>Setup</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/quickstart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Installing Skeletor</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/installing/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/installing/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
 
 &lt;p&gt;Skeletor uses open source tools for its workflow. If you haven&amp;rsquo;t installed these requirements please do so.&lt;/p&gt;
@@ -95,19 +86,7 @@
 
 &lt;p&gt;Compiled and production-ready code can be found in the &lt;code&gt;dist&lt;/code&gt; directory. The &lt;code&gt;src&lt;/code&gt; directory contains development code.&lt;/p&gt;
 
-&lt;div class=&#34;admonition note&#34;&gt;
-	&lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
-	&lt;p class=&#34;admonition-desc&#34;&gt;Nothing to see here, move along.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;A sentence&lt;/p&gt;
-
-&lt;div class=&#34;admonition warning&#34;&gt;
-	&lt;p class=&#34;admonition-title&#34;&gt;Don&amp;#39;t try this at home&lt;/p&gt;
-	&lt;p class=&#34;admonition-desc&#34;&gt;Nothing to see here, move along.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;&lt;code class=&#34;hljs nohighlight&#34;&gt;skeletor
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
 |-- Static
 |   |-- assets
 |   |   |-- images
@@ -167,17 +146,18 @@
 |-- gulpfile.js
 |-- index.html
 |-- package.json
-|-- README.md&lt;/code&gt;&lt;/pre&gt;
+|-- README.md
 
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Next: see &lt;a href=&#34;usage&#34;&gt;Usage&lt;/a&gt; for explanation of &lt;code&gt;gulp&lt;/code&gt; command&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Using Skeletor</title>
+      <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -215,15 +195,15 @@ The files are determined by what&amp;rsquo;s declared as a &lt;strong&gt;main&lt
 
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
-  paths: {
-    &amp;quot;bower-example&amp;quot;: &amp;quot;../../../bower_components/bower-example&amp;quot;,
-  },
-  packages: [
+    paths: {
+        &amp;quot;bower-example&amp;quot;: &amp;quot;../../../bower_components/bower-example&amp;quot;,
+    },
+    packages: [
 
-  ],
-  shim: {
+    ],
+    shim: {
 
-  }
+    }
 });
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -245,105 +225,193 @@ require.config({
     </item>
     
     <item>
-      <title>Configuring Hugo</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/configuration/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>CSS</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/configuration/</guid>
-      <description></description>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/css/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with Sass and a structure setup. See the comments in each partial for more detailed explanations. Also, some sass helper libraries and plugins are preinstalled:
+* &lt;a href=&#34;http://susy.oddbird.net&#34;&gt;Susy&lt;/a&gt;, great for robust grids
+* &lt;a href=&#34;http://bourbon.io&#34;&gt;Bourbon&lt;/a&gt;, awesome set of mixins
+* &lt;a href=&#34;http://breakpoint-sass.com&#34;&gt;Breakpoint&lt;/a&gt;, used with a custom mixin to make breakpoints easy
+* &lt;a href=&#34;https://github.com/britco/node-sass-globbing&#34;&gt;Node Sass Globbing&lt;/a&gt;, so you don&amp;rsquo;t have to add custom partials to the main.scss&lt;/p&gt;
+
+&lt;h2 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h2&gt;
+
+&lt;h4 id=&#34;main-scss&#34;&gt;&lt;code&gt;main.scss&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;main.scss&lt;/code&gt; file contains the entries points for the sites sass partials.&lt;/p&gt;
+
+&lt;h4 id=&#34;partials&#34;&gt;&lt;code&gt;partials&lt;/code&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_settings.scss&lt;/code&gt; site settings defined here, it contains variables for all of the colors, font stacks, breakpoints, and sizing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;base&lt;/code&gt; holds global and base styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;components&lt;/code&gt; holds site components styles. Any partial added here is automatically imported with the globbing plugin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layout&lt;/code&gt; holds global layout styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;utilites&lt;/code&gt; holds mixins and SASS utilites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;overview-of-best-practices-for-writing-sass-css-with-skeletor&#34;&gt;Overview of best practices for writing SASS/CSS with Skeletor&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.zell-weekeat.com/how-to-write-mobile-first-css&#34;&gt;Mobile First&lt;/a&gt;, mobile first approach&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://smacss.com&#34;&gt;SMACSS&lt;/a&gt;, css design process&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://css-tricks.com/bem-101&#34;&gt;BEM&lt;/a&gt;, naming convention for CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out these practices in an example component here for guidance: &lt;a href=&#34;src/scss/partials/components/navigation/_main.scss/&#34;&gt;&lt;code&gt;src/scss/partials/components/navigation/_main.scss&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Notes&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class:&lt;/p&gt;
+
+&lt;p&gt;```sass
+.main-nav {
+    /* Mobile main nav styles */
+}&lt;/p&gt;
+
+&lt;p&gt;@include breakpoint($medium){
+    .main-nav {
+        /* Tablet main nav styles */
+    }
+}&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+instead of
+
+```sass
+.main-nav {
+    /* Mobile main nav styles */
+    @include breakpoint($medium){
+        /* Tablet main nav styles */
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which doesn&amp;rsquo;t work as well on large scale sites with more complex modules. This is also in the example component.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Source Organization</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/source-directory/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>Javascript</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/source-directory/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
 
-&lt;p&gt;Hugo takes a single directory and uses it as the input for creating a complete
-website.&lt;/p&gt;
-
-&lt;p&gt;The top level of a source directory will typically have the following elements:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;▸ archetypes/
-▸ content/
-▸ data/
-▸ layouts/
-▸ static/
-▸ themes/
-  config.toml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Learn more about the different directories and what their purpose is:&lt;/p&gt;
+&lt;p&gt;Skeletor comes with JavaScript structure using &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/overview/configuration/&#34;&gt;config&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/extras/datafiles/&#34;&gt;data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/content/archetypes/&#34;&gt;archetypes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/content/organization/&#34;&gt;content&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/layout/overview/&#34;&gt;layouts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/themes/creation#static&#34;&gt;static&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/themes/overview/&#34;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jquery.com&#34;&gt;jQuery&lt;/a&gt;, version 2 is automatically loaded for browers that support it, otherwise the 1.9 branch is used.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://browser-update.org&#34;&gt;Browser Update&lt;/a&gt;, tell your audience to use modern browsers!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/JoshBarr/on-media-query&#34;&gt;onMediaQuery&lt;/a&gt;, works great for triggering javascript for certain media queries.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/scottjehl/picturefill&#34;&gt;Picturefill&lt;/a&gt;, there is no reason to not use reponsive images.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;h3 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h3&gt;
 
-&lt;p&gt;An example directory may look like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inside &lt;code&gt;components&lt;/code&gt; will be your sites custom requirejs modules.
 
-&lt;pre&gt;&lt;code&gt;.
-├── config.toml
-├── archetypes
-|   └── default.md
-├── content
-|   ├── post
-|   |   ├── firstpost.md
-|   |   └── secondpost.md
-|   └── quote
-|   |   ├── first.md
-|   |   └── second.md
-├── data
-├── layouts
-|   ├── _default
-|   |   ├── single.html
-|   |   └── list.html
-|   ├── partials
-|   |   ├── header.html
-|   |   └── footer.html
-|   ├── taxonomies
-|   |   ├── category.html
-|   |   ├── post.html
-|   |   ├── quote.html
-|   |   └── tag.html
-|   ├── post
-|   |   ├── li.html
-|   |   ├── single.html
-|   |   └── summary.html
-|   ├── quote
-|   |   ├── li.html
-|   |   ├── single.html
-|   |   └── summary.html
-|   ├── shortcodes
-|   |   ├── img.html
-|   |   ├── vimeo.html
-|   |   └── youtube.html
-|   ├── index.html
-|   └── sitemap.xml
-├── themes
-|   ├── hyde
-|   └── doc
-└── static
-    ├── css
-    └── js
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;common&lt;/code&gt; folder contains components that are global and be concatenated to the main.js when built.&lt;/li&gt;
+&lt;li&gt;other components will be standalone and won&amp;rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;data-component-and-data-component-context&#34;&gt;data-component and data-component-context&lt;/h3&gt;
+
+&lt;p&gt;To load a JS component, use the sample syntax in &lt;code&gt;component-example.js&lt;/code&gt;, and add a data-component to the html element that should load the JS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&amp;gt;
+&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot;&amp;gt;
+    Lorem ipsum
+&amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This directory structure tells us a lot about this site:&lt;/p&gt;
+&lt;p&gt;To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;The website intends to have two different types of content: &lt;em&gt;posts&lt;/em&gt; and &lt;em&gt;quotes&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;It will also apply two different taxonomies to that content: &lt;em&gt;categories&lt;/em&gt; and &lt;em&gt;tags&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;It will be displaying content in 3 different views: a list, a summary and a full page view.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded only in tablet and desktop --&amp;gt;
+&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot; data-component-context=&amp;quot;tablet,desktop&amp;quot;&amp;gt;
+    Lorem ipsum
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sprites</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with easy ways to create 3 different types of sprites.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Ensighten/grunt-spritesmith&#34;&gt;Spritesmith&lt;/a&gt; to create a bitmap spritesheet with retina support;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jkphl/svg-sprite&#34;&gt;svg-sprite&lt;/a&gt; to create a vector spritesheet made out of svgs.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.sgalinski.de/toolchain/gulp-inline-svg&#34;&gt;gulp-inline-svg&lt;/a&gt; to inline an svg directory in the CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop a png and corresponding retina (image@2x.png naming convention) in &lt;code&gt;src/sprites/bitmaps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/bitmap.spritesheet.png&lt;/code&gt; and retina sheet at &lt;code&gt;/Static/assets/spritesheets/bitmap.spritesheet@2x.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Use this mixin in your sass to include sprite with retina&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sass&#34;&gt;@include retina-sprite($nameOfImage-group); //The `-group` after the name is important.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/vector&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/vector.spritesheet.svg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now utilize the svg use tag in your html!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;svg&amp;gt;
+    &amp;lt;use xlink:href=&amp;quot;/Static/assets/spritesheets/vector.spritesheet.svg#nameOfImage&amp;quot;&amp;gt;&amp;lt;/use&amp;gt;
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;inline&#34;&gt;Inline&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/inline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the sass partial at &lt;code&gt;src/scss/partials/base/_svg.scss&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now inline your svg into your sass with a mixin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/**
+@include inline-svg($nameOfImage, $fillColorString)
+**/
+
+@include inline-svg($plus, #CCC)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Styleguide</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SC5/sc5-styleguide&#34;&gt;sc5-styleguide&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

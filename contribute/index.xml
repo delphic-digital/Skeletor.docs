@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contribute on The Skeletor Project</title>
+    <link>https://delphic-digital.github.io/Skeletor.docs/contribute/</link>
+    <description>Recent content in Contribute on The Skeletor Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Jun 2016 16:37:49 -0400</lastBuildDate>
+    <atom:link href="https://delphic-digital.github.io/Skeletor.docs/contribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating a plugin</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/contribute/writing-a-plugin/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/contribute/writing-a-plugin/</guid>
+      <description>
+
+&lt;p&gt;Creating a plugin for Skeletor is easy. There is a plugin factory included in &lt;code&gt;Skeletor.core&lt;/code&gt;,&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Skeletor.core&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Your plugin&amp;rsquo;s constructor, calling &lt;code&gt;__super__&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;DEFAULTS&lt;/code&gt; static property on your plugin&amp;rsquo;s constructor&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;VERSION&lt;/code&gt; static property on your plugin&amp;rsquo;s constructor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;creating-your-plugin&#34;&gt;Creating your plugin&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s look at an example. In this example, we&amp;rsquo;re going to create a &lt;code&gt;button&lt;/code&gt; plugin. To do so, we will use the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define(
+	[
+		&#39;$&#39;,
+		&#39;plugin&#39;
+	],
+	function($, Plugin) {
+		function Button(element, options) {
+			Button.__super__.call(this, element, options, Button.DEFAULTS);
+		}
+
+		Button.VERSION = &#39;0.0.1&#39;;
+
+		Button.DEFAULTS = {
+			cssClass = &#39;button&#39;
+		};
+
+		Plugin.create(&#39;button&#39;, Button, {
+			_init: function(element) {
+			}
+		});
+	}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First, we declare a &lt;code&gt;Button&lt;/code&gt; constructor, and VERSION and DEFAULTS properties. We then invoke the static &lt;code&gt;Plugin.create&lt;/code&gt; function. Through prototypal inheritance, this function extends the &lt;code&gt;Button&lt;/code&gt; prototype with the &lt;code&gt;Plugin&lt;/code&gt; prototype. Additionally, it creates our Zepto plugin interface.&lt;/p&gt;
+
+&lt;p&gt;To create a button instance, you merely need to use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&#39;&amp;lt;button /&amp;gt;&#39;).button();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;the-plugin-factory-method&#34;&gt;The Plugin factory method&lt;/h2&gt;
+
+&lt;p&gt;Extends a plugin using the &lt;code&gt;Plugin&lt;/code&gt; prototype.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&amp;nbsp;name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The name of the plugin, in lowercase.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ctor&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The constructor of the plugin we want to extend.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;prototype&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Additional methods we want to extend onto our plugin&amp;rsquo;s prototype. The prototype must declare an _init function, which is used for plugin construction.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;See the example above for usage.&lt;/p&gt;
+
+&lt;h2 id=&#34;invoking-methods-on-a-plugin&#34;&gt;Invoking methods on a plugin.&lt;/h2&gt;
+
+&lt;p&gt;The plugin factory facilitates invoking methods via the plugin interface. This means that once a plugin is initialized, public methods can be invoked by passing the name of the method as the first parameter to the plugin function.&lt;/p&gt;
+
+&lt;p&gt;Public methods are methods defined on the object passed into the &lt;code&gt;Plugin.create&lt;/code&gt; factory method that aren&amp;rsquo;t preceded by an &lt;em&gt;underscore&lt;/em&gt; character. Methods preceded by an &lt;em&gt;underscore&lt;/em&gt; are considered private methods.&lt;/p&gt;
+
+&lt;p&gt;Using our &lt;code&gt;button&lt;/code&gt; example above, here&amp;rsquo;s what public methods would look like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define(
+	[
+		&#39;$&#39;,
+		&#39;plugin&#39;
+	],
+	function($, Plugin) {
+		function Button(element, options) {
+			Button.__super__.call(this, element, options, Button.DEFAULTS);
+		}
+
+		Button.VERSION = &#39;0.0.1&#39;;
+
+		Button.DEFAULTS = {
+			cssClass = &#39;button&#39;
+		};
+
+		Plugin.create(&#39;button&#39;, Button, {
+			_init: function(element) {
+				this.$element = $(element);
+			},
+			enable: function() {
+				this.$element.removeAttr(&#39;disabled&#39;);
+			},
+			disable: function() {
+				this.$element.attr(&#39;disabled&#39;, &#39;disabled&#39;);
+			},
+			isEnabled: function() {
+				return !this.$element[0].hasAttribute(&#39;disabled&#39;);
+			}
+		});
+	}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the above example, the &lt;code&gt;enable&lt;/code&gt; and &lt;code&gt;disable&lt;/code&gt; functions are public. To invoke the method, simply pass the method name into the plugin function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var $button = $(&#39;&amp;lt;button /&amp;gt;&#39;).button();
+
+$button.button(&#39;disable&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;method-return-values&#34;&gt;Method return values&lt;/h3&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to note that there&amp;rsquo;s some specific behaviour around invoking methods that return a value when using a single element vs. a set of elements.&lt;/p&gt;
+
+&lt;p&gt;When invoking a method against a single element, and when that method returns a value, the value will be returned as expected.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var $button = $(&#39;&amp;lt;button /&amp;gt;&#39;).button();
+
+var enabled = $button.button(&#39;isEnabled&#39;); // returns true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When invoking a method against a set of elements, and when that method returns a value, the original set of elements will be returned.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var $buttons = $(&#39;.lots-of-buttons&#39;).button();
+
+var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of elements
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This behaviour is intentional, as it&amp;rsquo;s assumed that it&amp;rsquo;s unlikely to be calling methods against a set of elements when expecting primitive values in return.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage-with-skeletor-boilerplate&#34;&gt;Usage with Skeletor boilerplate&lt;/h2&gt;
+
+&lt;p&gt;The plugin can be installed using bower:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bower install plugin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Skeletor will auto wire it up to your require.js config file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &#39;paths&#39;: {
+    &#39;plugin&#39;: &#39;bower_components/plugin&#39;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

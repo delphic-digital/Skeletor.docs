@@ -14,7 +14,21 @@
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/release-notes/</guid>
-      <description></description>
+      <description>
+
+&lt;h2 id=&#34;1-0&#34;&gt;1.0&lt;/h2&gt;
+
+&lt;p&gt;Skeletor 1.0 release has an all new JavaScript framework.&lt;/p&gt;
+
+&lt;h3 id=&#34;new-features&#34;&gt;New features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create extensible JavaScript plugins.&lt;/li&gt;
+&lt;li&gt;Bower integration for 3rd party scripts&lt;/li&gt;
+&lt;li&gt;Bower integration for your own scripts&lt;/li&gt;
+&lt;li&gt;Current components converted over to new Skeletor framework&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -23,7 +37,11 @@
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/roadmap/</guid>
-      <description></description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Accordion component&lt;/li&gt;
+&lt;li&gt;Tab component&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -32,7 +50,29 @@
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
-      <description></description>
+      <description>
+
+&lt;p&gt;Skeletor is relased under the BSD 3-Clause License.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-bsd-3-clause-license&#34;&gt;The BSD 3-Clause License&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://opensource.org/licenses/BSD-3-Clause&#34;&gt;https://opensource.org/licenses/BSD-3-Clause&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Copyright &amp;copy; 2016, Jeff Mills
+All rights reserved.&lt;/p&gt;
+
+&lt;p&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;ldquo;AS IS&amp;rdquo; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
