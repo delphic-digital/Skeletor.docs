@@ -8,4 +8,6 @@ env:
 install:
     - go get github.com/spf13/hugo
 script:
+    - hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
+script:
     - ./scripts/deploy.sh

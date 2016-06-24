@@ -85,9 +85,6 @@ parse_args() {
 }
 
 main() {
-	git clone https://github.com/delphic-digital/Skeletor.docs .
-  hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
-
 	parse_args "$@"
 
 	enable_expanded_output
