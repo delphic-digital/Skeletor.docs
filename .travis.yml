@@ -8,8 +8,4 @@ env:
 before_script:
     - go get -u -v github.com/spf13/hugo
 script:
-    - git clone https://github.com/delphic-digital/Skeletor.docs
-    - hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
-
-after_success:
-    - ./scripts/deploy.sh
+- ./scripts/deploy.sh
