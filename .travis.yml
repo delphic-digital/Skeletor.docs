@@ -5,6 +5,8 @@ sudo: required
 env:
   global:
     secure: Rb4CBDcTOD/OOBll2cP3bE5dyRbLAPE/mElweXvcWEXtWJ432+99zKKYRqfEp+awUaGubjox2ljstyUcFPwOQWKvdzFZO5HB0qnSsV0tsHw9DzVx0ume+fWiv13HEng7UwlTx2H/sEn13CTOmKkabDYKVVwIzYHBA5FbXE1OQCIcOs+E3etiujbw5wLIyrumSLX6ro9RkamQbuzqTlycKzMp77M0o8O3ONjjE5JuDHkrnGwa9ck8NBLGC7u6LNzGRiKq4l/3wDDuncULiYMfPfn/VdQ6gyp4d3iBzrZPjldvoR2/dheKHzM8wXdSCl8DT2tuPO3+105SYplvAXyVUQFIx3ZNyV7oMjCkQU7BBMJVU7pwQovJvYWOxuVOdN4mFIyuSLvb3tomr2JdE6FETN2RblM3m11nNtLVUPozbx2m3on++61iQYdmEWtQ3sGipv6a2JWR4hSU51FINWlhZDI2LW5Gxuc2q3+JD9JaKNqd7RUUKd/VTOgHCgHzs5yTNnigAb40PAWXKvMcBd0D9XTJCWjz1jWFZXklQjY2DMtWwU4xq2d6DNF/UYAcljFGgp/7W4C432s9ICRTrVXuGMRiClXgcfG9yiaeNShSk4vDucnqazLhv7RIGtULIgGSbCnGxti0Jm8BTzFuAoMtsNW3Yl7sHcYQ5xEzBe571Yk=
+before_script:
+    - go get -u -v github.com/spf13/hugo
 script:
     - git clone https://github.com/delphic-digital/Skeletor.docs
     - hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
