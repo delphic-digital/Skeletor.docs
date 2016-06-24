@@ -183,6 +183,8 @@ pre code {
 	font-weight: 500;
 }
 
+.sidebar-header-version:hover { color:  #a466dc; }
+
 #sidebar {
 	position: fixed;
 	overflow-y: auto;

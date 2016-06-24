@@ -1,10 +1,7 @@
 <!--sidebar start-->
 <aside>
 	<div id="sidebar" class="nav-collapse">
-		<div class="sidebar-header">
-			<a href="https://github.com/delphic-digital/Skeletor">{{ partial "skeletor-logo.svg"}}
-				<span class="sidebar-header-version"><span>Skeletor v2.0</span><br>delphic-digital/Skeletor</span></a>
-		</div>
+		{{ partial "logo.html" . }}
 		<!-- sidebar menu start-->
 		<ul class="sidebar-menu">
 			{{ $currentNode := . }}
@@ -32,7 +29,7 @@
 			  {{end}}
 			  </li>
 		  {{end}}
-			
+
 		</ul>
 		<!-- sidebar menu end-->
 	</div>
