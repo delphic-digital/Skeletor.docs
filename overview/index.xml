@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview on The Skeletor Project</title>
-    <link>localhost/overview/</link>
+    <link>https://delphic-digital.github.io/Skeletor.docs/overview/</link>
     <description>Recent content in Overview on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="localhost/overview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://delphic-digital.github.io/Skeletor.docs/overview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to Skeletor</title>
-      <link>/localhost/overview/introduction/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>/localhost/overview/introduction/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a directory structure and Gulpfile designed as an easy starting point for front end development of projects. Mainly it was developed for projects at Delphic Digital, but it was designed to be agnostic, so any project is capable of using it. It is designed to give you a quick and organized way to start developing web sites with best practices in mind.&lt;/p&gt;
@@ -59,19 +59,19 @@
     
     <item>
       <title>Hugo Quickstart Guide</title>
-      <link>/localhost/overview/quickstart/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/quickstart/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>/localhost/overview/quickstart/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/quickstart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Installing Skeletor</title>
-      <link>/localhost/overview/installing/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/installing/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>/localhost/overview/installing/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/installing/</guid>
       <description>
 
 &lt;p&gt;Skeletor uses open source tools for its workflow. If you haven&amp;rsquo;t installed these requirements please do so.&lt;/p&gt;
@@ -176,10 +176,10 @@
     
     <item>
       <title>Using Skeletor</title>
-      <link>/localhost/overview/usage/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>/localhost/overview/usage/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
 
 &lt;p&gt;Skeletor uses gulp as a task runner and several commands are available to use:&lt;/p&gt;
@@ -246,19 +246,19 @@ require.config({
     
     <item>
       <title>Configuring Hugo</title>
-      <link>/localhost/overview/configuration/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/configuration/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>/localhost/overview/configuration/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/configuration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Source Organization</title>
-      <link>/localhost/overview/source-directory/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/source-directory/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>/localhost/overview/source-directory/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/source-directory/</guid>
       <description>
 
 &lt;p&gt;Hugo takes a single directory and uses it as the input for creating a complete
@@ -278,13 +278,13 @@ website.&lt;/p&gt;
 &lt;p&gt;Learn more about the different directories and what their purpose is:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/overview/configuration/&#34;&gt;config&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/extras/datafiles/&#34;&gt;data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/content/archetypes/&#34;&gt;archetypes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/content/organization/&#34;&gt;content&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/layout/overview/&#34;&gt;layouts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/themes/creation#static&#34;&gt;static&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;localhost/themes/overview/&#34;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/overview/configuration/&#34;&gt;config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/extras/datafiles/&#34;&gt;data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/content/archetypes/&#34;&gt;archetypes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/content/organization/&#34;&gt;content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/layout/overview/&#34;&gt;layouts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/themes/creation#static&#34;&gt;static&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://delphic-digital.github.io/Skeletor.docs/themes/overview/&#34;&gt;themes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
