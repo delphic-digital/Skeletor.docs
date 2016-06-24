@@ -19,7 +19,7 @@ header {
 	padding: 20px;
 	width: 100%;
 	color: #fff;
-	background: #59488e;
+	background: #673ab7;
 	box-shadow: 0 1.5px 3px rgba(0,0,0,.24),0 3px 8px rgba(0,0,0,.05);
 }
 
@@ -147,7 +147,7 @@ pre code {
 	transition: all 0.3s ease;
 }
 .site-logo .skull {
-	fill: #fff;
+	fill: #999;
 		-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -156,7 +156,7 @@ pre code {
 }
 
 .site-logo:hover .hood {
-	fill: #59488e;
+	fill: #673ab7;
 }
 
 .site-logo:hover .skull {
