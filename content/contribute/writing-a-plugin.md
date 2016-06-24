@@ -18,7 +18,7 @@ A generic plugin factory method for creating Mobify plugins.
 
 The plugin can be installed using bower:
 
-```
+```bash
 bower install plugin
 ```
 
@@ -26,7 +26,7 @@ bower install plugin
 
 Skeletor will auto wire it up to your require.js config file:
 
-```config.js
+```
 
 {
 	'paths': {
@@ -36,16 +36,6 @@ Skeletor will auto wire it up to your require.js config file:
 
 ```
 
-And then require the plugin factory in as needed:
-
-```
-define(
-    ['$', 'plugin'],
-    function($, Plugin) {
-        // create plugin
-    }
-);
-```
 
 ## Usage
 
