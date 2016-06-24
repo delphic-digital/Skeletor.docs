@@ -1,16 +1,15 @@
 ---
-lastmod: 2016-02-20
-date: 2013-07-01
+date: 2016-6-24
 linktitle: Introduction
 menu:
   main:
     parent: getting started
-next: /overview/quickstart
 title: Introduction to Skeletor
-weight: 5
+toc: true
+weight: 1
 ---
 
-_Skeletor_ is a directory structure and Gulpfile designed as an easy starting point for front end development of projects. Mainly it was developed for projects at Delphic Digital, but it was designed to be agnostic, so any project is capable of using it. It is designed to give you a quick and organized way to start developing web sites with best practices in mind.
+_Skeletor_ is a power framework designed as an easy starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices in mind. Skeletor makes use of the latest and greatest technology with performance always in mind.
 
 ### Features
 
@@ -24,7 +23,8 @@ _Skeletor_ is a directory structure and Gulpfile designed as an easy starting po
 		* [Breakpoint](http://breakpoint-sass.com/)
 * Javascript AMD modules and optimization with requirejs
 * Bower for client side package management
-* Static file serving with automated reloading
+* Zurb Foundation _like_ JavaScript framework
+* Live reloading during development
 
 
 ### Get started

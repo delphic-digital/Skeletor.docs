@@ -11,3 +11,6 @@ notoc: true
 title: Skeletor Roadmap
 weight: 20
 ---
+
+* Accordion component
+* Tab component

@@ -1,3 +1,6 @@
 {{ partial "header.html" . }}
+{{ range where .Site.Pages "Type" "index" }}
+	{{ .Content }}
+{{ end }}
 
 {{ partial "footer.html" . }}

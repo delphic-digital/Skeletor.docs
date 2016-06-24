@@ -1,5 +1,4 @@
 				<div class="footer-panel">
-					<p>Last revision: {{ .Lastmod.Format "January 2, 2006" }}
 					<!-- <span style="float: right;">Hugo v{{ .Hugo.Version }} documentation</span> -->
 					{{ if .IsPage }}
 						{{ $File := .File }}  {{with $File.Path }}<a href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/{{ $File.Dir }}{{ $File.LogicalName }}" target="blank">Edit this Page</a>{{end}}

@@ -1,13 +1,10 @@
 ---
-aliases:
-- /doc/usage/
-lastmod: 2015-12-23
-date: 2013-07-01
 menu:
   main:
     parent: getting started
-title: Using Skeletor
-weight: 30
+title: Usage
+toc: true
+weight: 3
 ---
 
 Skeletor uses gulp as a task runner and several commands are available to use:
@@ -48,15 +45,15 @@ The files are determined by what's declared as a **main** file by the `bower.jso
 ```js
 // Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
-  paths: {
-    "bower-example": "../../../bower_components/bower-example",
-  },
-  packages: [
+	paths: {
+		"bower-example": "../../../bower_components/bower-example",
+	},
+	packages: [
 
-  ],
-  shim: {
+	],
+	shim: {
 
-  }
+	}
 });
 ```
 

@@ -10,3 +10,14 @@ menu:
 title: Release Notes
 weight: 10
 ---
+
+## 1.0
+
+Skeletor 1.0 release has an all new JavaScript framework.
+
+### New features
+
+* Create extensible JavaScript plugins.
+* Bower integration for 3rd party scripts
+* Bower integration for your own scripts
+* Current components converted over to new Skeletor framework

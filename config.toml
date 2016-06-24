@@ -1,5 +1,5 @@
 title = "The Skeletor Project"
-baseurl = "https://delphic-digital.github.io/Skeletor.docs/"
+baseurl = "localhost"
 MetaDataFormat = "yaml"
 pluralizeListTitles = false
 theme = "skeletor"
@@ -25,6 +25,11 @@ theme = "skeletor"
     identifier = "getting started"
     pre = ""
     weight = -100
+[[menu.main]]
+    name = "Plugins"
+    identifier = "plugins"
+    pre = ""
+    weight = -80
 [[menu.main]]
     name = "Tutorials"
     identifier = "tutorials"
