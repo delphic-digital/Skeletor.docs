@@ -334,7 +334,7 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 .toc-container {
 	display: none;
 	position: fixed;
-	top: 95px;
+	top: 170px;
 	right: 0;
 	left: 0;
 	width: 100%;
@@ -347,14 +347,14 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 }
 .toc {
 	float: right;
-	margin-right: -160px;
+	margin-right: -200px;
 	padding: 10px 20px 20px;
 	width: 180px;
-	font-size: 12px;
+	/*font-size: 13px;*/
 	line-height: 1.2;
 	word-wrap: break-word;
-	background: #303f46;
-  box-shadow: 0 1.5px 3px rgba(0,0,0,.3),0 3px 8px rgba(0,0,0,.1);
+	/*background: #303f46;
+  box-shadow: 0 1.5px 3px rgba(0,0,0,.3),0 3px 8px rgba(0,0,0,.1);*/
 }
 
 .toc h4 { font-size: 14px; line-height: 1; }
