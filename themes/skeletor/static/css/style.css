@@ -155,11 +155,11 @@ pre code {
 	transition: all 0.3s ease;
 }
 
-.site-logo:hover .hood {
+.sidebar-header:hover .hood {
 	fill: #673ab7;
 }
 
-.site-logo:hover .skull {
+.sidebar-header:hover .skull {
 	fill: #e3c376;
 }
 
@@ -183,7 +183,7 @@ pre code {
 	font-weight: 500;
 }
 
-.sidebar-header-version:hover { color:  #a466dc; }
+.sidebar-header:hover { color:  #a466dc; }
 
 #sidebar {
 	position: fixed;
