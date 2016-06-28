@@ -11,9 +11,9 @@ title: Release Notes
 weight: 10
 ---
 
-## 1.0
+## 2.0
 
-Skeletor 1.0 release has an all new JavaScript framework.
+Skeletor 2.0 release has an all new JavaScript framework.
 
 ### New features
 
@@ -21,3 +21,8 @@ Skeletor 1.0 release has an all new JavaScript framework.
 * Bower integration for 3rd party scripts
 * Bower integration for your own scripts
 * Current components converted over to new Skeletor framework
+
+
+## 1.0
+
+Skeletor 1.0 switched to gulp from grunt
