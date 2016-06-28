@@ -41,9 +41,8 @@
 <ul>
 <li><a href="#brief-overview-of-structure">Brief overview of structure</a>
 <ul>
-<li>
+<li><a href="#main-scss"><code>main.scss</code></a>
 <ul>
-<li><a href="#main-scss"><code>main.scss</code></a></li>
 <li><a href="#partials"><code>partials</code></a></li>
 <li><a href="#overview-of-best-practices-for-writing-sass-css-with-skeletor">Overview of best practices for writing SASS/CSS with Skeletor</a></li>
 </ul></li>
@@ -201,15 +200,15 @@
 
 
 
-<p>Skeletor comes with Sass and a structure setup. See the comments in each partial for more detailed explanations. Also, some sass helper libraries and plugins are preinstalled:
-* <a href="http://susy.oddbird.net">Susy</a>, great for robust grids
-* <a href="http://bourbon.io">Bourbon</a>, awesome set of mixins
-* <a href="http://breakpoint-sass.com">Breakpoint</a>, used with a custom mixin to make breakpoints easy
-* <a href="https://github.com/britco/node-sass-globbing">Node Sass Globbing</a>, so you don&rsquo;t have to add custom partials to the main.scss</p>
+<p>Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:
+ * <a href="http://susy.oddbird.net">Susy</a>, great for robust grids
+ * <a href="http://bourbon.io">Bourbon</a>, awesome set of mixins
+ * <a href="http://breakpoint-sass.com">Breakpoint</a>, used with a custom mixin to make breakpoints easy
+ * <a href="https://github.com/britco/node-sass-globbing">Node Sass Globbing</a>, so you don&rsquo;t have to add custom partials to the main.scss. Be careful of casscading rules!!</p>
 
 <h2 id="brief-overview-of-structure">Brief overview of structure</h2>
 
-<h4 id="main-scss"><code>main.scss</code></h4>
+<h3 id="main-scss"><code>main.scss</code></h3>
 
 <p>The <code>main.scss</code> file contains the entries points for the sites sass partials.</p>
 
@@ -231,36 +230,50 @@
 <li><a href="https://css-tricks.com/bem-101">BEM</a>, naming convention for CSS.</li>
 </ul>
 
-<p>Check out these practices in an example component here for guidance: <a href="src/scss/partials/components/navigation/_main.scss/"><code>src/scss/partials/components/navigation/_main.scss</code></a>.</p>
-
 <p><em>Notes</em></p>
 
-<p>We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class:</p>
+<p>We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.</p>
 
-<p>```sass
-.main-nav {
+<pre><code class="language-scss">.main-nav {
     /* Mobile main nav styles */
-}</p>
 
-<p>@include breakpoint($medium){
-    .main-nav {
-        /* Tablet main nav styles */
+    &amp;__list {
+
     }
-}</p>
 
-<pre><code>
-instead of
+    &amp;__item {
 
-```sass
-.main-nav {
-    /* Mobile main nav styles */
+    }
+
     @include breakpoint($medium){
-        /* Tablet main nav styles */
+
+        &amp;__list {
+
+        }
+
+        &amp;__item {
+
+        }
     }
+
 }
 </code></pre>
 
-<p>which doesn&rsquo;t work as well on large scale sites with more complex modules. This is also in the example component.</p>
+<p>instead of</p>
+
+<pre><code class="language-scss">.main-nav {
+
+    @include breakpoint($medium){}
+
+    &amp;__list {
+        @include breakpoint($medium){}
+    }
+
+    &amp;__item {
+        @include breakpoint($medium){}
+    }
+}
+</code></pre>
 
 
 				<div class="footer-panel">

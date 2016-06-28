@@ -247,15 +247,15 @@ require.config({
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
 
-&lt;p&gt;Skeletor comes with Sass and a structure setup. See the comments in each partial for more detailed explanations. Also, some sass helper libraries and plugins are preinstalled:
-* &lt;a href=&#34;http://susy.oddbird.net&#34;&gt;Susy&lt;/a&gt;, great for robust grids
-* &lt;a href=&#34;http://bourbon.io&#34;&gt;Bourbon&lt;/a&gt;, awesome set of mixins
-* &lt;a href=&#34;http://breakpoint-sass.com&#34;&gt;Breakpoint&lt;/a&gt;, used with a custom mixin to make breakpoints easy
-* &lt;a href=&#34;https://github.com/britco/node-sass-globbing&#34;&gt;Node Sass Globbing&lt;/a&gt;, so you don&amp;rsquo;t have to add custom partials to the main.scss&lt;/p&gt;
+&lt;p&gt;Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:
+ * &lt;a href=&#34;http://susy.oddbird.net&#34;&gt;Susy&lt;/a&gt;, great for robust grids
+ * &lt;a href=&#34;http://bourbon.io&#34;&gt;Bourbon&lt;/a&gt;, awesome set of mixins
+ * &lt;a href=&#34;http://breakpoint-sass.com&#34;&gt;Breakpoint&lt;/a&gt;, used with a custom mixin to make breakpoints easy
+ * &lt;a href=&#34;https://github.com/britco/node-sass-globbing&#34;&gt;Node Sass Globbing&lt;/a&gt;, so you don&amp;rsquo;t have to add custom partials to the main.scss. Be careful of casscading rules!!&lt;/p&gt;
 
 &lt;h2 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h2&gt;
 
-&lt;h4 id=&#34;main-scss&#34;&gt;&lt;code&gt;main.scss&lt;/code&gt;&lt;/h4&gt;
+&lt;h3 id=&#34;main-scss&#34;&gt;&lt;code&gt;main.scss&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code&gt;main.scss&lt;/code&gt; file contains the entries points for the sites sass partials.&lt;/p&gt;
 
@@ -277,36 +277,50 @@ require.config({
 &lt;li&gt;&lt;a href=&#34;https://css-tricks.com/bem-101&#34;&gt;BEM&lt;/a&gt;, naming convention for CSS.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Check out these practices in an example component here for guidance: &lt;a href=&#34;src/scss/partials/components/navigation/_main.scss/&#34;&gt;&lt;code&gt;src/scss/partials/components/navigation/_main.scss&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;em&gt;Notes&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class:&lt;/p&gt;
+&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
 
-&lt;p&gt;```sass
-.main-nav {
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
     /* Mobile main nav styles */
-}&lt;/p&gt;
 
-&lt;p&gt;@include breakpoint($medium){
-    .main-nav {
-        /* Tablet main nav styles */
+    &amp;amp;__list {
+
     }
-}&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-instead of
+    &amp;amp;__item {
 
-```sass
-.main-nav {
-    /* Mobile main nav styles */
+    }
+
     @include breakpoint($medium){
-        /* Tablet main nav styles */
+
+        &amp;amp;__list {
+
+        }
+
+        &amp;amp;__item {
+
+        }
     }
+
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;which doesn&amp;rsquo;t work as well on large scale sites with more complex modules. This is also in the example component.&lt;/p&gt;
+&lt;p&gt;instead of&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
+
+    @include breakpoint($medium){}
+
+    &amp;amp;__list {
+        @include breakpoint($medium){}
+    }
+
+    &amp;amp;__item {
+        @include breakpoint($medium){}
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
