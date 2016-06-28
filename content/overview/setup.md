@@ -32,7 +32,7 @@ skeletor
 * ```localHostname = 'localhost.com'``` Change to your local website that is running if you want to proxy it to browser-sync.
 * ```siteShortname = 'skeletor'``` Used for JavaScript optimaztion and should match your main.js namespace: ```skeletor.main.js```
 * ```baseLayoutDir = './'``` Where your index or base layout file is.
-* ```baseLayoutFile = "index.html"``` The filename of your index or base layout. This is used to change the script included from src to dist.
+* ```baseLayoutFile = 'index.html'``` The filename of your index or base layout. This is used to change the script included from src to dist.
 * ```views = './*.html'``` Where browser-sync should watch for HTML changes
 * ```src = './Static/src``` Where the sass and js src are, probably don't need to change
 * ```dist = './Static/dist'``` Where everything gets compiled to, probably don't need to change
