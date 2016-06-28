@@ -679,9 +679,9 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/release-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;1-0&#34;&gt;1.0&lt;/h2&gt;
+&lt;h2 id=&#34;2-0&#34;&gt;2.0&lt;/h2&gt;
 
-&lt;p&gt;Skeletor 1.0 release has an all new JavaScript framework.&lt;/p&gt;
+&lt;p&gt;Skeletor 2.0 release has an all new JavaScript framework.&lt;/p&gt;
 
 &lt;h3 id=&#34;new-features&#34;&gt;New features&lt;/h3&gt;
 
@@ -691,6 +691,10 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
 &lt;li&gt;Bower integration for your own scripts&lt;/li&gt;
 &lt;li&gt;Current components converted over to new Skeletor framework&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;1-0&#34;&gt;1.0&lt;/h2&gt;
+
+&lt;p&gt;Skeletor 1.0 switched to gulp from grunt&lt;/p&gt;
 </description>
     </item>
     
