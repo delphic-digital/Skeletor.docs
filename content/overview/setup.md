@@ -19,6 +19,19 @@ Skeletor uses open source tools for its workflow. If you haven't installed these
 * Open a terminal and install the Node.Js dependencies by running ```npm install``` in your project directory.
 * Install client side dependencies with bower by running ```bower install``` in your project directory.
 
+Several things happened happened when you can the commands. `npm` installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. `bower` installed some predefined javascript dependencies for use on your site. This is what was installed:
+
+* onMediaQuery
+* picturefill
+* svg4everybody
+* normalize-css
+* skeletor.browsehappy,
+* skeletor.sass.utilities,
+* skeletor.sass.helpers,
+* skeletor.util.componentLoader
+
+You can continue to use bower to install vendor plugins
+
 ## Config
 
 Before you get started, you will need to update some config options for gulp. Open the config file that is here:
@@ -29,14 +42,16 @@ skeletor
 |   |-- config.js
 ```
 
-* ```localHostname = 'localhost.com'``` Change to your local website that is running if you want to proxy it to browser-sync.
-* ```siteShortname = 'skeletor'``` Used for JavaScript optimaztion and should match your main.js namespace: ```skeletor.main.js```
-* ```baseLayoutDir = './'``` Where your index or base layout file is.
-* ```baseLayoutFile = 'index.html'``` The filename of your index or base layout. This is used to change the script included from src to dist.
-* ```views = './*.html'``` Where browser-sync should watch for HTML changes
-* ```src = './Static/src``` Where the sass and js src are, probably don't need to change
-* ```dist = './Static/dist'``` Where everything gets compiled to, probably don't need to change
-* ```assets = './Static/assets'``` Where fonts and images, and other static assets should go. Probably don't need to change.
+```javascript
+var localHostname = 'localhost.com', // Change to your local website that is running if you want to proxy it to browser-sync.
+    siteShortname = 'skeletor', // Used for JavaScript optimaztion and should match your main.js namespace:  skeletor.main.js
+    baseLayoutDir = './', // Where your index or base layout file is.
+    baseLayoutFile = 'index.html', // The filename of your index or base layout. This is used to change the script included from src to dist.
+    views = './*.html', // Where browser-sync should watch for HTML changes
+    src = './Static/src', // Where the sass and js src are, probably don't need to change
+    dist = './Static/dist', // Where everything gets compiled to, probably don't need to change
+    assets = './Static/assets' // Where fonts and images, and other static assets should go. Probably don't need to change.
+```
 
 ## Starting
 
