@@ -65,20 +65,45 @@
 &lt;li&gt;Install Bower &lt;code&gt;npm install -g bower&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
+&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Fork/Clone/Download the &lt;a href=&#34;https://github.com/delphic-digital/Skeletor&#34;&gt;Skeletor&lt;/a&gt; repository into your machine.&lt;/li&gt;
 &lt;li&gt;Open a terminal and install the Node.Js dependencies by running &lt;code&gt;npm install&lt;/code&gt; in your project directory.&lt;/li&gt;
 &lt;li&gt;Install client side dependencies with bower by running &lt;code&gt;bower install&lt;/code&gt; in your project directory.&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;gulp&lt;/code&gt; to automatically open a new Skeletor project running on &lt;code&gt;localhost:3000&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;config&#34;&gt;Config&lt;/h2&gt;
+
+&lt;p&gt;Before you get started, you will need to update some config options for gulp. Open the config file that is here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
+|-- gulp
+|   |-- config.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;localHostname = &#39;localhost.com&#39;&lt;/code&gt; Change to your local website that is running if you want to proxy it to browser-sync.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteShortname = &#39;skeletor&#39;&lt;/code&gt; Used for JavaScript optimaztion and should match your main.js namespace: &lt;code&gt;skeletor.main.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;baseLayoutDir = &#39;./&#39;&lt;/code&gt; Where your index or base layout file is.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;baseLayoutFile = &amp;quot;index.html&amp;quot;&lt;/code&gt; The filename of your index or base layout. This is used to change the script included from src to dist.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;views = &#39;./*.html&#39;&lt;/code&gt; Where browser-sync should watch for HTML changes&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src = &#39;./Static/src&lt;/code&gt; Where the sass and js src are, probably don&amp;rsquo;t need to change&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dist = &#39;./Static/dist&#39;&lt;/code&gt; Where everything gets compiled to, probably don&amp;rsquo;t need to change&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assets = &#39;./Static/assets&#39;&lt;/code&gt; Where fonts and images, and other static assets should go. Probably don&amp;rsquo;t need to change.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;starting&#34;&gt;Starting&lt;/h2&gt;
+
+&lt;p&gt;Run gulp to automatically open a new Skeletor project running on localhost:3000.&lt;/p&gt;
 
 &lt;h2 id=&#34;file-structure&#34;&gt;File structure&lt;/h2&gt;
 
 &lt;p&gt;Compiled and production-ready code can be found in the &lt;code&gt;dist&lt;/code&gt; directory. The &lt;code&gt;src&lt;/code&gt; directory contains development code.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
+|-- Gulp
+|   |-- # Lots of gulp stuff
 |-- Static
 |   |-- assets
 |   |   |-- images
