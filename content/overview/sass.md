@@ -8,15 +8,15 @@ weight: 4
 ---
 
 
-Skeletor comes with Sass and a structure setup. See the comments in each partial for more detailed explanations. Also, some sass helper libraries and plugins are preinstalled:
-* [Susy](http://susy.oddbird.net), great for robust grids
-* [Bourbon](http://bourbon.io), awesome set of mixins
-* [Breakpoint](http://breakpoint-sass.com), used with a custom mixin to make breakpoints easy
-* [Node Sass Globbing](https://github.com/britco/node-sass-globbing), so you don't have to add custom partials to the main.scss
+Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:
+ * [Susy](http://susy.oddbird.net), great for robust grids
+ * [Bourbon](http://bourbon.io), awesome set of mixins
+ * [Breakpoint](http://breakpoint-sass.com), used with a custom mixin to make breakpoints easy
+ * [Node Sass Globbing](https://github.com/britco/node-sass-globbing), so you don't have to add custom partials to the main.scss. Be careful of casscading rules!!
 
 ## Brief overview of structure
 
-#### `main.scss`
+### `main.scss`
 
 The `main.scss` file contains the entries points for the sites sass partials.
 
@@ -34,33 +34,51 @@ The `main.scss` file contains the entries points for the sites sass partials.
  * [SMACSS](https://smacss.com), css design process
  * [BEM](https://css-tricks.com/bem-101), naming convention for CSS.
 
-Check out these practices in an example component here for guidance: [```src/scss/partials/components/navigation/_main.scss```](src/scss/partials/components/navigation/_main.scss/).
 
 _Notes_
 
-We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class:
+We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.
 
-```sass
+```scss
 .main-nav {
 	/* Mobile main nav styles */
-}
 
-@include breakpoint($medium){
-	.main-nav {
-		/* Tablet main nav styles */
+	&__list {
+
 	}
+
+	&__item {
+
+	}
+
+	@include breakpoint($medium){
+
+		&__list {
+
+		}
+
+		&__item {
+
+		}
+	}
+
 }
-````
+```
 
 instead of
 
-```sass
+
+```scss
 .main-nav {
-	/* Mobile main nav styles */
-	@include breakpoint($medium){
-		/* Tablet main nav styles */
+
+	@include breakpoint($medium){}
+
+	&__list {
+		@include breakpoint($medium){}
+	}
+
+	&__item {
+		@include breakpoint($medium){}
 	}
 }
-````
-
-which doesn't work as well on large scale sites with more complex modules. This is also in the example component.
+```
