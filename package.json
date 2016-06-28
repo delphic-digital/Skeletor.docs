@@ -1,0 +1,24 @@
+{
+  "name": "skeletor.docs",
+  "version": "1.0.0",
+  "description": "Documentation site for Skeletor",
+  "main": "index.js",
+  "dependencies": {
+    "hugo-lunr": "git+https://github.com/gwleclerc/hugo-lunr.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "hugo-lunr -o dist/lunr.json -l yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delphic-digital/Skeletor.docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delphic-digital/Skeletor.docs/issues"
+  },
+  "homepage": "https://github.com/delphic-digital/Skeletor.docs#readme"
+}

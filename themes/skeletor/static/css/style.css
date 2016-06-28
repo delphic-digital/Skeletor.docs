@@ -193,6 +193,7 @@ pre code {
 	height: 100%;
 }
 
+ul.sidebar-menu { float: left; }
 
 ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 	margin: 0;
@@ -382,7 +383,7 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 
 
 /* Search form */
-
+.search { float: left; position: relative; }
 .search-input {
   float:left;
   font-size: 16px;
@@ -413,60 +414,44 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+   color: #fff;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+   color: #fff;
 }
 
-:-ms-input-placeholder {  
-   color: #fff;  
+:-ms-input-placeholder {
+   color: #fff;
 }
 
 /* Search result wrapper */
-.algolia-autocomplete {
+.search-results-container {
+	position: fixed;
+	top: 77px;
+	left: 0;
 	width: 100%;
+	background: #37474f;
+	box-shadow: 0 1.5px 3px rgba(0,0,0,.24),0 3px 8px rgba(0,0,0,.05);
 }
 
-/* List of search results */
-.aa-dropdown-menu {
-	box-sizing: border-box;
-	width: 100%;
-	background-color: #FFFFFF;
-	border: 1px solid #B3B3B3;
-	padding: 0;
+.search-results {
+	display: none;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	font-size: 11px;
+}
+
+.search-result {
+/* 	margin-left: 280px; */
+}
+
+.search-results a {
 	font-size: 16px;
-	margin: 4 0 4 0;
 }
 
-/* Highlight terms in search result headers */
-.algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
-	background-color: #F04A9C;
-}
-
-/* Highlight terms in search result body */
-.algolia-docsearch-suggestion--highlight {
-	color: #F04A9C;
-	font-weight: 900;
-}
-
-/* Currently selected search result */
-.aa-cursor .algolia-docsearch-suggestion--content {
-	color: inherit;
-}
-
-.aa-cursor .algolia-docsearch-suggestion {
-	background: #EFEFEF;
-	color: #353B44;
-}
-
-.algolia-docsearch-suggestion {
-	font-size: 16px;
-	color: #9AA2AB;
-}
-
-.algolia-docsearch-suggestion--category-header,
-.algolia-docsearch-suggestion--subcategory-column {
-	display: none !important;
+.search-highlight {
+	display: inline-block;
+	background: red;
 }

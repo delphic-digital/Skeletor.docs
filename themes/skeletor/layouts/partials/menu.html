@@ -1,8 +1,6 @@
-<!--sidebar start-->
 <aside>
 	<div id="sidebar" class="nav-collapse">
 		{{ partial "logo.html" . }}
-		<!-- sidebar menu start-->
 		<ul class="sidebar-menu">
 			{{ $currentNode := . }}
 			{{ range .Site.Menus.main }}
@@ -29,10 +27,7 @@
 			  {{end}}
 			  </li>
 		  {{end}}
-
 		</ul>
-		<!-- sidebar menu end-->
 		{{ partial "search.html" . }}
 	</div>
 </aside>
-<!--sidebar end-->
