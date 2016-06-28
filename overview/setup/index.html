@@ -212,6 +212,21 @@
 <li>Install client side dependencies with bower by running <code>bower install</code> in your project directory.</li>
 </ul>
 
+<p>Several things happened happened when you can the commands. <code>npm</code> installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. <code>bower</code> installed some predefined javascript dependencies for use on your site. This is what was installed:</p>
+
+<ul>
+<li>onMediaQuery</li>
+<li>picturefill</li>
+<li>svg4everybody</li>
+<li>normalize-css</li>
+<li>skeletor.browsehappy,</li>
+<li>skeletor.sass.utilities,</li>
+<li>skeletor.sass.helpers,</li>
+<li>skeletor.util.componentLoader</li>
+</ul>
+
+<p>You can continue to use bower to install vendor plugins</p>
+
 <h2 id="config">Config</h2>
 
 <p>Before you get started, you will need to update some config options for gulp. Open the config file that is here:</p>
@@ -221,16 +236,15 @@
 |   |-- config.js
 </code></pre>
 
-<ul>
-<li><code>localHostname = 'localhost.com'</code> Change to your local website that is running if you want to proxy it to browser-sync.</li>
-<li><code>siteShortname = 'skeletor'</code> Used for JavaScript optimaztion and should match your main.js namespace: <code>skeletor.main.js</code></li>
-<li><code>baseLayoutDir = './'</code> Where your index or base layout file is.</li>
-<li><code>baseLayoutFile = 'index.html'</code> The filename of your index or base layout. This is used to change the script included from src to dist.</li>
-<li><code>views = './*.html'</code> Where browser-sync should watch for HTML changes</li>
-<li><code>src = './Static/src</code> Where the sass and js src are, probably don&rsquo;t need to change</li>
-<li><code>dist = './Static/dist'</code> Where everything gets compiled to, probably don&rsquo;t need to change</li>
-<li><code>assets = './Static/assets'</code> Where fonts and images, and other static assets should go. Probably don&rsquo;t need to change.</li>
-</ul>
+<pre><code class="language-javascript">var localHostname = 'localhost.com', // Change to your local website that is running if you want to proxy it to browser-sync.
+    siteShortname = 'skeletor', // Used for JavaScript optimaztion and should match your main.js namespace:  skeletor.main.js
+    baseLayoutDir = './', // Where your index or base layout file is.
+    baseLayoutFile = 'index.html', // The filename of your index or base layout. This is used to change the script included from src to dist.
+    views = './*.html', // Where browser-sync should watch for HTML changes
+    src = './Static/src', // Where the sass and js src are, probably don't need to change
+    dist = './Static/dist', // Where everything gets compiled to, probably don't need to change
+    assets = './Static/assets' // Where fonts and images, and other static assets should go. Probably don't need to change.
+</code></pre>
 
 <h2 id="starting">Starting</h2>
 
