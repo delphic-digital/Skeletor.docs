@@ -15,45 +15,37 @@
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a power framework designed as an easy starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices in mind. Skeletor makes use of the latest and greatest technology with performance always in mind.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as an easy starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
 
-&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+&lt;p&gt;Skeletor tries to achieve a very minimalistic design to remain as flexible as possible. Everything included is very basic architectural and skeleton code to give you a headstart. There isn&amp;rsquo;t much templated code, but there are the tools in place to quickly prototype up something. This framework is meant for intermediate to advanced front end developers.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Command Line Interface (CLI)&lt;/li&gt;
-&lt;li&gt;Scaffold new projects&lt;/li&gt;
-&lt;li&gt;Image and SVG optimization&lt;/li&gt;
-&lt;li&gt;Sass compilation and minification
+&lt;h3 id=&#34;what-s-included&#34;&gt;What&amp;rsquo;s included?&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Built in support for:
+&lt;li&gt;&lt;strong&gt;Gulp&lt;/strong&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://susy.oddbird.net/&#34;&gt;Susy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://bourbon.io/&#34;&gt;Bourbon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://breakpoint-sass.com/&#34;&gt;Breakpoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tasks for everything from compiling Sass to live browser reloading.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sass&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Folder stucture with predefined partials.&lt;/li&gt;
+&lt;li&gt;Globbling to automatically include component partials.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Javascript AMD modules and optimization with requirejs&lt;/li&gt;
-&lt;li&gt;Bower for client side package management&lt;/li&gt;
-&lt;li&gt;Zurb Foundation &lt;em&gt;like&lt;/em&gt; JavaScript framework&lt;/li&gt;
-&lt;li&gt;Live reloading during development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RequireJS module loading for easy dependency management.&lt;/li&gt;
+&lt;li&gt;Extensible JavaScript framework like Zurb&amp;rsquo;s Foundation or Twitter Bootstrap.&lt;/li&gt;
+&lt;li&gt;Compatible component plugins.&lt;/li&gt;
+&lt;li&gt;Bower for vendor package management.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;get-started&#34;&gt;Get started&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;setup&#34;&gt;Setup&lt;/a&gt; &amp;mdash; Project setup&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;usage&#34;&gt;Usage&lt;/a&gt; &amp;mdash; How to use Skeletor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;css&#34;&gt;CSS&lt;/a&gt; &amp;mdash; How to use CSS in Skeletor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;javascript&#34;&gt;JavaScript&lt;/a&gt; &amp;mdash; How to use JavaScript in Skeletor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;sprites&#34;&gt;Sprites&lt;/a&gt; &amp;mdash; How to create Sprites in Skeletor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;styleguide&#34;&gt;Styleguide&lt;/a&gt; &amp;mdash; How to create a styleguide in Skeletor&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;h4 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h4&gt;
 
-&lt;p&gt;This repository gets updated as more best practices or discoveries are implemented.&lt;/p&gt;
+&lt;p&gt;This project and site gets updated as more best practices or discoveries are implemented.&lt;/p&gt;
 </description>
     </item>
     
@@ -225,11 +217,11 @@ require.config({
     </item>
     
     <item>
-      <title>CSS</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/css/</link>
+      <title>Sass</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/css/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with Sass and a structure setup. See the comments in each partial for more detailed explanations. Also, some sass helper libraries and plugins are preinstalled:
