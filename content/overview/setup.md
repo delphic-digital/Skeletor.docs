@@ -112,5 +112,3 @@ skeletor
 |-- README.md
 
 ```
-
-Next: see [Usage](usage) for explanation of `gulp` command
