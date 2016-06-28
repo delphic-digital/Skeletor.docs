@@ -13,12 +13,34 @@ Skeletor uses open source tools for its workflow. If you haven't installed these
 * Install Gulp ```npm install --g gulp-cli```
 * Install Bower ```npm install -g bower```
 
-## Quick Start
+## Installing
 
 * Fork/Clone/Download the [Skeletor](https://github.com/delphic-digital/Skeletor) repository into your machine.
 * Open a terminal and install the Node.Js dependencies by running ```npm install``` in your project directory.
 * Install client side dependencies with bower by running ```bower install``` in your project directory.
-* Run ```gulp``` to automatically open a new Skeletor project running on ```localhost:3000```.
+
+## Config
+
+Before you get started, you will need to update some config options for gulp. Open the config file that is here:
+
+```bash
+skeletor
+|-- gulp
+|   |-- config.js
+```
+
+* ```localHostname = 'localhost.com'``` Change to your local website that is running if you want to proxy it to browser-sync.
+* ```siteShortname = 'skeletor'``` Used for JavaScript optimaztion and should match your main.js namespace: ```skeletor.main.js```
+* ```baseLayoutDir = './'``` Where your index or base layout file is.
+* ```baseLayoutFile = "index.html"``` The filename of your index or base layout. This is used to change the script included from src to dist.
+* ```views = './*.html'``` Where browser-sync should watch for HTML changes
+* ```src = './Static/src``` Where the sass and js src are, probably don't need to change
+* ```dist = './Static/dist'``` Where everything gets compiled to, probably don't need to change
+* ```assets = './Static/assets'``` Where fonts and images, and other static assets should go. Probably don't need to change.
+
+## Starting
+
+Run gulp to automatically open a new Skeletor project running on localhost:3000.
 
 ## File structure
 
@@ -26,6 +48,8 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 
 ```bash
 skeletor
+|-- Gulp
+|   |-- # Lots of gulp stuff
 |-- Static
 |   |-- assets
 |   |   |-- images
