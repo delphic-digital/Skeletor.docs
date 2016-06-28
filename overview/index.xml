@@ -86,7 +86,7 @@
 &lt;li&gt;&lt;code&gt;localHostname = &#39;localhost.com&#39;&lt;/code&gt; Change to your local website that is running if you want to proxy it to browser-sync.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;siteShortname = &#39;skeletor&#39;&lt;/code&gt; Used for JavaScript optimaztion and should match your main.js namespace: &lt;code&gt;skeletor.main.js&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;baseLayoutDir = &#39;./&#39;&lt;/code&gt; Where your index or base layout file is.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;baseLayoutFile = &amp;quot;index.html&amp;quot;&lt;/code&gt; The filename of your index or base layout. This is used to change the script included from src to dist.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;baseLayoutFile = &#39;index.html&#39;&lt;/code&gt; The filename of your index or base layout. This is used to change the script included from src to dist.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;views = &#39;./*.html&#39;&lt;/code&gt; Where browser-sync should watch for HTML changes&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;src = &#39;./Static/src&lt;/code&gt; Where the sass and js src are, probably don&amp;rsquo;t need to change&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;dist = &#39;./Static/dist&#39;&lt;/code&gt; Where everything gets compiled to, probably don&amp;rsquo;t need to change&lt;/li&gt;
