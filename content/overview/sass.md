@@ -2,7 +2,7 @@
 menu:
   main:
     parent: getting started
-title: CSS
+title: Sass
 toc: true
 weight: 4
 ---
