@@ -15,7 +15,6 @@
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/tomorrow-night-bright.min.css' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
 		<link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet">
 	</head>
 
@@ -24,7 +23,14 @@
 		<header>
 			<div class="header-content-wrap">
 			<!-- 	<div class="toggle-nav">Menu</div> -->
+				<div class="header-top-buttons">
+					{{ if .IsPage }}
+						{{ $File := .File }}  {{with $File.Path }}<a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/{{ $File.Dir }}{{ $File.LogicalName }}" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>{{end}}
+					{{ end }}
+					<a title="Search this site" href="" class="js-toggle-search"><i class="zmdi zmdi-search zmdi-hc-lg"></i></a>
+				</div>
 				<h1 class="page-title">{{ .Scratch.Get "title" }}</h1>
+				{{ partial "search.html" . }}
 			</div>
 		</header>
 
@@ -33,6 +39,3 @@
 			{{ partial "toc.html" . }}
 			{{ partial "menu.html" . }}
 			<section class="content-section">
-				<div class="search-results-container">
-					<div class="search-results"></div>
-				</div>
