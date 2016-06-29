@@ -23,29 +23,20 @@ $('#sidebar .sub-menu > a').click(function () {
 	}
 });
 
+$('.js-toggle-search').click(function(e){
+	e.preventDefault();
+	$('.search-form').fadeToggle(150);
+	$('.search-input').focus();
+	$('.search-results-container').hide();
+})
+
 var index,
 		store,
     data = $.getJSON('/lunr.json');
 
-var debounce = function (fn) {
-	var timeout
-	return function () {
-		var args = Array.prototype.slice.call(arguments),
-			ctx = this
-
-		clearTimeout(timeout)
-		timeout = setTimeout(function () {
-			fn.apply(ctx, args)
-		}, 100)
-	}
-}
-
 function getSnippet(str, val){
-	//var splitted = str.substr(0,str.indexOf(val));
 	var first = str.substr(0,str.indexOf(val)).slice(-100);
 	var second = str.substr(str.indexOf(val)+val.length, 100);
-	/*var first = '...'+splitted[0].slice(20);
-	var second = splitted[1]+'...';*/
 	var snippet = '...'+first + '<span class="search-highlight">'+val+'</span>'+second;
 	return snippet;
 }
@@ -58,7 +49,7 @@ index = lunr(function () {
 });
 
 data.then(function(items){
-	store = items
+	store = items;
 	for (item in items) {
 		var doc = {
 			'title': items[item].title,
@@ -81,12 +72,35 @@ $('.search-input').on('keyup', function () {
 	})
 
 	//console.log(results)
-	$('.search-results').show().empty();
+	if(!query || query==''){
+		$('.search-results-container').hide();
+	}else{
+		$('.search-results-container').show();
+		$('.search-results').empty();
+	}
+	var length = results.length;
+
+	if(length==0){
+		$('.search-results-title').html('No Search Results Found')
+	}else{
+		$('.search-results-title').html(length + ' Search Result')
+	}
+
+	if(length>1){
+		$('.search-results-title').append('s');
+	}
+
+
+
 
 	for (i in results){
 		//console.log(results[i].content)
 
-		$('.search-results').append('<div class="search-result"><a href="'+results[i].uri+'" class="search-result__title">'+results[i].title+'</a><div class="search-result__snippet">'+getSnippet(results[i].content, query)+'</div>')
+		$('.search-results').append('<div class="search-result"><a href="'+results[i].uri+'" class="search-result__title">'+results[i].title+'</a><div class="search-result__snippet">'+getSnippet(results[i].content, query)+'</div></div>')
+
+		if(i != results.length-1){
+			$('.search-results').append('<hr>');
+		}
 	}
 
 	/*results.length ?

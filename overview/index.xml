@@ -5,12 +5,13 @@
     <link>https://delphic-digital.github.io/Skeletor.docs/overview/</link>
     <description>Recent content in Overview on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Jun 2016 21:17:50 +0000</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/overview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -52,7 +53,7 @@
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -186,7 +187,7 @@
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -256,7 +257,7 @@ require.config({
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
@@ -341,7 +342,7 @@ require.config({
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
@@ -391,7 +392,7 @@ require.config({
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
       <description>
@@ -451,7 +452,7 @@ require.config({
     <item>
       <title>Styleguide</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jun 2016 21:17:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SC5/sc5-styleguide&#34;&gt;sc5-styleguide&lt;/a&gt;&lt;/p&gt;
