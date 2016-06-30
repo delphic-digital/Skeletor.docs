@@ -20,6 +20,7 @@ Skeletor tries to achieve a very minimalistic design to remain as flexible as po
   * Folder stucture with predefined partials.
   * Globbling to automatically include component partials.
 * __JavaScript__
+	* Context aware component loading for on demand/aync loading
   * RequireJS module loading for easy dependency management.
   * Extensible JavaScript framework like Zurb's Foundation or Twitter Bootstrap.
   * Compatible component plugins.
