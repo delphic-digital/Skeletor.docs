@@ -30,6 +30,11 @@ $('.js-toggle-search').click(function(e){
 	$('.search-results-container').hide();
 })
 
+$('.js-toggle-sidebar').click(function(e){
+	e.preventDefault();
+	$('body').toggleClass('sidebar-toggle');
+})
+
 var index,
 		store,
     data = $.getJSON('/lunr.json');

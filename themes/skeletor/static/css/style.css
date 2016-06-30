@@ -58,6 +58,8 @@ main{
 	color: #fff;
 }
 
+.header-menu-button { display: none; }
+
 .content-section {
 	margin: 0 0 0 260px;
 	padding: 120px 40px;
@@ -517,4 +519,62 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 .search-highlight {
 	display: inline-block;
 	background: red;
+}
+
+@media only screen and (max-width: 1200px)  {
+
+	#sidebar {
+		z-index: 900;
+		margin-top: 0;
+		padding-top: 30px;
+		background: #263238;
+		transform: translate3d(-260px,0,0);
+		transition: transform .25s cubic-bezier(.4,0,.2,1),
+		-webkit-transform .25s cubic-bezier(.4,0,.2,1);
+		box-shadow: 0 1.5px 3px rgba(0,0,0,.3),0 3px 8px rgba(0,0,0,.1);
+	}
+
+	.overlay {
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		z-index: 200;
+		width: 0;
+  	height: 0;
+  	background: rgba(0,0,0,.54);
+  	transition: opacity .25s,width 0s,height 0s;
+	}
+
+	.sidebar-toggle #sidebar {
+		transform: translateZ(0);
+	}
+
+	.sidebar-toggle .overlay {
+		opacity: 1;
+		width: 100%;
+  	height: 100%;
+	}
+
+
+	header h1 {
+		margin-left: 60px;
+	}
+
+	.header-top-buttons { padding-right: 0; }
+
+	.header-menu-button {
+		display: block;
+		position: absolute;
+		left: 20px;
+		top: 18px;
+		font-size: 16px;
+		color: #fff;
+	}
+
+	.content-section {
+		margin: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
 }
