@@ -37,7 +37,7 @@ $('.js-toggle-sidebar').click(function(e){
 
 var index,
 		store,
-    data = $.getJSON('/lunr.json');
+    data = $.getJSON(window.baseurl+'/lunr.json');
 
 function getSnippet(str, val){
 	var first = str.substr(0,str.indexOf(val)).slice(-100);

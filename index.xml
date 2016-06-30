@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,7 +66,7 @@
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -200,7 +200,7 @@
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -270,7 +270,7 @@ require.config({
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
@@ -355,7 +355,7 @@ require.config({
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
@@ -605,7 +605,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
       <description>
@@ -665,7 +665,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Styleguide</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</link>
-      <pubDate>Thu, 30 Jun 2016 15:44:19 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SC5/sc5-styleguide&#34;&gt;sc5-styleguide&lt;/a&gt;&lt;/p&gt;
