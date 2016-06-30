@@ -418,26 +418,30 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 	box-shadow: 0 1.5px 3px rgba(0,0,0,.24),0 3px 8px rgba(0,0,0,.05);
 }
 
+.search-form-content {
+	position: relative;
+	margin: 12px auto 0;
+	width: 100%;
+	max-width: 1200px;
+}
+
 .search-form-close {
 	position: absolute;
-	right: 20px;
-	top: 18px;
+	left: 20px;
+	top: 7px;
 	color: #fff;
 }
 
 
 .search-input {
 	display: block;
-	margin: 12px auto 0;
-	width: 100%;
-  max-width: 1200px;
-  font-size: 16px;;
-  padding: 5px 10px;
-  background: 0 0;
-  text-align: left;
-  color: #fff;
-  border: 0;
- /* border-bottom: 1px solid #999b9d;*/
+	margin: 0 0 0 60px;
+	padding: 5px 10px;
+	font-size: 16px;
+	text-align: left;
+	color: #fff;
+	border: 0;
+	background: none;
 }
 
 .search-input:focus {
