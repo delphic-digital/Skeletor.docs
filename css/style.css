@@ -477,7 +477,7 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 .search-results-container {
 	display: none;
 	position: fixed;
-	top: 100px;
+	top: 60px;
 	left: 0;
 	width: 100%;
 	background: #37474f;
@@ -502,13 +502,16 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 }
 
 .search-result {
+	display: block;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 10px 20px;
+	color: #fff;
 }
 
-.search-results a {
+.search-result__title {
 	font-size: 16px;
+	color: #a466dc;
 }
 
 .search-highlight {
