@@ -12,5 +12,6 @@ install:
     - go get -u -v github.com/spf13/hugo
 before_script:
     - hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
+    - npm run index
 script:
     - ./deploy.sh
