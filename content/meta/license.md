@@ -1,7 +1,6 @@
 ---
 aliases:
 - /license/
-date: 2013-07-01
 menu:
   main:
     parent: about
@@ -9,7 +8,7 @@ title: License
 weight: 50
 ---
 
-Skeletor is relased under the BSD 3-Clause License.
+Skeletor is released under the BSD 3-Clause License.
 
 ## The BSD 3-Clause License
 https://opensource.org/licenses/BSD-3-Clause
