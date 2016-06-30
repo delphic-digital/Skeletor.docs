@@ -7,12 +7,12 @@ title: Creating a plugin
 weight: 5
 ---
 
-Creating a plugin for Skeletor is easy. There is a plugin factory included in `Skeletor.core`,
+Creating a plugin for Skeletor is easy. There is a plugin factory included in `Skeletor.core`.
 
 
 ## Requirements
 
-* Skeletor.core
+* Skeletor.core (included in Skeletor by default)
 
 
 ## Usage
@@ -27,130 +27,127 @@ The plugin factory requires a few things to be defined in your plugin prior to c
 ## Creating your plugin
 
 
-Let's look at an example. In this example, we're going to create a `button` plugin. To do so, we will use the following code:
+Here is an example of creating a `breadcrumb` plugin.
 
 ```
-define(
-	[
-		'$',
-		'plugin'
-	],
-	function($, Plugin) {
-		function Button(element, options) {
-			Button.__super__.call(this, element, options, Button.DEFAULTS);
-		}
+//skeletor.breadcrumb.js
 
-		Button.VERSION = '0.0.1';
+define(['jquery', 'skeletor.core'],function ($, Skeletor){
+    function Breadcrumb(element, options) {
+        Breadcrumb.__super__.call(this, element, options, Breadcrumb.DEFAULTS);
 
-		Button.DEFAULTS = {
-			cssClass = 'button'
-		};
+        Breadcrumb.VERSION = '0.0.1';
 
-		Plugin.create('button', Button, {
-			_init: function(element) {
-			}
-		});
-	}
-)
+        Breadcrumb.DEFAULTS = {
+          cssClass = 'breadcrumb'
+        };
+
+        Skeletor.Plugin.create('breadcrumb', Breadcrumb, {
+            _init: function(element) {
+            	this.$element = $(element);
+            }
+        });
+    }
+})
 ```
 
-First, we declare a `Button` constructor, and VERSION and DEFAULTS properties. We then invoke the static `Plugin.create` function. Through prototypal inheritance, this function extends the `Button` prototype with the `Plugin` prototype. Additionally, it creates our Zepto plugin interface.
+First, we declare a `Breadcrumb` constructor, and VERSION and DEFAULTS properties. We then invoke the static `Skeletor.Plugin.create` function for Skeletor's core. Through prototypal inheritance, this function extends the `Breadcrumb` prototype with the `Plugin` prototype. Additionally, it creates our jQuery plugin interface.
 
-To create a button instance, you merely need to use:
+To create a breadcrumb instance, you merely need to use:
 
 ```
-$('<button />').button();
+var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'));
 ```
 
-## The Plugin factory method
+## Passing options to a plugin.
 
-Extends a plugin using the `Plugin` prototype.
+You can extend the default options on plugin in typical jQuery format. Pass your options as the second argument.
 
-| Parameter&nbsp;name | Description |
-|----------------|-------------|
-| **name** | The name of the plugin, in lowercase. |
-| **ctor** | The constructor of the plugin we want to extend. |
-| **prototype** | Additional methods we want to extend onto our plugin's prototype. The prototype must declare an _init function, which is used for plugin construction. |
+```
+var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'), {
+   size: 'large',
+   spacer: '|'
+});
+```
 
-See the example above for usage.
+Your options are passed through to the `options` object inside your plugin and extend the defaults. you can also overwrite the defaults.
+
+```
+//skeletor.breadcrumb.js
+
+define(['jquery', 'skeletor.core'],function ($, Skeletor){
+    function Breadcrumb(element, options) {
+        Breadcrumb.__super__.call(this, element, options, Breadcrumb.DEFAULTS);
+
+        Breadcrumb.VERSION = '0.0.1';
+
+        Breadcrumb.DEFAULTS = {
+          cssClass = 'breadcrumb'
+        };
+
+        Skeletor.Plugin.create('breadcrumb', Breadcrumb, {
+            _init: function(element) {
+            	this.$element = $(element);
+            	console.log(this.options.cssClass)
+            	console.log(this.options.spacer)
+            	console.log(this.options.large)
+            }
+        });
+    }
+})
+```
+
 
 ## Invoking methods on a plugin.
 
 The plugin factory facilitates invoking methods via the plugin interface. This means that once a plugin is initialized, public methods can be invoked by passing the name of the method as the first parameter to the plugin function.
 
-Public methods are methods defined on the object passed into the `Plugin.create` factory method that aren't preceded by an *underscore* character. Methods preceded by an *underscore* are considered private methods.
+Public methods are methods defined on the object passed into the `Skeletor.Plugin.create` factory method that aren't preceded by an *underscore* character. Methods preceded by an *underscore* are considered private methods.
 
-Using our `button` example above, here's what public methods would look like:
-
-```
-define(
-	[
-		'$',
-		'plugin'
-	],
-	function($, Plugin) {
-		function Button(element, options) {
-			Button.__super__.call(this, element, options, Button.DEFAULTS);
-		}
-
-		Button.VERSION = '0.0.1';
-
-		Button.DEFAULTS = {
-			cssClass = 'button'
-		};
-
-		Plugin.create('button', Button, {
-			_init: function(element) {
-				this.$element = $(element);
-			},
-			enable: function() {
-				this.$element.removeAttr('disabled');
-			},
-			disable: function() {
-				this.$element.attr('disabled', 'disabled');
-			},
-			isEnabled: function() {
-				return !this.$element[0].hasAttribute('disabled');
-			}
-		});
-	}
-)
-```
-
-In the above example, the `enable` and `disable` functions are public. To invoke the method, simply pass the method name into the plugin function:
+Using our `breadcrumb` example above, here's what public methods would look like:
 
 ```
-var $button = $('<button />').button();
+//skeletor.breadcrumb.js
 
-$button.button('disable');
+define(['jquery', 'skeletor.core'],function ($, Skeletor){
+    function Breadcrumb(element, options) {
+        Breadcrumb.__super__.call(this, element, options, Breadcrumb.DEFAULTS);
+
+        Breadcrumb.VERSION = '0.0.1';
+
+        Breadcrumb.DEFAULTS = {
+          cssClass = 'breadcrumb'
+        };
+
+        Skeletor.Plugin.create('breadcrumb', Breadcrumb, {
+            _init: function(element) {
+                this.$element = $(element);
+            },
+            enable: function() {
+                this.$element.removeAttr('disabled');
+            },
+            disable: function() {
+                this.$element.attr('disabled', 'disabled');
+            },
+            isEnabled: function() {
+                return !this.$element[0].hasAttribute('disabled');
+            }
+        });
+    }
+})
 ```
 
-### Method return values
-
-It's important to note that there's some specific behaviour around invoking methods that return a value when using a single element vs. a set of elements.
-
-When invoking a method against a single element, and when that method returns a value, the value will be returned as expected.
+In the above example, the `enable` and `disable` functions are public. To invoke the method, simply call it on the saved instance:
 
 ```
-var $button = $('<button />').button();
+var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'));
 
-var enabled = $button.button('isEnabled'); // returns true
+$breadcrumb.disable();
 ```
-
-When invoking a method against a set of elements, and when that method returns a value, the original set of elements will be returned.
-
-```
-var $buttons = $('.lots-of-buttons').button();
-
-var enabled = $buttons.button('isEnabled'); // returns original set of elements
-```
-
-This behaviour is intentional, as it's assumed that it's unlikely to be calling methods against a set of elements when expecting primitive values in return.
-
 
 ## Usage with Skeletor boilerplate
 
-The plugin can be installed using bower:
+First register your plugin with the bower registery, and then install it with bower in your Skeletor project:
 
 ```bash
 bower install plugin
@@ -161,7 +158,14 @@ Skeletor will auto wire it up to your require.js config file:
 ```
 {
   'paths': {
-    'plugin': 'bower_components/plugin'
+    'skeletor.breadcrumb': 'bower_components/skeletor.breadcrumb'
   }
 }
+```
+
+Now you can load it with requirejs in a component:
+```
+require(['skeletor.breadcrumb'], function(){
+    var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'));
+})
 ```
