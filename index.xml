@@ -23,12 +23,12 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as an easy starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as a starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
 
 &lt;p&gt;Skeletor tries to achieve a very minimalistic design to remain as flexible as possible. Everything included is very basic skeleton code to give you a headstart. There isn&amp;rsquo;t much templated code, but there are the tools and patterns in place to quickly prototype anything. This framework is meant for intermediate to advanced front end developers.&lt;/p&gt;
 
@@ -66,7 +66,7 @@
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -87,20 +87,7 @@
 &lt;li&gt;Install client side dependencies with bower by running &lt;code&gt;bower install&lt;/code&gt; in your project directory.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Several things happened happened when you can the commands. &lt;code&gt;npm&lt;/code&gt; installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. &lt;code&gt;bower&lt;/code&gt; installed some predefined javascript dependencies for use on your site. This is what was installed:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;onMediaQuery&lt;/li&gt;
-&lt;li&gt;picturefill&lt;/li&gt;
-&lt;li&gt;svg4everybody&lt;/li&gt;
-&lt;li&gt;normalize-css&lt;/li&gt;
-&lt;li&gt;skeletor.browsehappy,&lt;/li&gt;
-&lt;li&gt;skeletor.sass.utilities,&lt;/li&gt;
-&lt;li&gt;skeletor.sass.helpers,&lt;/li&gt;
-&lt;li&gt;skeletor.util.componentLoader&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can continue to use bower to install vendor plugins&lt;/p&gt;
+&lt;p&gt;Several things happened happened when you can the commands. &lt;code&gt;npm&lt;/code&gt; installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. &lt;code&gt;bower&lt;/code&gt; installed client side dependencies.&lt;/p&gt;
 
 &lt;h2 id=&#34;config&#34;&gt;Config&lt;/h2&gt;
 
@@ -108,7 +95,7 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
 |-- gulp
-|   |-- config.js
+    |-- config.js
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var localHostname = &#39;localhost.com&#39;, // Change to your local website that is running if you want to proxy it to browser-sync.
@@ -200,7 +187,7 @@
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -270,7 +257,7 @@ require.config({
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
@@ -355,40 +342,33 @@ require.config({
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jquery.com&#34;&gt;jQuery&lt;/a&gt;, version 2 is automatically loaded for browsers that support it, otherwise the 1.9 branch is used.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://browser-update.org&#34;&gt;Browser Update&lt;/a&gt;, tell your audience to use modern browsers!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/JoshBarr/on-media-query&#34;&gt;onMediaQuery&lt;/a&gt;, works great for triggering javascript for certain media queries.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/scottjehl/picturefill&#34;&gt;Picturefill&lt;/a&gt;, there is no reason to not use reponsive images.&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
 |-- Static
-|   |-- dist
-|   |   |-- js
-|   |       |-- # Your custom javascript is compiled here
-|   |       |-- lib
-|   |           |-- require.js
-|   |-- src
-|       |-- js
-|           |-- skeletor.main.js
-|           |-- components
-|           |-- common.js
-|           |-- common
-|               |-- # Your common components here
+    |-- dist
+    |   |-- js
+    |       |-- # Your custom javascript is compiled here
+    |       |-- lib
+    |           |-- require.js
+    |-- src
+        |-- js
+            |-- skeletor.main.js
+            |-- components
+            |-- common.js
+            |-- common
+                |-- # Your common components here
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;the-main-file&#34;&gt;The main file&lt;/h4&gt;
+&lt;h4 id=&#34;the-main-file&#34;&gt;The main file:&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
@@ -540,7 +520,7 @@ define(function (require){
 */
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Inside &lt;code&gt;components&lt;/code&gt; will be your sites custom requirejs modules.&lt;/p&gt;
+&lt;p&gt;Inside the &lt;code&gt;components&lt;/code&gt; folder will be your sites custom requirejs modules.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;common&lt;/code&gt; folder contains components that are global and be concatenated to the main.js when built.&lt;/li&gt;
@@ -566,6 +546,42 @@ define(function (require){
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-component&#34;&gt;Example component&lt;/h3&gt;
+
+&lt;p&gt;Components are standard requirejs modules, and it&amp;rsquo;s syntax should be used. For components that rely on the &lt;code&gt;data-component&lt;/code&gt; loading, they require a couple functions.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;An init function for encapsulating code that should run with the component is fully loaded into the page.&lt;/li&gt;
+&lt;li&gt;A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define([&#39;jquery&#39;],function($) {
+
+    return {
+        settings: {
+            $elm : $(&#39;.js-skeletor-guy&#39;)
+        },
+
+        init: function() {
+
+            console.log(&#39;Init skeletor guy.&#39;);
+
+            this.settings.$elm.click(function(){
+                $(this).toggleClass(&#39;flipped&#39;)
+            })
+        },
+
+        destroy: function() {
+            console.log(&#39;Destroy skeletor guy.&#39;)
+        }
+
+    };
+
+});
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -772,7 +788,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
       <description>
@@ -832,7 +848,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Styleguide</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</link>
-      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 19:27:46 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SC5/sc5-styleguide&#34;&gt;sc5-styleguide&lt;/a&gt;&lt;/p&gt;
@@ -875,6 +891,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
       <description>&lt;ul&gt;
 &lt;li&gt;Accordion component&lt;/li&gt;
 &lt;li&gt;Tab component&lt;/li&gt;
+&lt;li&gt;Accessibility enhancements&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -227,20 +227,7 @@
 <li>Install client side dependencies with bower by running <code>bower install</code> in your project directory.</li>
 </ul>
 
-<p>Several things happened happened when you can the commands. <code>npm</code> installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. <code>bower</code> installed some predefined javascript dependencies for use on your site. This is what was installed:</p>
-
-<ul>
-<li>onMediaQuery</li>
-<li>picturefill</li>
-<li>svg4everybody</li>
-<li>normalize-css</li>
-<li>skeletor.browsehappy,</li>
-<li>skeletor.sass.utilities,</li>
-<li>skeletor.sass.helpers,</li>
-<li>skeletor.util.componentLoader</li>
-</ul>
-
-<p>You can continue to use bower to install vendor plugins</p>
+<p>Several things happened happened when you can the commands. <code>npm</code> installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. <code>bower</code> installed client side dependencies.</p>
 
 <h2 id="config">Config</h2>
 
@@ -248,7 +235,7 @@
 
 <pre><code class="language-bash">skeletor
 |-- gulp
-|   |-- config.js
+    |-- config.js
 </code></pre>
 
 <pre><code class="language-javascript">var localHostname = 'localhost.com', // Change to your local website that is running if you want to proxy it to browser-sync.

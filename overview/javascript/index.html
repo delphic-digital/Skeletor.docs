@@ -64,9 +64,10 @@
 <ul>
 <li><a href="#brief-overview-of-structure">Brief overview of structure</a>
 <ul>
-<li><a href="#the-main-file">The main file</a></li>
+<li><a href="#the-main-file">The main file:</a></li>
 </ul></li>
 <li><a href="#data-component-and-data-component-context">data-component and data-component-context</a></li>
+<li><a href="#example-component">Example component</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -217,33 +218,26 @@
 
 <p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a>. Some JS helper libraries and plugins are included automatically:</p>
 
-<ul>
-<li><a href="https://jquery.com">jQuery</a>, version 2 is automatically loaded for browsers that support it, otherwise the 1.9 branch is used.</li>
-<li><a href="http://browser-update.org">Browser Update</a>, tell your audience to use modern browsers!</li>
-<li><a href="https://github.com/JoshBarr/on-media-query">onMediaQuery</a>, works great for triggering javascript for certain media queries.</li>
-<li><a href="https://github.com/scottjehl/picturefill">Picturefill</a>, there is no reason to not use reponsive images.</li>
-</ul>
-
 <h3 id="brief-overview-of-structure">Brief overview of structure</h3>
 
 <pre><code class="language-bash">skeletor
 |-- Static
-|   |-- dist
-|   |   |-- js
-|   |       |-- # Your custom javascript is compiled here
-|   |       |-- lib
-|   |           |-- require.js
-|   |-- src
-|       |-- js
-|           |-- skeletor.main.js
-|           |-- components
-|           |-- common.js
-|           |-- common
-|               |-- # Your common components here
+    |-- dist
+    |   |-- js
+    |       |-- # Your custom javascript is compiled here
+    |       |-- lib
+    |           |-- require.js
+    |-- src
+        |-- js
+            |-- skeletor.main.js
+            |-- components
+            |-- common.js
+            |-- common
+                |-- # Your common components here
 
 </code></pre>
 
-<h4 id="the-main-file">The main file</h4>
+<h4 id="the-main-file">The main file:</h4>
 
 <pre><code>// Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
@@ -395,7 +389,7 @@ define(function (require){
 */
 </code></pre>
 
-<p>Inside <code>components</code> will be your sites custom requirejs modules.</p>
+<p>Inside the <code>components</code> folder will be your sites custom requirejs modules.</p>
 
 <ul>
 <li><code>common</code> folder contains components that are global and be concatenated to the main.js when built.</li>
@@ -421,6 +415,42 @@ define(function (require){
 </code></pre>
 
 <p>These components are aynced in after page load and will remain separate modules in the build process.</p>
+
+<h3 id="example-component">Example component</h3>
+
+<p>Components are standard requirejs modules, and it&rsquo;s syntax should be used. For components that rely on the <code>data-component</code> loading, they require a couple functions.</p>
+
+<ol>
+<li>An init function for encapsulating code that should run with the component is fully loaded into the page.</li>
+<li>A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.</li>
+</ol>
+
+<p>Here&rsquo;s an example:</p>
+
+<pre><code>define(['jquery'],function($) {
+
+    return {
+        settings: {
+            $elm : $('.js-skeletor-guy')
+        },
+
+        init: function() {
+
+            console.log('Init skeletor guy.');
+
+            this.settings.$elm.click(function(){
+                $(this).toggleClass('flipped')
+            })
+        },
+
+        destroy: function() {
+            console.log('Destroy skeletor guy.')
+        }
+
+    };
+
+});
+</code></pre>
 
 
 				<div class="footer-panel">
