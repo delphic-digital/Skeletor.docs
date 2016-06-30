@@ -9,32 +9,28 @@ weight: 5
 
 Skeletor comes with a JavaScript structure that utilizes [RequireJS](http://requirejs.org). Some JS helper libraries and plugins are included automatically:
 
-* [jQuery](https://jquery.com), version 2 is automatically loaded for browsers that support it, otherwise the 1.9 branch is used.
-* [Browser Update](http://browser-update.org), tell your audience to use modern browsers!
-* [onMediaQuery](https://github.com/JoshBarr/on-media-query), works great for triggering javascript for certain media queries.
-* [Picturefill](https://github.com/scottjehl/picturefill), there is no reason to not use reponsive images.
 
 ### Brief overview of structure
 
 ```bash
 skeletor
 |-- Static
-|   |-- dist
-|   |   |-- js
-|   |       |-- # Your custom javascript is compiled here
-|   |       |-- lib
-|   |           |-- require.js
-|   |-- src
-|       |-- js
-|           |-- skeletor.main.js
-|           |-- components
-|           |-- common.js
-|           |-- common
-|               |-- # Your common components here
+    |-- dist
+    |   |-- js
+    |       |-- # Your custom javascript is compiled here
+    |       |-- lib
+    |           |-- require.js
+    |-- src
+        |-- js
+            |-- skeletor.main.js
+            |-- components
+            |-- common.js
+            |-- common
+                |-- # Your common components here
 
 ```
 
-#### The main file
+#### The main file:
 
 ```
 // Automatically injected Bower JS dependencies via bowerRequireJS
@@ -192,7 +188,7 @@ commonComponents  = require('./components/common');
 */
 ```
 
-Inside `components` will be your sites custom requirejs modules.
+Inside the `components` folder will be your sites custom requirejs modules.
 
 * `common` folder contains components that are global and be concatenated to the main.js when built.
 * other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
@@ -218,3 +214,38 @@ To load a JS component for only certain media queries, add a data-component-cont
 ```
 
 These components are aynced in after page load and will remain separate modules in the build process.
+
+### Example component
+
+Components are standard requirejs modules, and it's syntax should be used. For components that rely on the `data-component` loading, they require a couple functions.
+
+1. An init function for encapsulating code that should run with the component is fully loaded into the page.
+2. A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.
+
+Here's an example:
+
+```
+define(['jquery'],function($) {
+
+	return {
+		settings: {
+			$elm : $('.js-skeletor-guy')
+		},
+
+		init: function() {
+
+			console.log('Init skeletor guy.');
+
+			this.settings.$elm.click(function(){
+				$(this).toggleClass('flipped')
+			})
+		},
+
+		destroy: function() {
+			console.log('Destroy skeletor guy.')
+		}
+
+	};
+
+});
+```

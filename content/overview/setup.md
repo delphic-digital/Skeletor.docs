@@ -19,18 +19,7 @@ Skeletor uses open source tools for its workflow. If you haven't installed these
 * Open a terminal and install the Node.Js dependencies by running ```npm install``` in your project directory.
 * Install client side dependencies with bower by running ```bower install``` in your project directory.
 
-Several things happened happened when you can the commands. `npm` installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. `bower` installed some predefined javascript dependencies for use on your site. This is what was installed:
-
-* onMediaQuery
-* picturefill
-* svg4everybody
-* normalize-css
-* skeletor.browsehappy,
-* skeletor.sass.utilities,
-* skeletor.sass.helpers,
-* skeletor.util.componentLoader
-
-You can continue to use bower to install vendor plugins
+Several things happened happened when you can the commands. `npm` installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. `bower` installed client side dependencies.
 
 ## Config
 
@@ -39,7 +28,7 @@ Before you get started, you will need to update some config options for gulp. Op
 ```bash
 skeletor
 |-- gulp
-|   |-- config.js
+    |-- config.js
 ```
 
 ```javascript

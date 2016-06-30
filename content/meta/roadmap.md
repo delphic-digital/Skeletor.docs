@@ -14,3 +14,4 @@ weight: 20
 
 * Accordion component
 * Tab component
+* Accessibility enhancements
