@@ -245,10 +245,50 @@
 
 <h4 id="the-main-file">The main file</h4>
 
+<pre><code>// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+// endbower
+
+//Need a second config so the optimizer doesn't try and evaluate the browser only jquery conditional.
+
+require.config({
+    paths: {
+        'jquery': (document.addEventListener) ?
+            ['//code.jquery.com/jquery-3.0.0.min']
+            :
+            ['//code.jquery.com/jquery-1.12.4.min'] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+    }
+})
+
+define(function (require){
+
+    var componentLoader   = require('skeletor.util.componentLoader'),
+        browsehappy       = require('skeletor.browsehappy'),
+        svg4everybody     = require('svg4everybody'),
+        picturefill       = require('picturefill'),
+        commonComponents  = require('./components/common');
+
+    svg4everybody();
+    commonComponents.init();
+
+});
+</code></pre>
+
 <div class="admonition note">
 	<p class="admonition-title">Note</p>
 	<p class="admonition-desc">Be sure to rename <code>skeletor.main.js</code> with your siteShortName config setting, so it&rsquo;s <code>nameofsite.main.js</code>. Also update this name in your base template.</p>
 </div>
+
+<p>Here is a breakdown of all the parts:</p>
 
 <pre><code>/*---------------------------------------------------------------
 
@@ -357,9 +397,10 @@ define(function (require){
 
 <p>Inside <code>components</code> will be your sites custom requirejs modules.</p>
 
-<pre><code>* `common` folder contains components that are global and be concatenated to the main.js when built.
-* other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
-</code></pre>
+<ul>
+<li><code>common</code> folder contains components that are global and be concatenated to the main.js when built.</li>
+<li>other components will be standalone and won&rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.</li>
+</ul>
 
 <h3 id="data-component-and-data-component-context">data-component and data-component-context</h3>
 

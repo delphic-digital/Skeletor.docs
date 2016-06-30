@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,7 +66,7 @@
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -200,7 +200,7 @@
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -270,7 +270,7 @@ require.config({
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
@@ -355,7 +355,7 @@ require.config({
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
@@ -390,10 +390,50 @@ require.config({
 
 &lt;h4 id=&#34;the-main-file&#34;&gt;The main file&lt;/h4&gt;
 
+&lt;pre&gt;&lt;code&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+// endbower
+
+//Need a second config so the optimizer doesn&#39;t try and evaluate the browser only jquery conditional.
+
+require.config({
+    paths: {
+        &#39;jquery&#39;: (document.addEventListener) ?
+            [&#39;//code.jquery.com/jquery-3.0.0.min&#39;]
+            :
+            [&#39;//code.jquery.com/jquery-1.12.4.min&#39;] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+    }
+})
+
+define(function (require){
+
+    var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
+        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
+        svg4everybody     = require(&#39;svg4everybody&#39;),
+        picturefill       = require(&#39;picturefill&#39;),
+        commonComponents  = require(&#39;./components/common&#39;);
+
+    svg4everybody();
+    commonComponents.init();
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;div class=&#34;admonition note&#34;&gt;
 	&lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
 	&lt;p class=&#34;admonition-desc&#34;&gt;Be sure to rename &lt;code&gt;skeletor.main.js&lt;/code&gt; with your siteShortName config setting, so it&amp;rsquo;s &lt;code&gt;nameofsite.main.js&lt;/code&gt;. Also update this name in your base template.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;p&gt;Here is a breakdown of all the parts:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
 
@@ -502,9 +542,10 @@ define(function (require){
 
 &lt;p&gt;Inside &lt;code&gt;components&lt;/code&gt; will be your sites custom requirejs modules.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;* `common` folder contains components that are global and be concatenated to the main.js when built.
-* other components will be standalone and won&#39;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;common&lt;/code&gt; folder contains components that are global and be concatenated to the main.js when built.&lt;/li&gt;
+&lt;li&gt;other components will be standalone and won&amp;rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;data-component-and-data-component-context&#34;&gt;data-component and data-component-context&lt;/h3&gt;
 
@@ -731,7 +772,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
       <description>
@@ -791,7 +832,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Styleguide</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</link>
-      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:46:11 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SC5/sc5-styleguide&#34;&gt;sc5-styleguide&lt;/a&gt;&lt;/p&gt;
