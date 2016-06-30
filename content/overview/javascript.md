@@ -36,9 +36,49 @@ skeletor
 
 #### The main file
 
+```
+// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+	paths: {
+	},
+	packages: [
+
+	],
+	shim: {
+
+	}
+});
+// endbower
+
+//Need a second config so the optimizer doesn't try and evaluate the browser only jquery conditional.
+
+require.config({
+	paths: {
+		'jquery': (document.addEventListener) ?
+			['//code.jquery.com/jquery-3.0.0.min']
+			:
+			['//code.jquery.com/jquery-1.12.4.min'] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+	}
+})
+
+define(function (require){
+
+	var componentLoader   = require('skeletor.util.componentLoader'),
+	    browsehappy       = require('skeletor.browsehappy'),
+	    svg4everybody     = require('svg4everybody'),
+	    picturefill       = require('picturefill'),
+	    commonComponents  = require('./components/common');
+
+	svg4everybody();
+	commonComponents.init();
+
+});
+```
 {{< note title="Note" >}}
 Be sure to rename `skeletor.main.js` with your siteShortName config setting, so it's `nameofsite.main.js`. Also update this name in your base template.
 {{< /note >}}
+
+Here is a breakdown of all the parts:
 
 ```
 /*---------------------------------------------------------------
@@ -154,8 +194,8 @@ commonComponents  = require('./components/common');
 
 Inside `components` will be your sites custom requirejs modules.
 
-	* `common` folder contains components that are global and be concatenated to the main.js when built.
-	* other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
+* `common` folder contains components that are global and be concatenated to the main.js when built.
+* other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
 
 
 ### data-component and data-component-context
