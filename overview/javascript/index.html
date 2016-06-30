@@ -62,7 +62,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#brief-overview-of-structure">Brief overview of structure</a></li>
+<li><a href="#brief-overview-of-structure">Brief overview of structure</a>
+<ul>
+<li><a href="#the-main-file">The main file</a></li>
+</ul></li>
 <li><a href="#data-component-and-data-component-context">data-component and data-component-context</a></li>
 </ul></li>
 </ul></li>
@@ -212,10 +215,10 @@
 
 
 
-<p>Skeletor comes with JavaScript structure using <a href="http://requirejs.org">RequireJS</a>. Some JS helper libraries and plugins are included automatically:</p>
+<p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a>. Some JS helper libraries and plugins are included automatically:</p>
 
 <ul>
-<li><a href="https://jquery.com">jQuery</a>, version 2 is automatically loaded for browers that support it, otherwise the 1.9 branch is used.</li>
+<li><a href="https://jquery.com">jQuery</a>, version 2 is automatically loaded for browsers that support it, otherwise the 1.9 branch is used.</li>
 <li><a href="http://browser-update.org">Browser Update</a>, tell your audience to use modern browsers!</li>
 <li><a href="https://github.com/JoshBarr/on-media-query">onMediaQuery</a>, works great for triggering javascript for certain media queries.</li>
 <li><a href="https://github.com/scottjehl/picturefill">Picturefill</a>, there is no reason to not use reponsive images.</li>
@@ -223,14 +226,140 @@
 
 <h3 id="brief-overview-of-structure">Brief overview of structure</h3>
 
-<ul>
-<li>Inside <code>components</code> will be your sites custom requirejs modules.
+<pre><code class="language-bash">skeletor
+|-- Static
+|   |-- dist
+|   |   |-- js
+|   |       |-- # Your custom javascript is compiled here
+|   |       |-- lib
+|   |           |-- require.js
+|   |-- src
+|       |-- js
+|           |-- skeletor.main.js
+|           |-- components
+|           |-- common.js
+|           |-- common
+|               |-- # Your common components here
 
-<ul>
-<li><code>common</code> folder contains components that are global and be concatenated to the main.js when built.</li>
-<li>other components will be standalone and won&rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.</li>
-</ul></li>
-</ul>
+</code></pre>
+
+<h4 id="the-main-file">The main file</h4>
+
+<div class="admonition note">
+	<p class="admonition-title">Note</p>
+	<p class="admonition-desc">Be sure to rename <code>skeletor.main.js</code> with your siteShortName config setting, so it&rsquo;s <code>nameofsite.main.js</code>. Also update this name in your base template.</p>
+</div>
+
+<pre><code>/*---------------------------------------------------------------
+
+    Here is where bower packages get automatically wired up.
+    You should never edit anything in here manually, unless
+    you need to delete a path.
+
+-----------------------------------------------------------------*/
+
+
+// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+// endbower
+</code></pre>
+
+<pre><code>/*---------------------------------------------------------------
+
+    This is some logic to load different verisons of jquery based
+    on browser support. jQuery 3.x supports IE 9+ only.
+
+-----------------------------------------------------------------*/
+
+
+//Need a second config so the optimizer doesn't try and evaluate the browser only jquery conditional.
+
+require.config({
+    paths: {
+        'jquery': (document.addEventListener) ?
+            ['//code.jquery.com/jquery-3.0.0.min']
+            :
+            ['//code.jquery.com/jquery-1.12.4.min'] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+    }
+})
+
+</code></pre>
+
+<pre><code>/*---------------------------------------------------------------
+
+    Here is where some predownloaded components are already
+    required. These are loaded and initiliazed on page load.
+
+-----------------------------------------------------------------*/
+
+define(function (require){
+
+    var componentLoader   = require('skeletor.util.componentLoader'),
+        browsehappy       = require('skeletor.browsehappy'),
+        svg4everybody     = require('svg4everybody'),
+        picturefill       = require('picturefill'),
+        commonComponents  = require('./components/common');
+
+    svg4everybody();
+    commonComponents.init();
+
+});
+</code></pre>
+
+<p>Here is a breakdown on the preloaded components:</p>
+
+<pre><code>var componentLoader   = require('skeletor.util.componentLoader'),
+/*
+    This is a Skeletor utility that handles component loading
+    throughdata attributes on elements in your html. By loading
+    javascript this way, the component is essitianly loaded
+    &quot;on demand&quot; and loaded only when it's needed. It also supports
+    context, so components can be loaded only on mobile, for example.
+    See below for example's on how to use this.
+*/
+</code></pre>
+
+<pre><code>browsehappy       = require('skeletor.browsehappy')
+/*
+    Detects old versions of browsers and shows a prompt bar for
+    the user to upgrade.
+*/
+</code></pre>
+
+<pre><code>svg4everybody     = require('svg4everybody'),
+/*
+    External SVG spritesheets polyfill. One of Skeletors key features.
+*/
+</code></pre>
+
+<pre><code>picturefill       = require('picturefill'),
+/*
+    Picture element pollyfill. Use picture element and srset without
+    crossbrowser worry.
+*/
+</code></pre>
+
+<pre><code>commonComponents  = require('./components/common');
+/*
+    For your sites custom common (global) components. This is where
+    code lives that you want loaded on every page.
+*/
+</code></pre>
+
+<p>Inside <code>components</code> will be your sites custom requirejs modules.</p>
+
+<pre><code>* `common` folder contains components that are global and be concatenated to the main.js when built.
+* other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
+</code></pre>
 
 <h3 id="data-component-and-data-component-context">data-component and data-component-context</h3>
 

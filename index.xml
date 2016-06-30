@@ -23,14 +23,14 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as an easy starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
 
-&lt;p&gt;Skeletor tries to achieve a very minimalistic design to remain as flexible as possible. Everything included is very basic architectural and skeleton code to give you a headstart. There isn&amp;rsquo;t much templated code, but there are the tools in place to quickly prototype up something. This framework is meant for intermediate to advanced front end developers.&lt;/p&gt;
+&lt;p&gt;Skeletor tries to achieve a very minimalistic design to remain as flexible as possible. Everything included is very basic skeleton code to give you a headstart. There isn&amp;rsquo;t much templated code, but there are the tools and patterns in place to quickly prototype anything. This framework is meant for intermediate to advanced front end developers.&lt;/p&gt;
 
 &lt;h3 id=&#34;what-s-included&#34;&gt;What&amp;rsquo;s included?&lt;/h3&gt;
 
@@ -66,7 +66,7 @@
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -200,7 +200,7 @@
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -270,7 +270,7 @@ require.config({
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
@@ -355,15 +355,15 @@ require.config({
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
 
-&lt;p&gt;Skeletor comes with JavaScript structure using &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
+&lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jquery.com&#34;&gt;jQuery&lt;/a&gt;, version 2 is automatically loaded for browers that support it, otherwise the 1.9 branch is used.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jquery.com&#34;&gt;jQuery&lt;/a&gt;, version 2 is automatically loaded for browsers that support it, otherwise the 1.9 branch is used.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://browser-update.org&#34;&gt;Browser Update&lt;/a&gt;, tell your audience to use modern browsers!&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/JoshBarr/on-media-query&#34;&gt;onMediaQuery&lt;/a&gt;, works great for triggering javascript for certain media queries.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/scottjehl/picturefill&#34;&gt;Picturefill&lt;/a&gt;, there is no reason to not use reponsive images.&lt;/li&gt;
@@ -371,14 +371,140 @@ require.config({
 
 &lt;h3 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Inside &lt;code&gt;components&lt;/code&gt; will be your sites custom requirejs modules.
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
+|-- Static
+|   |-- dist
+|   |   |-- js
+|   |       |-- # Your custom javascript is compiled here
+|   |       |-- lib
+|   |           |-- require.js
+|   |-- src
+|       |-- js
+|           |-- skeletor.main.js
+|           |-- components
+|           |-- common.js
+|           |-- common
+|               |-- # Your common components here
 
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;common&lt;/code&gt; folder contains components that are global and be concatenated to the main.js when built.&lt;/li&gt;
-&lt;li&gt;other components will be standalone and won&amp;rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;the-main-file&#34;&gt;The main file&lt;/h4&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+	&lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
+	&lt;p class=&#34;admonition-desc&#34;&gt;Be sure to rename &lt;code&gt;skeletor.main.js&lt;/code&gt; with your siteShortName config setting, so it&amp;rsquo;s &lt;code&gt;nameofsite.main.js&lt;/code&gt;. Also update this name in your base template.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
+
+    Here is where bower packages get automatically wired up.
+    You should never edit anything in here manually, unless
+    you need to delete a path.
+
+-----------------------------------------------------------------*/
+
+
+// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+// endbower
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
+
+    This is some logic to load different verisons of jquery based
+    on browser support. jQuery 3.x supports IE 9+ only.
+
+-----------------------------------------------------------------*/
+
+
+//Need a second config so the optimizer doesn&#39;t try and evaluate the browser only jquery conditional.
+
+require.config({
+    paths: {
+        &#39;jquery&#39;: (document.addEventListener) ?
+            [&#39;//code.jquery.com/jquery-3.0.0.min&#39;]
+            :
+            [&#39;//code.jquery.com/jquery-1.12.4.min&#39;] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+    }
+})
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
+
+    Here is where some predownloaded components are already
+    required. These are loaded and initiliazed on page load.
+
+-----------------------------------------------------------------*/
+
+define(function (require){
+
+    var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
+        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
+        svg4everybody     = require(&#39;svg4everybody&#39;),
+        picturefill       = require(&#39;picturefill&#39;),
+        commonComponents  = require(&#39;./components/common&#39;);
+
+    svg4everybody();
+    commonComponents.init();
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is a breakdown on the preloaded components:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
+/*
+    This is a Skeletor utility that handles component loading
+    throughdata attributes on elements in your html. By loading
+    javascript this way, the component is essitianly loaded
+    &amp;quot;on demand&amp;quot; and loaded only when it&#39;s needed. It also supports
+    context, so components can be loaded only on mobile, for example.
+    See below for example&#39;s on how to use this.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;browsehappy       = require(&#39;skeletor.browsehappy&#39;)
+/*
+    Detects old versions of browsers and shows a prompt bar for
+    the user to upgrade.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;svg4everybody     = require(&#39;svg4everybody&#39;),
+/*
+    External SVG spritesheets polyfill. One of Skeletors key features.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;picturefill       = require(&#39;picturefill&#39;),
+/*
+    Picture element pollyfill. Use picture element and srset without
+    crossbrowser worry.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;commonComponents  = require(&#39;./components/common&#39;);
+/*
+    For your sites custom common (global) components. This is where
+    code lives that you want loaded on every page.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Inside &lt;code&gt;components&lt;/code&gt; will be your sites custom requirejs modules.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* `common` folder contains components that are global and be concatenated to the main.js when built.
+* other components will be standalone and won&#39;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;data-component-and-data-component-context&#34;&gt;data-component and data-component-context&lt;/h3&gt;
 
@@ -605,7 +731,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
       <description>
@@ -665,7 +791,7 @@ var enabled = $buttons.button(&#39;isEnabled&#39;); // returns original set of e
     <item>
       <title>Styleguide</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</link>
-      <pubDate>Thu, 30 Jun 2016 15:54:24 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 16:42:23 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/styleguide/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SC5/sc5-styleguide&#34;&gt;sc5-styleguide&lt;/a&gt;&lt;/p&gt;
