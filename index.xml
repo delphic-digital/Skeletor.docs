@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Thu, 30 Jun 2016 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,7 +66,7 @@
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Thu, 30 Jun 2016 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -187,7 +187,7 @@
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Thu, 30 Jun 2016 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -257,7 +257,7 @@ require.config({
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Thu, 30 Jun 2016 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
       <description>
@@ -342,7 +342,7 @@ require.config({
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Thu, 30 Jun 2016 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
       <description>
@@ -772,7 +772,7 @@ $breadcrumb.disable();
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Thu, 30 Jun 2016 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
       <description>
@@ -873,12 +873,12 @@ $breadcrumb.disable();
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>
 
-&lt;p&gt;Skeletor is relased under the BSD 3-Clause License.&lt;/p&gt;
+&lt;p&gt;Skeletor is released under the BSD 3-Clause License.&lt;/p&gt;
 
 &lt;h2 id=&#34;the-bsd-3-clause-license&#34;&gt;The BSD 3-Clause License&lt;/h2&gt;
 
