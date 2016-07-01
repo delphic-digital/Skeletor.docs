@@ -101,7 +101,7 @@ $('.search-input').on('keyup', function () {
 	for (i in results){
 		//console.log(results[i].content)
 
-		$('.search-results').append('<a href="'+results[i].uri+'" class="search-result"><div  class="search-result__title">'+results[i].title+'</div><div class="search-result__snippet">'+getSnippet(results[i].content, query)+'</div></a>')
+		$('.search-results').append('<a href="'+window.baseurl+results[i].uri+'" class="search-result"><div  class="search-result__title">'+results[i].title+'</div><div class="search-result__snippet">'+getSnippet(results[i].content, query)+'</div></a>')
 
 		if(i != results.length-1){
 			$('.search-results').append('<hr>');

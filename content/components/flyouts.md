@@ -5,6 +5,7 @@ menu:
     parent: components
 title: Skeletor.flyouts
 weight: 5
+draft: true
 ---
 
 Flyout menu system.
