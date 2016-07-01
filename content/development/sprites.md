@@ -1,10 +1,10 @@
 ---
 menu:
   main:
-    parent: getting started
+    parent: development
 title: Sprites
 toc: true
-weight: 6
+weight: 3
 ---
 Skeletor comes with easy ways to create 3 different types of sprites.
 

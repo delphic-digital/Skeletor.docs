@@ -1,10 +1,10 @@
 ---
 menu:
   main:
-    parent: getting started
+    parent: development
 title: Javascript
 toc: true
-weight: 5
+weight: 1
 ---
 
 Skeletor comes with a JavaScript structure that utilizes [RequireJS](http://requirejs.org). Some JS helper libraries and plugins are included automatically:
