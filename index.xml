@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,7 +66,7 @@
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
@@ -316,7 +316,7 @@ define(function (require){
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -385,7 +385,7 @@ define(function (require){
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -506,7 +506,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>
@@ -566,7 +566,7 @@ define(function (require){
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -639,7 +639,7 @@ require.config({
       <pubDate>Fri, 01 Jul 2016 09:39:50 -0400</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/tutorials/mobile-first-sass/</guid>
-      <description>&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
+      <description>&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
 
@@ -899,7 +899,7 @@ $breadcrumb.disable();
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Fri, 01 Jul 2016 13:59:34 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 14:39:34 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>

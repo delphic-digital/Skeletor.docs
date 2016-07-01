@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jul 2016 09:39:50 -0400</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/tutorials/mobile-first-sass/</guid>
-      <description>&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
+      <description>&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
 
