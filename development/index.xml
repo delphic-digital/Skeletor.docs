@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on The Skeletor Project</title>
+    <link>https://delphic-digital.github.io/Skeletor.docs/development/</link>
+    <description>Recent content in Development on The Skeletor Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Jul 2016 12:58:39 +0000</lastBuildDate>
+    <atom:link href="https://delphic-digital.github.io/Skeletor.docs/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
+
+&lt;h3 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
+|-- Static
+    |-- dist
+    |   |-- js
+    |       |-- # Your custom javascript is compiled here
+    |       |-- lib
+    |           |-- require.js
+    |-- src
+        |-- js
+            |-- skeletor.main.js
+            |-- components
+            |-- common.js
+            |-- common
+                |-- # Your common components here
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;the-main-file&#34;&gt;The main file:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+// endbower
+
+//Need a second config so the optimizer doesn&#39;t try and evaluate the browser only jquery conditional.
+
+require.config({
+    paths: {
+        &#39;jquery&#39;: (document.addEventListener) ?
+            [&#39;//code.jquery.com/jquery-3.0.0.min&#39;]
+            :
+            [&#39;//code.jquery.com/jquery-1.12.4.min&#39;] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+    }
+})
+
+define(function (require){
+
+    var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
+        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
+        svg4everybody     = require(&#39;svg4everybody&#39;),
+        picturefill       = require(&#39;picturefill&#39;),
+        commonComponents  = require(&#39;./components/common&#39;);
+
+    svg4everybody();
+    commonComponents.init();
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+	&lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
+	&lt;p class=&#34;admonition-desc&#34;&gt;Be sure to rename &lt;code&gt;skeletor.main.js&lt;/code&gt; with your siteShortName config setting, so it&amp;rsquo;s &lt;code&gt;nameofsite.main.js&lt;/code&gt;. Also update this name in your base template.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here is a breakdown of all the parts:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
+
+    Here is where bower packages get automatically wired up.
+    You should never edit anything in here manually, unless
+    you need to delete a path.
+
+-----------------------------------------------------------------*/
+
+
+// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+// endbower
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
+
+    This is some logic to load different verisons of jquery based
+    on browser support. jQuery 3.x supports IE 9+ only.
+
+-----------------------------------------------------------------*/
+
+
+//Need a second config so the optimizer doesn&#39;t try and evaluate the browser only jquery conditional.
+
+require.config({
+    paths: {
+        &#39;jquery&#39;: (document.addEventListener) ?
+            [&#39;//code.jquery.com/jquery-3.0.0.min&#39;]
+            :
+            [&#39;//code.jquery.com/jquery-1.12.4.min&#39;] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
+    }
+})
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;/*---------------------------------------------------------------
+
+    Here is where some predownloaded components are already
+    required. These are loaded and initiliazed on page load.
+
+-----------------------------------------------------------------*/
+
+define(function (require){
+
+    var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
+        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
+        svg4everybody     = require(&#39;svg4everybody&#39;),
+        picturefill       = require(&#39;picturefill&#39;),
+        commonComponents  = require(&#39;./components/common&#39;);
+
+    svg4everybody();
+    commonComponents.init();
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is a breakdown on the preloaded components:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
+/*
+    This is a Skeletor utility that handles component loading
+    throughdata attributes on elements in your html. By loading
+    javascript this way, the component is essitianly loaded
+    &amp;quot;on demand&amp;quot; and loaded only when it&#39;s needed. It also supports
+    context, so components can be loaded only on mobile, for example.
+    See below for example&#39;s on how to use this.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;browsehappy       = require(&#39;skeletor.browsehappy&#39;)
+/*
+    Detects old versions of browsers and shows a prompt bar for
+    the user to upgrade.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;svg4everybody     = require(&#39;svg4everybody&#39;),
+/*
+    External SVG spritesheets polyfill. One of Skeletors key features.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;picturefill       = require(&#39;picturefill&#39;),
+/*
+    Picture element pollyfill. Use picture element and srset without
+    crossbrowser worry.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;commonComponents  = require(&#39;./components/common&#39;);
+/*
+    For your sites custom common (global) components. This is where
+    code lives that you want loaded on every page.
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Inside the &lt;code&gt;components&lt;/code&gt; folder will be your sites custom requirejs modules.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;common&lt;/code&gt; folder contains components that are global and be concatenated to the main.js when built.&lt;/li&gt;
+&lt;li&gt;other components will be standalone and won&amp;rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;data-component-and-data-component-context&#34;&gt;data-component and data-component-context&lt;/h3&gt;
+
+&lt;p&gt;To load a JS component, use the sample syntax in &lt;code&gt;component-example.js&lt;/code&gt;, and add a data-component to the html element that should load the JS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&amp;gt;
+&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot;&amp;gt;
+    Lorem ipsum
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded only in tablet and desktop --&amp;gt;
+&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot; data-component-context=&amp;quot;tablet,desktop&amp;quot;&amp;gt;
+    Lorem ipsum
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-component&#34;&gt;Example component&lt;/h3&gt;
+
+&lt;p&gt;Components are standard requirejs modules, and it&amp;rsquo;s syntax should be used. For components that rely on the &lt;code&gt;data-component&lt;/code&gt; loading, they require a couple functions.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;An init function for encapsulating code that should run with the component is fully loaded into the page.&lt;/li&gt;
+&lt;li&gt;A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define([&#39;jquery&#39;],function($) {
+
+    return {
+        settings: {
+            $elm : $(&#39;.js-skeletor-guy&#39;)
+        },
+
+        init: function() {
+
+            console.log(&#39;Init skeletor guy.&#39;);
+
+            this.settings.$elm.click(function(){
+                $(this).toggleClass(&#39;flipped&#39;)
+            })
+        },
+
+        destroy: function() {
+            console.log(&#39;Destroy skeletor guy.&#39;)
+        }
+
+    };
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sass</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:
+ * &lt;a href=&#34;http://susy.oddbird.net&#34;&gt;Susy&lt;/a&gt;, great for robust grids
+ * &lt;a href=&#34;http://bourbon.io&#34;&gt;Bourbon&lt;/a&gt;, awesome set of mixins
+ * &lt;a href=&#34;http://breakpoint-sass.com&#34;&gt;Breakpoint&lt;/a&gt;, used with a custom mixin to make breakpoints easy
+ * &lt;a href=&#34;https://github.com/britco/node-sass-globbing&#34;&gt;Node Sass Globbing&lt;/a&gt;, so you don&amp;rsquo;t have to add custom partials to the main.scss. Be careful of casscading rules!!&lt;/p&gt;
+
+&lt;h2 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h2&gt;
+
+&lt;h3 id=&#34;main-scss&#34;&gt;&lt;code&gt;main.scss&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;main.scss&lt;/code&gt; file contains the entries points for the sites sass partials.&lt;/p&gt;
+
+&lt;h4 id=&#34;partials&#34;&gt;&lt;code&gt;partials&lt;/code&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_settings.scss&lt;/code&gt; site settings defined here, it contains variables for all of the colors, font stacks, breakpoints, and sizing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;base&lt;/code&gt; holds global and base styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;components&lt;/code&gt; holds site components styles. Any partial added here is automatically imported with the globbing plugin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layout&lt;/code&gt; holds global layout styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;utilites&lt;/code&gt; holds mixins and SASS utilites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;overview-of-best-practices-for-writing-sass-css-with-skeletor&#34;&gt;Overview of best practices for writing SASS/CSS with Skeletor&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.zell-weekeat.com/how-to-write-mobile-first-css&#34;&gt;Mobile First&lt;/a&gt;, mobile first approach&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://smacss.com&#34;&gt;SMACSS&lt;/a&gt;, css design process&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://css-tricks.com/bem-101&#34;&gt;BEM&lt;/a&gt;, naming convention for CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Notes&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
+    /* Mobile main nav styles */
+
+    &amp;amp;__list {
+
+    }
+
+    &amp;amp;__item {
+
+    }
+
+    @include breakpoint($medium){
+
+        &amp;amp;__list {
+
+        }
+
+        &amp;amp;__item {
+
+        }
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;instead of&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
+
+    @include breakpoint($medium){}
+
+    &amp;amp;__list {
+        @include breakpoint($medium){}
+    }
+
+    &amp;amp;__item {
+        @include breakpoint($medium){}
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sprites</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with easy ways to create 3 different types of sprites.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Ensighten/grunt-spritesmith&#34;&gt;Spritesmith&lt;/a&gt; to create a bitmap spritesheet with retina support;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jkphl/svg-sprite&#34;&gt;svg-sprite&lt;/a&gt; to create a vector spritesheet made out of svgs.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.sgalinski.de/toolchain/gulp-inline-svg&#34;&gt;gulp-inline-svg&lt;/a&gt; to inline an svg directory in the CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop a png and corresponding retina (image@2x.png naming convention) in &lt;code&gt;src/sprites/bitmaps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/bitmap.spritesheet.png&lt;/code&gt; and retina sheet at &lt;code&gt;/Static/assets/spritesheets/bitmap.spritesheet@2x.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Use this mixin in your sass to include sprite with retina&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sass&#34;&gt;@include retina-sprite($nameOfImage-group); //The `-group` after the name is important.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/vector&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/vector.spritesheet.svg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now utilize the svg use tag in your html!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;svg&amp;gt;
+    &amp;lt;use xlink:href=&amp;quot;/Static/assets/spritesheets/vector.spritesheet.svg#nameOfImage&amp;quot;&amp;gt;&amp;lt;/use&amp;gt;
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;inline&#34;&gt;Inline&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/inline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the sass partial at &lt;code&gt;src/scss/partials/base/_svg.scss&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now inline your svg into your sass with a mixin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/**
+@include inline-svg($nameOfImage, $fillColorString)
+**/
+
+@include inline-svg($plus, #CCC)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -64,287 +64,11 @@
     </item>
     
     <item>
-      <title>Setup</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
-      
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
-      <description>
-
-&lt;p&gt;Skeletor uses open source tools for its workflow. If you haven&amp;rsquo;t installed these requirements please do so.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Install Gulp &lt;code&gt;npm install --g gulp-cli&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Install Bower &lt;code&gt;npm install -g bower&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fork/Clone/Download the &lt;a href=&#34;https://github.com/delphic-digital/Skeletor&#34;&gt;Skeletor&lt;/a&gt; repository into your machine.&lt;/li&gt;
-&lt;li&gt;Open a terminal and install the Node.Js dependencies by running &lt;code&gt;npm install&lt;/code&gt; in your project directory.&lt;/li&gt;
-&lt;li&gt;Install client side dependencies with bower by running &lt;code&gt;bower install&lt;/code&gt; in your project directory.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Several things happened happened when you can the commands. &lt;code&gt;npm&lt;/code&gt; installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. &lt;code&gt;bower&lt;/code&gt; installed client side dependencies.&lt;/p&gt;
-
-&lt;h2 id=&#34;config&#34;&gt;Config&lt;/h2&gt;
-
-&lt;p&gt;Before you get started, you will need to update some config options for gulp. Open the config file that is here:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
-|-- gulp
-    |-- config.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var localHostname = &#39;localhost.com&#39;, // Change to your local website that is running if you want to proxy it to browser-sync.
-    siteShortname = &#39;skeletor&#39;, // Used for JavaScript optimaztion and should match your main.js namespace:  skeletor.main.js
-    baseLayoutDir = &#39;./&#39;, // Where your index or base layout file is.
-    baseLayoutFile = &#39;index.html&#39;, // The filename of your index or base layout. This is used to change the script included from src to dist.
-    views = &#39;./*.html&#39;, // Where browser-sync should watch for HTML changes
-    src = &#39;./Static/src&#39;, // Where the sass and js src are, probably don&#39;t need to change
-    dist = &#39;./Static/dist&#39;, // Where everything gets compiled to, probably don&#39;t need to change
-    assets = &#39;./Static/assets&#39; // Where fonts and images, and other static assets should go. Probably don&#39;t need to change.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;starting&#34;&gt;Starting&lt;/h2&gt;
-
-&lt;p&gt;Run gulp to automatically open a new Skeletor project running on localhost:3000.&lt;/p&gt;
-
-&lt;h2 id=&#34;file-structure&#34;&gt;File structure&lt;/h2&gt;
-
-&lt;p&gt;Compiled and production-ready code can be found in the &lt;code&gt;dist&lt;/code&gt; directory. The &lt;code&gt;src&lt;/code&gt; directory contains development code.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
-|-- Gulp
-|   |-- # Lots of gulp stuff
-|-- Static
-|   |-- assets
-|   |   |-- images
-|   |   |   |-- # Your image files
-|   |   |-- spritesheets
-|   |       |-- # Your spritesheets get generated here
-|   |-- dist
-|   |   |-- css
-|   |   |   |-- main.css # Your Sass gets compiled here
-|   |   |-- js
-|   |   |   |-- lib
-|   |   |   |   |-- require.js
-|   |-- src
-|       |-- js
-|       |   |-- skeletor.main.js
-|       |   |-- components
-|       |   |   |-- common.js
-|       |   |   |-- common
-|       |   |   |   |-- # Your common components here
-|       |-- scss
-|       |   |-- main.scss
-|       |   |-- partials
-|       |       |-- _settings.scss
-|       |       |-- base
-|       |       |   |-- _buttons.scss
-|       |       |   |-- _fonts.scss
-|       |       |   |-- _inputs.scss
-|       |       |   |-- _scaffolding.scss
-|       |       |   |-- _sprites.scss
-|       |       |   |-- _svg.scss
-|       |       |   |-- _typography.scss
-|       |       |-- components
-|       |       |   |-- # Your sites Sass components
-|       |       |-- layout
-|       |           |-- _footer.scss
-|       |           |-- _forms.scss
-|       |           |-- _header.scss
-|       |           |-- _sidebar.scss
-|       |-- sprites
-|       |   |-- bitmap.example.handlebars
-|       |   |-- inline.mustache
-|       |   |-- vector.example.html
-|       |   |-- bitmaps
-|       |   |   |-- # Your bitmap (png/jpg) sprites
-|       |   |-- inline
-|       |   |   |-- # Your CSS sprites
-|       |   |-- vectors
-|       |       |-- # Your svg spritesheet sprites
-|       |-- styleguide
-|           |-- styleguide_overrides.css
-|           |-- styleguide_variables.css
-|-- .bowerrc
-|-- .editorconfig
-|-- .gitignore
-|-- bower.json
-|-- config.json
-|-- gulpfile.js
-|-- index.html
-|-- package.json
-|-- README.md
-
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Usage</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
-      
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
-      <description>
-
-&lt;p&gt;Skeletor uses gulp as a task runner and several commands are available to use:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# run Gulp in development mode (does not minify your JS for quicker response),
-# start the server, open a new browser tab at localhost:3000 and start watching files.
-# JS script include path is updated to src directory in base template.
-# Sass is automatically compiled, and sprites are automatically generated.
-$ gulp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# run Gulp in production mode (runs your JS code through the requirejs optimizer),
-# JS path is updated to dist directory in base template,
-# will not start any server or watch.
-$ gulp build
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;installing-components&#34;&gt;Installing components&lt;/h2&gt;
-
-&lt;p&gt;Skeletor integrates with bower package management very nicely for vendor components. See &lt;a href=&#34;http://bower.io&#34;&gt;http://bower.io&lt;/a&gt; for more info.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# install a vendor component with bower
-# main component files are automatically wired up to Skeletor
-# js main is added to requirejs paths config.
-# css/scss is added to main.scss
-$ bower install &amp;lt;package&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There is some automation that happens when you use bower. Please take care to understand these steps.
-The files are determined by what&amp;rsquo;s declared as a &lt;strong&gt;main&lt;/strong&gt; file by the &lt;code&gt;bower.json&lt;/code&gt; spec.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;JavaScript files are added to the requirejs paths config:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
-require.config({
-    paths: {
-        &amp;quot;bower-example&amp;quot;: &amp;quot;../../../bower_components/bower-example&amp;quot;,
-    },
-    packages: [
-
-    ],
-    shim: {
-
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;CSS/SASS files are added to the main.scss:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;// Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
-// bower:css
-@import &amp;quot;../../../bower_components/bower-example.css&amp;quot;;
-// endbower
-
-// Automatically injected Bower SCSS dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import &amp;quot;../../../bower_components/bower-example.scss&amp;quot;;
-// endbower
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If something goes wrong (correct files aren&amp;rsquo;t wired up), check the components bower.json file to make sure the &lt;code&gt;&amp;quot;main&amp;quot;: []&lt;/code&gt; is declared correctly. If not, you can add an override for your project&amp;rsquo;s &lt;code&gt;bower.json&lt;/code&gt; file. See &lt;a href=&#34;https://github.com/ck86/main-bower-files#overrides-options&#34;&gt;https://github.com/ck86/main-bower-files#overrides-options&lt;/a&gt; for how to do this.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Sass</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
-      
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sass/</guid>
-      <description>
-
-&lt;p&gt;Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:
- * &lt;a href=&#34;http://susy.oddbird.net&#34;&gt;Susy&lt;/a&gt;, great for robust grids
- * &lt;a href=&#34;http://bourbon.io&#34;&gt;Bourbon&lt;/a&gt;, awesome set of mixins
- * &lt;a href=&#34;http://breakpoint-sass.com&#34;&gt;Breakpoint&lt;/a&gt;, used with a custom mixin to make breakpoints easy
- * &lt;a href=&#34;https://github.com/britco/node-sass-globbing&#34;&gt;Node Sass Globbing&lt;/a&gt;, so you don&amp;rsquo;t have to add custom partials to the main.scss. Be careful of casscading rules!!&lt;/p&gt;
-
-&lt;h2 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h2&gt;
-
-&lt;h3 id=&#34;main-scss&#34;&gt;&lt;code&gt;main.scss&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;main.scss&lt;/code&gt; file contains the entries points for the sites sass partials.&lt;/p&gt;
-
-&lt;h4 id=&#34;partials&#34;&gt;&lt;code&gt;partials&lt;/code&gt;&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;_settings.scss&lt;/code&gt; site settings defined here, it contains variables for all of the colors, font stacks, breakpoints, and sizing.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;base&lt;/code&gt; holds global and base styles.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;components&lt;/code&gt; holds site components styles. Any partial added here is automatically imported with the globbing plugin&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;layout&lt;/code&gt; holds global layout styles.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;utilites&lt;/code&gt; holds mixins and SASS utilites.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;overview-of-best-practices-for-writing-sass-css-with-skeletor&#34;&gt;Overview of best practices for writing SASS/CSS with Skeletor&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.zell-weekeat.com/how-to-write-mobile-first-css&#34;&gt;Mobile First&lt;/a&gt;, mobile first approach&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://smacss.com&#34;&gt;SMACSS&lt;/a&gt;, css design process&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://css-tricks.com/bem-101&#34;&gt;BEM&lt;/a&gt;, naming convention for CSS.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Notes&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
-    /* Mobile main nav styles */
-
-    &amp;amp;__list {
-
-    }
-
-    &amp;amp;__item {
-
-    }
-
-    @include breakpoint($medium){
-
-        &amp;amp;__list {
-
-        }
-
-        &amp;amp;__item {
-
-        }
-    }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;instead of&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
-
-    @include breakpoint($medium){}
-
-    &amp;amp;__list {
-        @include breakpoint($medium){}
-    }
-
-    &amp;amp;__item {
-        @include breakpoint($medium){}
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Javascript</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
+      <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/javascript/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
@@ -586,6 +310,342 @@ define(function (require){
     </item>
     
     <item>
+      <title>Sass</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:
+ * &lt;a href=&#34;http://susy.oddbird.net&#34;&gt;Susy&lt;/a&gt;, great for robust grids
+ * &lt;a href=&#34;http://bourbon.io&#34;&gt;Bourbon&lt;/a&gt;, awesome set of mixins
+ * &lt;a href=&#34;http://breakpoint-sass.com&#34;&gt;Breakpoint&lt;/a&gt;, used with a custom mixin to make breakpoints easy
+ * &lt;a href=&#34;https://github.com/britco/node-sass-globbing&#34;&gt;Node Sass Globbing&lt;/a&gt;, so you don&amp;rsquo;t have to add custom partials to the main.scss. Be careful of casscading rules!!&lt;/p&gt;
+
+&lt;h2 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h2&gt;
+
+&lt;h3 id=&#34;main-scss&#34;&gt;&lt;code&gt;main.scss&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;main.scss&lt;/code&gt; file contains the entries points for the sites sass partials.&lt;/p&gt;
+
+&lt;h4 id=&#34;partials&#34;&gt;&lt;code&gt;partials&lt;/code&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_settings.scss&lt;/code&gt; site settings defined here, it contains variables for all of the colors, font stacks, breakpoints, and sizing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;base&lt;/code&gt; holds global and base styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;components&lt;/code&gt; holds site components styles. Any partial added here is automatically imported with the globbing plugin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layout&lt;/code&gt; holds global layout styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;utilites&lt;/code&gt; holds mixins and SASS utilites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;overview-of-best-practices-for-writing-sass-css-with-skeletor&#34;&gt;Overview of best practices for writing SASS/CSS with Skeletor&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.zell-weekeat.com/how-to-write-mobile-first-css&#34;&gt;Mobile First&lt;/a&gt;, mobile first approach&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://smacss.com&#34;&gt;SMACSS&lt;/a&gt;, css design process&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://css-tricks.com/bem-101&#34;&gt;BEM&lt;/a&gt;, naming convention for CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Notes&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
+    /* Mobile main nav styles */
+
+    &amp;amp;__list {
+
+    }
+
+    &amp;amp;__item {
+
+    }
+
+    @include breakpoint($medium){
+
+        &amp;amp;__list {
+
+        }
+
+        &amp;amp;__item {
+
+        }
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;instead of&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
+
+    @include breakpoint($medium){}
+
+    &amp;amp;__list {
+        @include breakpoint($medium){}
+    }
+
+    &amp;amp;__item {
+        @include breakpoint($medium){}
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setup</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
+      <description>
+
+&lt;p&gt;Skeletor uses open source tools for its workflow. If you haven&amp;rsquo;t installed these requirements please do so.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Gulp &lt;code&gt;npm install --g gulp-cli&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install Bower &lt;code&gt;npm install -g bower&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fork/Clone/Download the &lt;a href=&#34;https://github.com/delphic-digital/Skeletor&#34;&gt;Skeletor&lt;/a&gt; repository into your machine.&lt;/li&gt;
+&lt;li&gt;Open a terminal and install the Node.Js dependencies by running &lt;code&gt;npm install&lt;/code&gt; in your project directory.&lt;/li&gt;
+&lt;li&gt;Install client side dependencies with bower by running &lt;code&gt;bower install&lt;/code&gt; in your project directory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Several things happened happened when you can the commands. &lt;code&gt;npm&lt;/code&gt; installed all the nodejs dependencies needed for gulp to do its work. You only have to run this once. &lt;code&gt;bower&lt;/code&gt; installed client side dependencies.&lt;/p&gt;
+
+&lt;h2 id=&#34;config&#34;&gt;Config&lt;/h2&gt;
+
+&lt;p&gt;Before you get started, you will need to update some config options for gulp. Open the config file that is here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
+|-- gulp
+    |-- config.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var localHostname = &#39;localhost.com&#39;, // Change to your local website that is running if you want to proxy it to browser-sync.
+    siteShortname = &#39;skeletor&#39;, // Used for JavaScript optimaztion and should match your main.js namespace:  skeletor.main.js
+    baseLayoutDir = &#39;./&#39;, // Where your index or base layout file is.
+    baseLayoutFile = &#39;index.html&#39;, // The filename of your index or base layout. This is used to change the script included from src to dist.
+    views = &#39;./*.html&#39;, // Where browser-sync should watch for HTML changes
+    src = &#39;./Static/src&#39;, // Where the sass and js src are, probably don&#39;t need to change
+    dist = &#39;./Static/dist&#39;, // Where everything gets compiled to, probably don&#39;t need to change
+    assets = &#39;./Static/assets&#39; // Where fonts and images, and other static assets should go. Probably don&#39;t need to change.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;starting&#34;&gt;Starting&lt;/h2&gt;
+
+&lt;p&gt;Run gulp to automatically open a new Skeletor project running on localhost:3000.&lt;/p&gt;
+
+&lt;h2 id=&#34;file-structure&#34;&gt;File structure&lt;/h2&gt;
+
+&lt;p&gt;Compiled and production-ready code can be found in the &lt;code&gt;dist&lt;/code&gt; directory. The &lt;code&gt;src&lt;/code&gt; directory contains development code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;skeletor
+|-- Gulp
+|   |-- # Lots of gulp stuff
+|-- Static
+|   |-- assets
+|   |   |-- images
+|   |   |   |-- # Your image files
+|   |   |-- spritesheets
+|   |       |-- # Your spritesheets get generated here
+|   |-- dist
+|   |   |-- css
+|   |   |   |-- main.css # Your Sass gets compiled here
+|   |   |-- js
+|   |   |   |-- lib
+|   |   |   |   |-- require.js
+|   |-- src
+|       |-- js
+|       |   |-- skeletor.main.js
+|       |   |-- components
+|       |   |   |-- common.js
+|       |   |   |-- common
+|       |   |   |   |-- # Your common components here
+|       |-- scss
+|       |   |-- main.scss
+|       |   |-- partials
+|       |       |-- _settings.scss
+|       |       |-- base
+|       |       |   |-- _buttons.scss
+|       |       |   |-- _fonts.scss
+|       |       |   |-- _inputs.scss
+|       |       |   |-- _scaffolding.scss
+|       |       |   |-- _sprites.scss
+|       |       |   |-- _svg.scss
+|       |       |   |-- _typography.scss
+|       |       |-- components
+|       |       |   |-- # Your sites Sass components
+|       |       |-- layout
+|       |           |-- _footer.scss
+|       |           |-- _forms.scss
+|       |           |-- _header.scss
+|       |           |-- _sidebar.scss
+|       |-- sprites
+|       |   |-- bitmap.example.handlebars
+|       |   |-- inline.mustache
+|       |   |-- vector.example.html
+|       |   |-- bitmaps
+|       |   |   |-- # Your bitmap (png/jpg) sprites
+|       |   |-- inline
+|       |   |   |-- # Your CSS sprites
+|       |   |-- vectors
+|       |       |-- # Your svg spritesheet sprites
+|       |-- styleguide
+|           |-- styleguide_overrides.css
+|           |-- styleguide_variables.css
+|-- .bowerrc
+|-- .editorconfig
+|-- .gitignore
+|-- bower.json
+|-- config.json
+|-- gulpfile.js
+|-- index.html
+|-- package.json
+|-- README.md
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sprites</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
+      <description>
+
+&lt;p&gt;Skeletor comes with easy ways to create 3 different types of sprites.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Ensighten/grunt-spritesmith&#34;&gt;Spritesmith&lt;/a&gt; to create a bitmap spritesheet with retina support;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jkphl/svg-sprite&#34;&gt;svg-sprite&lt;/a&gt; to create a vector spritesheet made out of svgs.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.sgalinski.de/toolchain/gulp-inline-svg&#34;&gt;gulp-inline-svg&lt;/a&gt; to inline an svg directory in the CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop a png and corresponding retina (image@2x.png naming convention) in &lt;code&gt;src/sprites/bitmaps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/bitmap.spritesheet.png&lt;/code&gt; and retina sheet at &lt;code&gt;/Static/assets/spritesheets/bitmap.spritesheet@2x.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Use this mixin in your sass to include sprite with retina&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sass&#34;&gt;@include retina-sprite($nameOfImage-group); //The `-group` after the name is important.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/vector&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/vector.spritesheet.svg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now utilize the svg use tag in your html!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;svg&amp;gt;
+    &amp;lt;use xlink:href=&amp;quot;/Static/assets/spritesheets/vector.spritesheet.svg#nameOfImage&amp;quot;&amp;gt;&amp;lt;/use&amp;gt;
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;inline&#34;&gt;Inline&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/inline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gulp will add your new image to the sass partial at &lt;code&gt;src/scss/partials/base/_svg.scss&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now inline your svg into your sass with a mixin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/**
+@include inline-svg($nameOfImage, $fillColorString)
+**/
+
+@include inline-svg($plus, #CCC)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Usage</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
+      <description>
+
+&lt;p&gt;Skeletor uses gulp as a task runner and several commands are available to use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# run Gulp in development mode (does not minify your JS for quicker response),
+# start the server, open a new browser tab at localhost:3000 and start watching files.
+# JS script include path is updated to src directory in base template.
+# Sass is automatically compiled, and sprites are automatically generated.
+$ gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# run Gulp in production mode (runs your JS code through the requirejs optimizer),
+# JS path is updated to dist directory in base template,
+# will not start any server or watch.
+$ gulp build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;installing-components&#34;&gt;Installing components&lt;/h2&gt;
+
+&lt;p&gt;Skeletor integrates with bower package management very nicely for vendor components. See &lt;a href=&#34;http://bower.io&#34;&gt;http://bower.io&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# install a vendor component with bower
+# main component files are automatically wired up to Skeletor
+# js main is added to requirejs paths config.
+# css/scss is added to main.scss
+$ bower install &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There is some automation that happens when you use bower. Please take care to understand these steps.
+The files are determined by what&amp;rsquo;s declared as a &lt;strong&gt;main&lt;/strong&gt; file by the &lt;code&gt;bower.json&lt;/code&gt; spec.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JavaScript files are added to the requirejs paths config:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+        &amp;quot;bower-example&amp;quot;: &amp;quot;../../../bower_components/bower-example&amp;quot;,
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS/SASS files are added to the main.scss:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;// Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
+// bower:css
+@import &amp;quot;../../../bower_components/bower-example.css&amp;quot;;
+// endbower
+
+// Automatically injected Bower SCSS dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import &amp;quot;../../../bower_components/bower-example.scss&amp;quot;;
+// endbower
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If something goes wrong (correct files aren&amp;rsquo;t wired up), check the components bower.json file to make sure the &lt;code&gt;&amp;quot;main&amp;quot;: []&lt;/code&gt; is declared correctly. If not, you can add an override for your project&amp;rsquo;s &lt;code&gt;bower.json&lt;/code&gt; file. See &lt;a href=&#34;https://github.com/ck86/main-bower-files#overrides-options&#34;&gt;https://github.com/ck86/main-bower-files#overrides-options&lt;/a&gt; for how to do this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Creating a plugin</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/contribute/writing-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
@@ -770,66 +830,6 @@ $breadcrumb.disable();
     </item>
     
     <item>
-      <title>Sprites</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
-      
-      <guid>https://delphic-digital.github.io/Skeletor.docs/overview/sprites/</guid>
-      <description>
-
-&lt;p&gt;Skeletor comes with easy ways to create 3 different types of sprites.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Ensighten/grunt-spritesmith&#34;&gt;Spritesmith&lt;/a&gt; to create a bitmap spritesheet with retina support;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jkphl/svg-sprite&#34;&gt;svg-sprite&lt;/a&gt; to create a vector spritesheet made out of svgs.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gitlab.sgalinski.de/toolchain/gulp-inline-svg&#34;&gt;gulp-inline-svg&lt;/a&gt; to inline an svg directory in the CSS.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Drop a png and corresponding retina (image@2x.png naming convention) in &lt;code&gt;src/sprites/bitmaps&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/bitmap.spritesheet.png&lt;/code&gt; and retina sheet at &lt;code&gt;/Static/assets/spritesheets/bitmap.spritesheet@2x.png&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Use this mixin in your sass to include sprite with retina&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sass&#34;&gt;@include retina-sprite($nameOfImage-group); //The `-group` after the name is important.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/vector&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Gulp will add your new image to the spritesheet at &lt;code&gt;Static/assets/spritesheets/vector.spritesheet.svg&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can now utilize the svg use tag in your html!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;svg&amp;gt;
-    &amp;lt;use xlink:href=&amp;quot;/Static/assets/spritesheets/vector.spritesheet.svg#nameOfImage&amp;quot;&amp;gt;&amp;lt;/use&amp;gt;
-&amp;lt;/svg&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;inline&#34;&gt;Inline&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Drop an svg in &lt;code&gt;src/sprites/inline&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Gulp will add your new image to the sass partial at &lt;code&gt;src/scss/partials/base/_svg.scss&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can now inline your svg into your sass with a mixin&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/**
-@include inline-svg($nameOfImage, $fillColorString)
-**/
-
-@include inline-svg($plus, #CCC)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Release Notes</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/release-notes/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
@@ -873,7 +873,7 @@ $breadcrumb.disable();
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Thu, 30 Jun 2016 20:50:50 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>
