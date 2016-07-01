@@ -2,7 +2,7 @@
 date: 2016-06-24T09:27:49-04:00
 menu:
   main:
-    parent: plugins
+    parent: components
 title: Skeletor.browsehappy
 weight: 5
 ---

@@ -194,7 +194,7 @@ Inside the `components` folder will be your sites custom requirejs modules.
 * other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
 
 
-### data-component and data-component-context
+### Dynamic component loading
 To load a JS component, use the sample syntax in ```component-example.js```, and add a data-component to the html element that should load the JS.
 
 ```HTML
