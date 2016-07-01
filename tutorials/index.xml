@@ -21,8 +21,6 @@
   &amp;amp;__list {}
   &amp;amp;__item {}
 
-  @include breakpoint($medium){}
-
   @include breakpoint($medium){
     &amp;amp;__list {}
     &amp;amp;__item {}
