@@ -15,8 +15,6 @@ We found using a traditional mobile first structure within each component partia
   &__list {}
   &__item {}
 
-  @include breakpoint($medium){}
-
   @include breakpoint($medium){
     &__list {}
     &__item {}
