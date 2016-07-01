@@ -39,3 +39,8 @@ theme = "skeletor"
     identifier = "contribute"
     pre = ""
     weight = -60
+[[menu.main]]
+    name = "Tutorials"
+    identifier = "tutorials"
+    pre = ""
+    weight = -50
