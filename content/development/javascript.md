@@ -7,7 +7,7 @@ toc: true
 weight: 1
 ---
 
-Skeletor comes with a JavaScript structure that utilizes [RequireJS](http://requirejs.org). Some JS helper libraries and plugins are included automatically:
+Skeletor comes with a JavaScript structure that utilizes [RequireJS](http://requirejs.org). Some JS helper libraries and plugins are included automatically.
 
 
 ### Brief overview of structure
@@ -152,10 +152,10 @@ Here is a breakdown on the preloaded components:
 var componentLoader   = require('skeletor.util.componentLoader'),
 /*
 	This is a Skeletor utility that handles component loading
-	throughdata attributes on elements in your html. By loading
+	through data attributes on elements in your html. By loading
 	javascript this way, the component is essitianly loaded
 	"on demand" and loaded only when it's needed. It also supports
-	context, so components can be loaded only on mobile, for example.
+	context, so components can be loaded only on mobile, tablet, or desktop.
 	See below for example's on how to use this.
 */
 ```
@@ -195,6 +195,7 @@ Inside the `components` folder will be your sites custom requirejs modules.
 
 
 ### Dynamic component loading
+
 To load a JS component, use the sample syntax in ```component-example.js```, and add a data-component to the html element that should load the JS.
 
 ```HTML
@@ -249,3 +250,7 @@ define(['jquery'],function($) {
 
 });
 ```
+
+## Skeletor Object
+
+The global `Skeletor` object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the `Skeletor` object, for example, the accordion class is found under `Skeletor.Accordion`.
