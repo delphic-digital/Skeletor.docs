@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,12 +66,12 @@
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
 
-&lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically:&lt;/p&gt;
+&lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically.&lt;/p&gt;
 
 &lt;h3 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h3&gt;
 
@@ -209,10 +209,10 @@ define(function (require){
 &lt;pre&gt;&lt;code&gt;var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
 /*
     This is a Skeletor utility that handles component loading
-    throughdata attributes on elements in your html. By loading
+    through data attributes on elements in your html. By loading
     javascript this way, the component is essitianly loaded
     &amp;quot;on demand&amp;quot; and loaded only when it&#39;s needed. It also supports
-    context, so components can be loaded only on mobile, for example.
+    context, so components can be loaded only on mobile, tablet, or desktop.
     See below for example&#39;s on how to use this.
 */
 &lt;/code&gt;&lt;/pre&gt;
@@ -306,13 +306,17 @@ define(function (require){
 
 });
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;skeletor-object&#34;&gt;Skeletor Object&lt;/h2&gt;
+
+&lt;p&gt;The global &lt;code&gt;Skeletor&lt;/code&gt; object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the &lt;code&gt;Skeletor&lt;/code&gt; object, for example, the accordion class is found under &lt;code&gt;Skeletor.Accordion&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -397,7 +401,7 @@ define(function (require){
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -518,7 +522,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>
@@ -578,7 +582,7 @@ define(function (require){
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -873,7 +877,7 @@ $breadcrumb.disable();
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:35:22 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>

@@ -69,6 +69,7 @@
 <li><a href="#dynamic-component-loading">Dynamic component loading</a></li>
 <li><a href="#example-component">Example component</a></li>
 </ul></li>
+<li><a href="#skeletor-object">Skeletor Object</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -211,7 +212,7 @@
 
 
 
-<p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a>. Some JS helper libraries and plugins are included automatically:</p>
+<p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a>. Some JS helper libraries and plugins are included automatically.</p>
 
 <h3 id="brief-overview-of-structure">Brief overview of structure</h3>
 
@@ -349,10 +350,10 @@ define(function (require){
 <pre><code>var componentLoader   = require('skeletor.util.componentLoader'),
 /*
     This is a Skeletor utility that handles component loading
-    throughdata attributes on elements in your html. By loading
+    through data attributes on elements in your html. By loading
     javascript this way, the component is essitianly loaded
     &quot;on demand&quot; and loaded only when it's needed. It also supports
-    context, so components can be loaded only on mobile, for example.
+    context, so components can be loaded only on mobile, tablet, or desktop.
     See below for example's on how to use this.
 */
 </code></pre>
@@ -446,6 +447,10 @@ define(function (require){
 
 });
 </code></pre>
+
+<h2 id="skeletor-object">Skeletor Object</h2>
+
+<p>The global <code>Skeletor</code> object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the <code>Skeletor</code> object, for example, the accordion class is found under <code>Skeletor.Accordion</code>.</p>
 
 
 				<div class="footer-panel">
