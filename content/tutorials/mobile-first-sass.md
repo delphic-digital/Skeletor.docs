@@ -7,7 +7,7 @@ title: Mobile first sass
 weight: 5
 ---
 
-We found using a traditional mobile first structure within each component partial is better for maintainability than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.
+We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.
 
 ```scss
 .main-nav {
