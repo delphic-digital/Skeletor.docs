@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,7 +66,7 @@
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
@@ -312,7 +312,7 @@ define(function (require){
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -397,7 +397,7 @@ define(function (require){
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -518,7 +518,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>
@@ -578,7 +578,7 @@ define(function (require){
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -873,7 +873,7 @@ $breadcrumb.disable();
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>

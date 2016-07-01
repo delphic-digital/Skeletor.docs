@@ -5,13 +5,13 @@
     <link>https://delphic-digital.github.io/Skeletor.docs/development/</link>
     <description>Recent content in Development on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Jul 2016 12:58:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jul 2016 13:13:51 +0000</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
@@ -257,7 +257,7 @@ define(function (require){
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -342,7 +342,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Fri, 01 Jul 2016 12:58:39 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:13:51 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>
