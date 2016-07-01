@@ -23,7 +23,7 @@
     <item>
       <title>Introduction to Skeletor</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</guid>
       <description>
@@ -66,7 +66,7 @@
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
@@ -251,7 +251,7 @@ define(function (require){
 &lt;li&gt;other components will be standalone and won&amp;rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;data-component-and-data-component-context&#34;&gt;data-component and data-component-context&lt;/h3&gt;
+&lt;h3 id=&#34;dynamic-component-loading&#34;&gt;Dynamic component loading&lt;/h3&gt;
 
 &lt;p&gt;To load a JS component, use the sample syntax in &lt;code&gt;component-example.js&lt;/code&gt;, and add a data-component to the html element that should load the JS.&lt;/p&gt;
 
@@ -312,7 +312,7 @@ define(function (require){
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -397,7 +397,7 @@ define(function (require){
     <item>
       <title>Setup</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</guid>
       <description>
@@ -518,7 +518,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>
@@ -578,7 +578,7 @@ define(function (require){
     <item>
       <title>Usage</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</guid>
       <description>
@@ -811,20 +811,20 @@ $breadcrumb.disable();
     
     <item>
       <title>Skeletor.flyouts</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/plugins/flyouts/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/components/flyouts/</link>
       <pubDate>Fri, 24 Jun 2016 09:30:03 -0400</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/plugins/flyouts/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/components/flyouts/</guid>
       <description>&lt;p&gt;Flyout menu system.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Skeletor.browsehappy</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/plugins/browsehappy/</link>
+      <link>https://delphic-digital.github.io/Skeletor.docs/components/browsehappy/</link>
       <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
       
-      <guid>https://delphic-digital.github.io/Skeletor.docs/plugins/browsehappy/</guid>
+      <guid>https://delphic-digital.github.io/Skeletor.docs/components/browsehappy/</guid>
       <description>&lt;p&gt;Show an unobstrusive notification bar if your browser is out dated.&lt;/p&gt;
 </description>
     </item>
@@ -873,7 +873,7 @@ $breadcrumb.disable();
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Fri, 01 Jul 2016 13:16:27 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2016 13:20:06 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>
