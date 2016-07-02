@@ -11,4 +11,5 @@ weight: 20
 
 * Accordion component
 * Tab component
+* Flyouts component
 * Accessibility enhancements
