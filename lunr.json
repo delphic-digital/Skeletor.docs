@@ -50,7 +50,7 @@
     {
         "uri": "/meta/roadmap",
         "title": "Skeletor Roadmap",
-        "content": "\nAccordion component\nTab component\nAccessibility enhancements",
+        "content": "\nAccordion component\nTab component\nFlyouts component\nAccessibility enhancements",
         "tags": []
     },
     {
