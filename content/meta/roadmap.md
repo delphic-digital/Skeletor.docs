@@ -13,3 +13,4 @@ weight: 20
 * Tab component
 * Flyouts component
 * Accessibility enhancements
+* Better handling of multiple data-components on a page

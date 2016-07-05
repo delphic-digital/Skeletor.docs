@@ -9,13 +9,11 @@ weight: 10
 
 ## 0.14.0, Jun 16, 2016
 
-Skeletor 4.0 release has an all new JavaScript framework.
+Skeletor 0.14 release has an all new JavaScript framework.
 
 ### New features
 
-* Create extensible JavaScript plugins.
-* Bower integration for 3rd party scripts
-* Bower integration for your own scripts
+* Create extensible JavaScript components for usage in Skeletor.
 * Current components converted over to new Skeletor framework
 
 
