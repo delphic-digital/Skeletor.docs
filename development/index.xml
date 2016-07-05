@@ -5,18 +5,23 @@
     <link>https://delphic-digital.github.io/Skeletor.docs/development/</link>
     <description>Recent content in Development on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Jul 2016 14:28:29 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2016 15:22:49 +0000</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Tue, 05 Jul 2016 14:28:29 +0000</pubDate>
+      <pubDate>Tue, 05 Jul 2016 15:22:49 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
 
-&lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt;. Some JS helper libraries and plugins are included automatically.&lt;/p&gt;
+&lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt; for dependency and module loading. There are a couple reasons for this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Skeletor uses best practices for loading JavaScript with a multi-page site. There is a &lt;em&gt;core&lt;/em&gt;, or commmon file that gets loading on everypage. After that, there are component level scripts that get loaded in after page load. These components are only loaded if that component exists on the page. It&amp;rsquo;s another way of doing page specific scripts, except this is refined down to the component level.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dependency managment&lt;/strong&gt; can become a big problem with JavaScript, AMD solves this.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;brief-overview-of-structure&#34;&gt;Brief overview of structure&lt;/h3&gt;
 
@@ -37,7 +42,9 @@
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;the-main-file&#34;&gt;The main file:&lt;/h4&gt;
+&lt;h4 id=&#34;main&#34;&gt;Main&lt;/h4&gt;
+
+&lt;p&gt;This is the &lt;code&gt;core&lt;/code&gt; and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
@@ -185,40 +192,18 @@ define(function (require){
 &lt;pre&gt;&lt;code&gt;commonComponents  = require(&#39;./components/common&#39;);
 /*
     For your sites custom common (global) components. This is where
-    code lives that you want loaded on every page.
+    code lives that you want loaded on every page and will be
+    concatenated to the main.js when built.
 */
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Inside the &lt;code&gt;components&lt;/code&gt; folder will be your sites custom requirejs modules.&lt;/p&gt;
+&lt;h3 id=&#34;dynamic-components&#34;&gt;Dynamic components&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;common&lt;/code&gt; folder contains components that are global and be concatenated to the main.js when built.&lt;/li&gt;
-&lt;li&gt;other components will be standalone and won&amp;rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Create requirejs components in the &lt;code&gt;./components&lt;/code&gt; folder. These won&amp;rsquo;t be concatenated with the main (common) JS and these can be loaded directly with the HTML.&lt;/p&gt;
 
-&lt;h3 id=&#34;dynamic-component-loading&#34;&gt;Dynamic component loading&lt;/h3&gt;
+&lt;h4 id=&#34;example-component&#34;&gt;Example component&lt;/h4&gt;
 
-&lt;p&gt;To load a JS component, use the sample syntax in &lt;code&gt;component-example.js&lt;/code&gt;, and add a data-component to the html element that should load the JS.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&amp;gt;
-&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot;&amp;gt;
-    Lorem ipsum
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded only in tablet and desktop --&amp;gt;
-&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot; data-component-context=&amp;quot;tablet,desktop&amp;quot;&amp;gt;
-    Lorem ipsum
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-component&#34;&gt;Example component&lt;/h3&gt;
-
-&lt;p&gt;Components are standard requirejs modules, and it&amp;rsquo;s syntax should be used. For components that rely on the &lt;code&gt;data-component&lt;/code&gt; loading, they require a couple functions.&lt;/p&gt;
+&lt;p&gt;Components are standard requirejs modules, and it&amp;rsquo;s syntax should be used. For components that rely on the &lt;code&gt;data-component&lt;/code&gt; loading, there require a couple functions.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;An init function for encapsulating code that should run with the component is fully loaded into the page.&lt;/li&gt;
@@ -252,6 +237,26 @@ define(function (require){
 });
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h4 id=&#34;component-loading&#34;&gt;Component loading&lt;/h4&gt;
+
+&lt;p&gt;Add a data-component to the html element that the component will be attached to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&amp;gt;
+&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot;&amp;gt;
+    Lorem ipsum
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!-- component-example.js will be loaded only in tablet and desktop --&amp;gt;
+&amp;lt;div class=&amp;quot;component-example&amp;quot; data-component=&amp;quot;component-example&amp;quot; data-component-context=&amp;quot;tablet,desktop&amp;quot;&amp;gt;
+    Lorem ipsum
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
+
 &lt;h2 id=&#34;skeletor-object&#34;&gt;Skeletor Object&lt;/h2&gt;
 
 &lt;p&gt;The global &lt;code&gt;Skeletor&lt;/code&gt; object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the &lt;code&gt;Skeletor&lt;/code&gt; object, for example, the accordion class is found under &lt;code&gt;Skeletor.Accordion&lt;/code&gt;.&lt;/p&gt;
@@ -261,7 +266,7 @@ define(function (require){
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Tue, 05 Jul 2016 14:28:29 +0000</pubDate>
+      <pubDate>Tue, 05 Jul 2016 15:22:49 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -330,7 +335,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Tue, 05 Jul 2016 14:28:29 +0000</pubDate>
+      <pubDate>Tue, 05 Jul 2016 15:22:49 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>

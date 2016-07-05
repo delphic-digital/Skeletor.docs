@@ -64,10 +64,13 @@
 <ul>
 <li><a href="#brief-overview-of-structure">Brief overview of structure</a>
 <ul>
-<li><a href="#the-main-file">The main file:</a></li>
+<li><a href="#main">Main</a></li>
 </ul></li>
-<li><a href="#dynamic-component-loading">Dynamic component loading</a></li>
+<li><a href="#dynamic-components">Dynamic components</a>
+<ul>
 <li><a href="#example-component">Example component</a></li>
+<li><a href="#component-loading">Component loading</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#skeletor-object">Skeletor Object</a></li>
 </ul></li>
@@ -199,6 +202,8 @@
 					
 					<li><a href="/Skeletor.docs/contribute/writing-a-plugin/">Creating a plugin</a> </li>
 					
+					<li><a href="/Skeletor.docs/contribute/registering-a-plugin/">Registering a plugin</a> </li>
+					
 				</ul>
 			  
 			  </li>
@@ -227,7 +232,12 @@
 
 
 
-<p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a>. Some JS helper libraries and plugins are included automatically.</p>
+<p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a> for dependency and module loading. There are a couple reasons for this:</p>
+
+<ul>
+<li><strong>Performance</strong>: Skeletor uses best practices for loading JavaScript with a multi-page site. There is a <em>core</em>, or commmon file that gets loading on everypage. After that, there are component level scripts that get loaded in after page load. These components are only loaded if that component exists on the page. It&rsquo;s another way of doing page specific scripts, except this is refined down to the component level.</li>
+<li><strong>Dependency managment</strong> can become a big problem with JavaScript, AMD solves this.</li>
+</ul>
 
 <h3 id="brief-overview-of-structure">Brief overview of structure</h3>
 
@@ -248,7 +258,9 @@
 
 </code></pre>
 
-<h4 id="the-main-file">The main file:</h4>
+<h4 id="main">Main</h4>
+
+<p>This is the <code>core</code> and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.</p>
 
 <pre><code>// Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
@@ -396,40 +408,18 @@ define(function (require){
 <pre><code>commonComponents  = require('./components/common');
 /*
     For your sites custom common (global) components. This is where
-    code lives that you want loaded on every page.
+    code lives that you want loaded on every page and will be
+    concatenated to the main.js when built.
 */
 </code></pre>
 
-<p>Inside the <code>components</code> folder will be your sites custom requirejs modules.</p>
+<h3 id="dynamic-components">Dynamic components</h3>
 
-<ul>
-<li><code>common</code> folder contains components that are global and be concatenated to the main.js when built.</li>
-<li>other components will be standalone and won&rsquo;t be concatenated with the main (common) JS. These can be loaded directly with the HTML.</li>
-</ul>
+<p>Create requirejs components in the <code>./components</code> folder. These won&rsquo;t be concatenated with the main (common) JS and these can be loaded directly with the HTML.</p>
 
-<h3 id="dynamic-component-loading">Dynamic component loading</h3>
+<h4 id="example-component">Example component</h4>
 
-<p>To load a JS component, use the sample syntax in <code>component-example.js</code>, and add a data-component to the html element that should load the JS.</p>
-
-<pre><code class="language-HTML">&lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&gt;
-&lt;div class=&quot;component-example&quot; data-component=&quot;component-example&quot;&gt;
-    Lorem ipsum
-&lt;/div&gt;
-</code></pre>
-
-<p>To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.</p>
-
-<pre><code class="language-HTML">&lt;!-- component-example.js will be loaded only in tablet and desktop --&gt;
-&lt;div class=&quot;component-example&quot; data-component=&quot;component-example&quot; data-component-context=&quot;tablet,desktop&quot;&gt;
-    Lorem ipsum
-&lt;/div&gt;
-</code></pre>
-
-<p>These components are aynced in after page load and will remain separate modules in the build process.</p>
-
-<h3 id="example-component">Example component</h3>
-
-<p>Components are standard requirejs modules, and it&rsquo;s syntax should be used. For components that rely on the <code>data-component</code> loading, they require a couple functions.</p>
+<p>Components are standard requirejs modules, and it&rsquo;s syntax should be used. For components that rely on the <code>data-component</code> loading, there require a couple functions.</p>
 
 <ol>
 <li>An init function for encapsulating code that should run with the component is fully loaded into the page.</li>
@@ -462,6 +452,26 @@ define(function (require){
 
 });
 </code></pre>
+
+<h4 id="component-loading">Component loading</h4>
+
+<p>Add a data-component to the html element that the component will be attached to:</p>
+
+<pre><code class="language-HTML">&lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&gt;
+&lt;div class=&quot;component-example&quot; data-component=&quot;component-example&quot;&gt;
+    Lorem ipsum
+&lt;/div&gt;
+</code></pre>
+
+<p>To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.</p>
+
+<pre><code class="language-HTML">&lt;!-- component-example.js will be loaded only in tablet and desktop --&gt;
+&lt;div class=&quot;component-example&quot; data-component=&quot;component-example&quot; data-component-context=&quot;tablet,desktop&quot;&gt;
+    Lorem ipsum
+&lt;/div&gt;
+</code></pre>
+
+<p>These components are aynced in after page load and will remain separate modules in the build process.</p>
 
 <h2 id="skeletor-object">Skeletor Object</h2>
 

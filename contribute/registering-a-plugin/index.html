@@ -8,7 +8,7 @@
 		<meta name="generator" content="Hugo 0.17-DEV" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		
-		<title>Skeletor - Skeletor.browsehappy</title>
+		<title>Skeletor - Registering a plugin</title>
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -28,12 +28,12 @@
 			
 				<div class="header-top-buttons">
 					
-						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/components/browsehappy.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
+						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/contribute/registering-a-plugin.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
 					
 					<a title="Search this site" href="" class="js-toggle-search"><i class="zmdi zmdi-search zmdi-hc-lg"></i></a>
 				</div>
 				<a href="" class="header-menu-button js-toggle-sidebar"><i class="zmdi zmdi-menu zmdi-hc"></i></a>
-				<h1 class="page-title">Skeletor.browsehappy</h1>
+				<h1 class="page-title">Registering a plugin</h1>
 				<div class="search-form">
 	<div class="search-form-content">
 		<a href="" class="search-form-close js-search-close"><i class="zmdi zmdi-arrow-left zmdi-hc-lg"></i></a>
@@ -146,16 +146,16 @@
 		  
 				
 
-			<li class="sub-menu active">
+			<li class="sub-menu">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Components</span>
-				<span class="menu-arrow fa fa-angle-down"></span>
+				<span class="menu-arrow fa fa-angle-right"></span>
 			</a>
-				<ul class="sub open">
+				<ul class="sub">
 					
-					<li class="active"><a href="/Skeletor.docs/components/browsehappy/">Skeletor.browsehappy</a> </li>
+					<li><a href="/Skeletor.docs/components/browsehappy/">Skeletor.browsehappy</a> </li>
 					
 				</ul>
 			  
@@ -163,18 +163,18 @@
 		  
 				
 
-			<li class="sub-menu">
+			<li class="sub-menu active">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Contributing</span>
-				<span class="menu-arrow fa fa-angle-right"></span>
+				<span class="menu-arrow fa fa-angle-down"></span>
 			</a>
-				<ul class="sub">
+				<ul class="sub open">
 					
 					<li><a href="/Skeletor.docs/contribute/writing-a-plugin/">Creating a plugin</a> </li>
 					
-					<li><a href="/Skeletor.docs/contribute/registering-a-plugin/">Registering a plugin</a> </li>
+					<li class="active"><a href="/Skeletor.docs/contribute/registering-a-plugin/">Registering a plugin</a> </li>
 					
 				</ul>
 			  
@@ -204,165 +204,41 @@
 
 
 
-<p>Show an unobstrusive notification bar if your browser is out dated. This is a wrapper around <a href="http://browser-update.org's">http://browser-update.org's</a> service. Lot&rsquo;s of this information here is repeated from their service.</p>
+<p>Skeletor has a private bower repo to host all it&rsquo;s components using <a href="https://www.npmjs.com/package/private-bower">private-bower</a> hosted here: <a href="http://bowerregistry-delphic.rhcloud.com/">http://bowerregistry-delphic.rhcloud.com/</a>. Registering it follows normal bower steps with an extra config.</p>
+
+<h2 id="register">Register</h2>
+
+<p>Create a bower config file at the root of your plugin directory: <code>.bowerrc</code> with the following settings.</p>
+
+<pre><code class="language-javascript">{
+    &quot;registry&quot;: &quot;http://bowerregistry-delphic.rhcloud.com&quot;,
+    &quot;timeout&quot;: 300000,
+}
+</code></pre>
+
+<p>You can read more about the <code>.bowerrc</code> from the bower site: <a href="https://bower.io/docs/config/">https://bower.io/docs/config/</a></p>
 
 <h2 id="usage">Usage</h2>
 
-<p>This component is included by default in Skeletor. There isn&rsquo;t anything extra you need to do unless you want to change options. The relevant initialization code is in the <code>skeletor.main.js</code></p>
+<p>Skeletor includes a <code>.bowerrc</code> file that points to the private bower registery already. Installing a Skeletor component is a simple as running bower commands.</p>
 
-<pre><code class="language-javascript">require(['skeletor.browsehappy'], function(){
-  new Skeletor.BrowseHappy()
-})
+<pre><code class="language-bash">bower install plugin
 </code></pre>
 
-<p>With optional options object:</p>
+<p>Skeletor will auto wire it up to your require.js config file:</p>
 
-<pre><code class="language-javascript">require(['skeletor.browsehappy'], function(){
-  new Skeletor.BrowseHappy($(document),{
-    test: true
-  })
-})
+<pre><code>{
+  'paths': {
+    'skeletor.plugin': 'bower_components/skeletor.plugin'
+  }
+}
 </code></pre>
 
-<div class="admonition note">
-	<p class="admonition-title">Note</p>
-	<p class="admonition-desc">The first parameter is always the element the component is attached too. In the above, <code>$(document)</code> is used. It&rsquo;s also the default if it&rsquo;s left blank.</p>
-</div>
+<p>Now you can load it with requirejs in a component:</p>
 
-<h2 id="options">Options</h2>
-
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>vs</td>
-<td>object</td>
-<td>{i:9,f:25,o:12.1,s:2,c:10}</td>
-<td>Browser versions to notify</td>
-</tr>
-
-<tr>
-<td>reminder</td>
-<td>int</td>
-<td>24</td>
-<td>after how many hours should the message reappear, 0 = show all the time</td>
-</tr>
-
-<tr>
-<td>reminderClosed</td>
-<td>int</td>
-<td>150</td>
-<td>If the user closes message it reappears after x hours</td>
-</tr>
-
-<tr>
-<td>onshow</td>
-<td>function</td>
-<td>function(infos){}</td>
-<td>Callback function after the bar has appeared</td>
-</tr>
-
-<tr>
-<td>onclick</td>
-<td>function</td>
-<td>function(infos){}</td>
-<td>Callback function if bar was clicked</td>
-</tr>
-
-<tr>
-<td>onclose</td>
-<td>function</td>
-<td>function(infos){}</td>
-<td>Callback function after the bar is closed</td>
-</tr>
-
-<tr>
-<td>l</td>
-<td>boolean</td>
-<td>false</td>
-<td>set a language for the message, e.g. &ldquo;en&rdquo;, overrides the default detection</td>
-</tr>
-
-<tr>
-<td>test</td>
-<td>boolean</td>
-<td>false</td>
-<td>true = always show the bar (for testing)</td>
-</tr>
-
-<tr>
-<td>text</td>
-<td>string</td>
-<td>&rdquo;&rdquo;</td>
-<td>Custom notification html text,  Optionally include up to two placeholders &ldquo;%s&rdquo; which will be replaced with the browser version and contents of the link tag. Example: &ldquo;Your browser (%s) is old.  Please <a%s>update</a>&ldquo;</td>
-</tr>
-
-<tr>
-<td>text_xx</td>
-<td>string</td>
-<td>&rdquo;&rdquo;</td>
-<td>Custom notification text for language &ldquo;xx&rdquo;, e.g. text_de for german and text_it for italian</td>
-</tr>
-
-<tr>
-<td>newwindow</td>
-<td>boolean</td>
-<td>true</td>
-<td>Open link in new window/tab</td>
-</tr>
-
-<tr>
-<td>url</td>
-<td>string</td>
-<td><a href="http://browsehappy.com/">http://browsehappy.com/</a></td>
-<td>The url to go to after clicking the notification</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="css">CSS</h2>
-
-<p>The following CSS rules are applied by the script. You can overwrite them in your own CSS.</p>
-
-<pre><code class="language-CSS">.buorg {
-  position:absolute;
-  width:100%;
-  top:0px;
-  left:0px;
-  border-bottom:1px solid #A29330;
-  background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);
-  text-align:left;
-  cursor:pointer;
-  font-family: Arial,Helvetica,sans-serif; color:#000;
-  font-size: 12px;
-}
-
-.buorg div {
-  padding:5px 36px 5px 40px;
-}
-
-.buorg a {
-  color:#E25600;
-}
-
-#buorgclose {
-  position: absolute;
-  right: .5em;
-  top:.2em;
-  height: 20px;
-  width: 12px;
-  font-weight: bold;
-  font-size:14px;
-  padding:0;
-}
+<pre><code>require(['skeletor.plugin'], function(){
+    var $plugin = new Skeletor.plugin($('.plugin__list'));
+})
 </code></pre>
 
 
