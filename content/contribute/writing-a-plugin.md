@@ -144,28 +144,3 @@ var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'));
 
 $breadcrumb.disable();
 ```
-
-## Usage with Skeletor boilerplate
-
-First register your plugin with the bower registery, and then install it with bower in your Skeletor project:
-
-```bash
-bower install plugin
-```
-
-Skeletor will auto wire it up to your require.js config file:
-
-```
-{
-  'paths': {
-    'skeletor.breadcrumb': 'bower_components/skeletor.breadcrumb'
-  }
-}
-```
-
-Now you can load it with requirejs in a component:
-```
-require(['skeletor.breadcrumb'], function(){
-    var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'));
-})
-```
