@@ -7,8 +7,10 @@ toc: true
 weight: 1
 ---
 
-Skeletor comes with a JavaScript structure that utilizes [RequireJS](http://requirejs.org). Some JS helper libraries and plugins are included automatically.
+Skeletor comes with a JavaScript structure that utilizes [RequireJS](http://requirejs.org) for dependency and module loading. There are a couple reasons for this:
 
+* **Performance**: Skeletor uses best practices for loading JavaScript with a multi-page site. There is a *core*, or commmon file that gets loading on everypage. After that, there are component level scripts that get loaded in after page load. These components are only loaded if that component exists on the page. It's another way of doing page specific scripts, except this is refined down to the component level.
+* **Dependency managment** can become a big problem with JavaScript, AMD solves this.
 
 ### Brief overview of structure
 
@@ -30,7 +32,9 @@ skeletor
 
 ```
 
-#### The main file:
+#### Main
+
+This is the `core` and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.
 
 ```
 // Automatically injected Bower JS dependencies via bowerRequireJS
@@ -184,41 +188,20 @@ picturefill       = require('picturefill'),
 commonComponents  = require('./components/common');
 /*
 	For your sites custom common (global) components. This is where
-	code lives that you want loaded on every page.
+	code lives that you want loaded on every page and will be
+	concatenated to the main.js when built.
 */
 ```
 
-Inside the `components` folder will be your sites custom requirejs modules.
 
-* `common` folder contains components that are global and be concatenated to the main.js when built.
-* other components will be standalone and won't be concatenated with the main (common) JS. These can be loaded directly with the HTML.
+### Dynamic components
+
+Create requirejs components in the `./components` folder. These won't be concatenated with the main (common) JS and these can be loaded directly with the HTML.
 
 
-### Dynamic component loading
+#### Example component
 
-To load a JS component, use the sample syntax in ```component-example.js```, and add a data-component to the html element that should load the JS.
-
-```HTML
-<!-- component-example.js will be loaded anytime this HTML is present on the page -->
-<div class="component-example" data-component="component-example">
-	Lorem ipsum
-</div>
-```
-
-To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.
-
-```HTML
-<!-- component-example.js will be loaded only in tablet and desktop -->
-<div class="component-example" data-component="component-example" data-component-context="tablet,desktop">
-	Lorem ipsum
-</div>
-```
-
-These components are aynced in after page load and will remain separate modules in the build process.
-
-### Example component
-
-Components are standard requirejs modules, and it's syntax should be used. For components that rely on the `data-component` loading, they require a couple functions.
+Components are standard requirejs modules, and it's syntax should be used. For components that rely on the `data-component` loading, there require a couple functions.
 
 1. An init function for encapsulating code that should run with the component is fully loaded into the page.
 2. A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.
@@ -250,6 +233,28 @@ define(['jquery'],function($) {
 
 });
 ```
+
+#### Component loading
+
+Add a data-component to the html element that the component will be attached to:
+
+```HTML
+<!-- component-example.js will be loaded anytime this HTML is present on the page -->
+<div class="component-example" data-component="component-example">
+	Lorem ipsum
+</div>
+```
+
+To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.
+
+```HTML
+<!-- component-example.js will be loaded only in tablet and desktop -->
+<div class="component-example" data-component="component-example" data-component-context="tablet,desktop">
+	Lorem ipsum
+</div>
+```
+
+These components are aynced in after page load and will remain separate modules in the build process.
 
 ## Skeletor Object
 
