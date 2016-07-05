@@ -18,14 +18,12 @@
 
 &lt;h2 id=&#34;0-14-0-jun-16-2016&#34;&gt;0.14.0, Jun 16, 2016&lt;/h2&gt;
 
-&lt;p&gt;Skeletor 4.0 release has an all new JavaScript framework.&lt;/p&gt;
+&lt;p&gt;Skeletor 0.14 release has an all new JavaScript framework.&lt;/p&gt;
 
 &lt;h3 id=&#34;new-features&#34;&gt;New features&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Create extensible JavaScript plugins.&lt;/li&gt;
-&lt;li&gt;Bower integration for 3rd party scripts&lt;/li&gt;
-&lt;li&gt;Bower integration for your own scripts&lt;/li&gt;
+&lt;li&gt;Create extensible JavaScript components for usage in Skeletor.&lt;/li&gt;
 &lt;li&gt;Current components converted over to new Skeletor framework&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -140,6 +138,7 @@
 &lt;li&gt;Tab component&lt;/li&gt;
 &lt;li&gt;Flyouts component&lt;/li&gt;
 &lt;li&gt;Accessibility enhancements&lt;/li&gt;
+&lt;li&gt;Better handling of multiple data-components on a page&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -147,7 +146,7 @@
     <item>
       <title>License</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/meta/license/</link>
-      <pubDate>Tue, 05 Jul 2016 15:22:49 +0000</pubDate>
+      <pubDate>Tue, 05 Jul 2016 15:38:53 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/license/</guid>
       <description>
