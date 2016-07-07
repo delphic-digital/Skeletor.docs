@@ -256,6 +256,32 @@ To load a JS component for only certain media queries, add a data-component-cont
 
 These components are aynced in after page load and will remain separate modules in the build process.
 
+## Using plugins
+
+Using Skeletor plugins (components and behaviors) is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by going to the private bower repo at http://bowerregistry-delphic.rhcloud.com. These skeletor plugins will automatically be wired up for use in requirejs. To use:
+
+```javascript
+require(['skeletor.accordion'], function(){
+
+  //attach to multiple elements
+  $('.js-accordion').each(function(){
+    new Skeletor.Accordion($(this));
+  })
+
+  //Or attach to single element
+  new Skeletor.Accordion($('.js-accordion-another'),{singleOpen: false});
+
+})
+```
+
+### Accessing Instances
+To access methods or properties on a plugin, the plugin instance will need to be retrieved. This can be achieved through the skeletor() method. You can pass public methods to the plugin this way.
+
+```javascript
+$('.js-accordion:eq(1)').skeletor('open',1)
+```
+
+
 ## Skeletor Object
 
 The global `Skeletor` object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the `Skeletor` object, for example, the accordion class is found under `Skeletor.Accordion`.
