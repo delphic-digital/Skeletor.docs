@@ -4,12 +4,12 @@
   "description": "Documentation site for Skeletor",
   "main": "index.js",
   "dependencies": {
-    "hugo-lunr": "git+https://github.com/gwleclerc/hugo-lunr.git"
+    "lunr-hugo": "~0.1.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "index": "hugo-lunr -o dist/lunr.json -l yaml"
+    "index": "lunr-hugo -o dist/lunr.json -l yaml"
   },
   "repository": {
     "type": "git",
