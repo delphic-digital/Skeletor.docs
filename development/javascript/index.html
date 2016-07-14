@@ -72,6 +72,10 @@
 <li><a href="#component-loading">Component loading</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#using-plugins">Using plugins</a>
+<ul>
+<li><a href="#accessing-instances">Accessing Instances</a></li>
+</ul></li>
 <li><a href="#skeletor-object">Skeletor Object</a></li>
 </ul></li>
 </ul>
@@ -104,7 +108,7 @@
 <path class="shadow" d=" M 127.70 131.35 C 128.45 130.05 129.21 128.75 130.01 127.48 C 131.55 129.36 132.73 131.48 133.73 133.68 C 131.70 132.95 129.70 132.16 127.70 131.35 Z" />
 </svg>
 
-	<span class="sidebar-header-version"><span>Skeletor v2.0</span><br>delphic-digital/Skeletor</span></a>
+	<span class="sidebar-header-version"><span>Skeletor v0.14</span><br>delphic-digital/Skeletor</span></a>
 </div>
 		<ul class="sidebar-menu">
 			
@@ -178,12 +182,12 @@
 			<a href="javascript:;" class="">
 				
 				
-				<span>Components</span>
+				<span>Plugins</span>
 				<span class="menu-arrow fa fa-angle-right"></span>
 			</a>
 				<ul class="sub">
 					
-					<li><a href="/Skeletor.docs/components/browsehappy/">Skeletor.browsehappy</a> </li>
+					<li><a href="/Skeletor.docs/plugins/browsehappy/">Skeletor.browsehappy</a> </li>
 					
 				</ul>
 			  
@@ -472,6 +476,30 @@ define(function (require){
 </code></pre>
 
 <p>These components are aynced in after page load and will remain separate modules in the build process.</p>
+
+<h2 id="using-plugins">Using plugins</h2>
+
+<p>Using Skeletor plugins (components and behaviors) is simple. If you&rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: <code>bower search skeletor</code> or by going to the private bower repo at <a href="http://bowerregistry-delphic.rhcloud.com">http://bowerregistry-delphic.rhcloud.com</a>. These skeletor plugins will automatically be wired up for use in requirejs. To use:</p>
+
+<pre><code class="language-javascript">require(['skeletor.accordion'], function(){
+
+  //attach to multiple elements
+  $('.js-accordion').each(function(){
+    new Skeletor.Accordion($(this));
+  })
+
+  //Or attach to single element
+  new Skeletor.Accordion($('.js-accordion-another'),{singleOpen: false});
+
+})
+</code></pre>
+
+<h3 id="accessing-instances">Accessing Instances</h3>
+
+<p>To access methods or properties on a plugin, the plugin instance will need to be retrieved. This can be achieved through the skeletor() method. You can pass public methods to the plugin this way.</p>
+
+<pre><code class="language-javascript">$('.js-accordion:eq(1)').skeletor('open',1)
+</code></pre>
 
 <h2 id="skeletor-object">Skeletor Object</h2>
 

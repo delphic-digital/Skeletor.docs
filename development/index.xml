@@ -5,13 +5,12 @@
     <link>https://delphic-digital.github.io/Skeletor.docs/development/</link>
     <description>Recent content in Development on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Jul 2016 15:38:53 +0000</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Javascript</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</link>
-      <pubDate>Tue, 05 Jul 2016 15:38:53 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</guid>
       <description>
@@ -257,6 +256,30 @@ define(function (require){
 
 &lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
 
+&lt;h2 id=&#34;using-plugins&#34;&gt;Using plugins&lt;/h2&gt;
+
+&lt;p&gt;Using Skeletor plugins (components and behaviors) is simple. If you&amp;rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: &lt;code&gt;bower search skeletor&lt;/code&gt; or by going to the private bower repo at &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com&#34;&gt;http://bowerregistry-delphic.rhcloud.com&lt;/a&gt;. These skeletor plugins will automatically be wired up for use in requirejs. To use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.accordion&#39;], function(){
+
+  //attach to multiple elements
+  $(&#39;.js-accordion&#39;).each(function(){
+    new Skeletor.Accordion($(this));
+  })
+
+  //Or attach to single element
+  new Skeletor.Accordion($(&#39;.js-accordion-another&#39;),{singleOpen: false});
+
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;accessing-instances&#34;&gt;Accessing Instances&lt;/h3&gt;
+
+&lt;p&gt;To access methods or properties on a plugin, the plugin instance will need to be retrieved. This can be achieved through the skeletor() method. You can pass public methods to the plugin this way.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;.js-accordion:eq(1)&#39;).skeletor(&#39;open&#39;,1)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;skeletor-object&#34;&gt;Skeletor Object&lt;/h2&gt;
 
 &lt;p&gt;The global &lt;code&gt;Skeletor&lt;/code&gt; object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the &lt;code&gt;Skeletor&lt;/code&gt; object, for example, the accordion class is found under &lt;code&gt;Skeletor.Accordion&lt;/code&gt;.&lt;/p&gt;
@@ -266,7 +289,7 @@ define(function (require){
     <item>
       <title>Sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sass/</link>
-      <pubDate>Tue, 05 Jul 2016 15:38:53 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sass/</guid>
       <description>
@@ -335,7 +358,7 @@ define(function (require){
     <item>
       <title>Sprites</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</link>
-      <pubDate>Tue, 05 Jul 2016 15:38:53 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</guid>
       <description>

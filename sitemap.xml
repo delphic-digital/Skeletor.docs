@@ -13,32 +13,26 @@
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/overview/introduction/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/development/javascript/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/development/sass/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/overview/setup/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/development/sprites/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/overview/usage/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
   <url>
@@ -52,7 +46,7 @@
   </url>
   
   <url>
-    <loc>https://delphic-digital.github.io/Skeletor.docs/components/browsehappy/</loc>
+    <loc>https://delphic-digital.github.io/Skeletor.docs/plugins/browsehappy/</loc>
     <lastmod>2016-06-24T09:27:49-04:00</lastmod>
   </url>
   
@@ -73,7 +67,6 @@
   
   <url>
     <loc>https://delphic-digital.github.io/Skeletor.docs/meta/license/</loc>
-    <lastmod>2016-07-05T15:38:53+00:00</lastmod>
   </url>
   
 </urlset>
