@@ -2,7 +2,7 @@
 date: 2016-06-24T09:27:49-04:00
 menu:
   main:
-    parent: components
+    parent: plugins
 title: Skeletor.browsehappy
 weight: 5
 ---
@@ -11,7 +11,7 @@ Show an unobstrusive notification bar if your browser is out dated. This is a wr
 
 ## Usage
 
-This component is included by default in Skeletor. There isn't anything extra you need to do unless you want to change options. The relevant initialization code is in the `skeletor.main.js`
+This plugin is included by default in Skeletor. There isn't anything extra you need to do unless you want to change options. The relevant initialization code is in the `skeletor.main.js`
 
 ```javascript
 require(['skeletor.browsehappy'], function(){
@@ -29,7 +29,7 @@ require(['skeletor.browsehappy'], function(){
 ```
 
 {{< note title="Note" >}}
-The first parameter is always the element the component is attached too. In the above, `$(document)` is used. It's also the default if it's left blank.
+The first parameter is always the element the plugin is attached too. In the above, `$(document)` is used. It's also the default if it's left blank.
 {{< /note >}}
 
 ## Options

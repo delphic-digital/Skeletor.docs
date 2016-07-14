@@ -30,8 +30,8 @@ theme = "skeletor"
     pre = ""
     weight = -90
 [[menu.main]]
-    name = "Components"
-    identifier = "components"
+    name = "Plugins"
+    identifier = "plugins"
     pre = ""
     weight = -80
 [[menu.main]]
