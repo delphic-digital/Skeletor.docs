@@ -33,17 +33,43 @@ $('.js-toggle-search').click(function(e){
 $('.js-toggle-sidebar').click(function(e){
 	e.preventDefault();
 	$('body').toggleClass('sidebar-toggle');
-})
+});
+
+function highlight(content,what) {
+	var pattern = new RegExp("(" + what + ")", "gim");
+	    replaceWith = '<span class="search-highlight">$1</span>',
+	    beginning = content.substr(0, content.search(pattern)+what.length).slice(-(50+what.length)),
+	    end = content.substr(content.search(pattern)+what.length, (50-what.length));
+
+	content = ((beginning[0].toUpperCase() == beginning[0])?beginning:'...'+beginning) + ((end.substring(end.length-1)) == "."?end:end+'...');
+
+	var highlighted = content.replace(pattern,replaceWith);
+
+	//console.log(content)
+
+	return highlighted;
+	}
+
+var debounce = function (fn) {
+	var timeout;
+		return function () {
+		var args = Array.prototype.slice.call(arguments),
+			  ctx = this
+
+		clearTimeout(timeout)
+		timeout = setTimeout(function () {
+			fn.apply(ctx, args)
+		}, 100)
+	}
+}
 
 var index,
 		store,
     data = $.getJSON(window.baseurl+'/lunr.json');
 
-function getSnippet(str, val){
-	var first = str.substr(0,str.indexOf(val)).slice(-100);
-	var second = str.substr(str.indexOf(val)+val.length, 100);
-	var snippet = '...'+first + '<span class="search-highlight">'+val+'</span>'+second;
-	return snippet;
+function getSnippet(content, val){
+	var highlighted =  highlight(content, val);
+	return highlighted;
 }
 
 
@@ -66,39 +92,47 @@ data.then(function(items){
 });
 
 
-
-
-
-$('.search-input').on('keyup', function () {
+$('.search-input').on('keyup', debounce(function () {
+	//if ($(this).val().length < 3) return;
 	// Get query
 	var query = $(this).val();
-	var results = index.search(query).map(function (result) {
-		return store.filter(function (q) { return q.uri === result.ref })[0]
-	})
+	if(query.length>2){
+		var results = index.search(query)
+		.filter(function(result){ //console.log(result)
+			return result.score > .00005;
+		})
+		.map(function (result) {
+			return store.filter(function (q) { return q.uri === result.ref })[0]
+		})
 
-	//console.log(results)
-	if(!query || query==''){
+		//console.log(results)
+		var length = results.length;
+
+		if(length==0){
+			$('.search-results-title').html('No Search Results Found')
+		}else{
+			$('.search-results-title').html(length + ' Search Result')
+		}
+
+		if(length>1){
+			$('.search-results-title').append('s');
+		}
+
+
+
+	}else{
+		//$('.search-results-container').hide();
+		//$('.search-results').empty();
+	}
+
+
+	if(!query || query=='' || query.length<3){
 		$('.search-results-container').hide();
 	}else{
 		$('.search-results-container').show();
 		$('.search-results').empty();
-	}
-	var length = results.length;
 
-	if(length==0){
-		$('.search-results-title').html('No Search Results Found')
-	}else{
-		$('.search-results-title').html(length + ' Search Result')
-	}
-
-	if(length>1){
-		$('.search-results-title').append('s');
-	}
-
-
-
-
-	for (i in results){
+		for (i in results){
 		//console.log(results[i].content)
 
 		$('.search-results').append('<a href="'+window.baseurl+results[i].uri+'" class="search-result"><div  class="search-result__title">'+results[i].title+'</div><div class="search-result__snippet">'+getSnippet(results[i].content, query)+'</div></a>')
@@ -107,6 +141,10 @@ $('.search-input').on('keyup', function () {
 			$('.search-results').append('<hr>');
 		}
 	}
+	}
+
+
+
 
 	/*results.length ?
 		results.map(function(result){
@@ -114,4 +152,4 @@ $('.search-input').on('keyup', function () {
 			//console.log(store[result.ref])
 		}) : console.log('nothing found')*/
 
-});
+}));
