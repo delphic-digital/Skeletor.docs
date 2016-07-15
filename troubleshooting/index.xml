@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troubleshooting on The Skeletor Project</title>
+    <link>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on The Skeletor Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Jul 2016 11:33:43 -0400</lastBuildDate>
+    <atom:link href="https://delphic-digital.github.io/Skeletor.docs/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>External svgs</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/external-svgs/</link>
+      <pubDate>Fri, 15 Jul 2016 11:33:43 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/external-svgs/</guid>
+      <description>
+
+&lt;h2 id=&#34;external-svgs-don-t-work-across-domains&#34;&gt;External svgs don&amp;rsquo;t work across domains.&lt;/h2&gt;
+
+&lt;p&gt;They have to be on the same domain.&lt;/p&gt;
+
+&lt;h3 id=&#34;workarounds&#34;&gt;Workarounds&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

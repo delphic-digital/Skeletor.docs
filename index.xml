@@ -663,6 +663,22 @@ require.config({
     </item>
     
     <item>
+      <title>External svgs</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/external-svgs/</link>
+      <pubDate>Fri, 15 Jul 2016 11:33:43 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/external-svgs/</guid>
+      <description>
+
+&lt;h2 id=&#34;external-svgs-don-t-work-across-domains&#34;&gt;External svgs don&amp;rsquo;t work across domains.&lt;/h2&gt;
+
+&lt;p&gt;They have to be on the same domain.&lt;/p&gt;
+
+&lt;h3 id=&#34;workarounds&#34;&gt;Workarounds&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Mobile first sass</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/tutorials/mobile-first-sass/</link>
       <pubDate>Fri, 01 Jul 2016 09:39:50 -0400</pubDate>

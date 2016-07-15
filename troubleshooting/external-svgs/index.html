@@ -8,7 +8,7 @@
 		<meta name="generator" content="Hugo 0.17-DEV" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		
-		<title>Skeletor - Sass</title>
+		<title>Skeletor - External svgs</title>
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -28,12 +28,12 @@
 			
 				<div class="header-top-buttons">
 					
-						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/development/sass.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
+						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/troubleshooting/external-svgs.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
 					
 					<a title="Search this site" href="" class="js-toggle-search"><i class="zmdi zmdi-search zmdi-hc-lg"></i></a>
 				</div>
 				<a href="" class="header-menu-button js-toggle-sidebar"><i class="zmdi zmdi-menu zmdi-hc"></i></a>
-				<h1 class="page-title">Sass</h1>
+				<h1 class="page-title">External svgs</h1>
 				<div class="search-form">
 	<div class="search-form-content">
 		<a href="" class="search-form-close js-search-close"><i class="zmdi zmdi-arrow-left zmdi-hc-lg"></i></a>
@@ -52,23 +52,6 @@
 		
 		<main>
 			
-	<div class="toc-container">
-		<div class="toc-wrapper">
-			<div class="toc">
-				<h4>In this section:</h4>
-				<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#structure">Structure</a></li>
-<li><a href="#philosophies">Philosophies</a></li>
-</ul></li>
-</ul>
-</nav>
-			</div>
-		</div>
-	</div>
-
 			<aside>
 	<div id="sidebar" class="nav-collapse">
 		<div class="sidebar-header">
@@ -142,18 +125,18 @@
 		  
 				
 
-			<li class="sub-menu active">
+			<li class="sub-menu">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Development</span>
-				<span class="menu-arrow fa fa-angle-down"></span>
+				<span class="menu-arrow fa fa-angle-right"></span>
 			</a>
-				<ul class="sub open">
+				<ul class="sub">
 					
 					<li><a href="/Skeletor.docs/development/javascript/">Javascript</a> </li>
 					
-					<li class="active"><a href="/Skeletor.docs/development/sass/">Sass</a> </li>
+					<li><a href="/Skeletor.docs/development/sass/">Sass</a> </li>
 					
 					<li><a href="/Skeletor.docs/development/sprites/">Sprites</a> </li>
 					
@@ -216,16 +199,16 @@
 		  
 				
 
-			<li class="sub-menu">
+			<li class="sub-menu active">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Troubleshooting</span>
-				<span class="menu-arrow fa fa-angle-right"></span>
+				<span class="menu-arrow fa fa-angle-down"></span>
 			</a>
-				<ul class="sub">
+				<ul class="sub open">
 					
-					<li><a href="/Skeletor.docs/troubleshooting/external-svgs/">External svgs</a> </li>
+					<li class="active"><a href="/Skeletor.docs/troubleshooting/external-svgs/">External svgs</a> </li>
 					
 				</ul>
 			  
@@ -238,64 +221,11 @@
 
 
 
-<p>Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:</p>
+<h2 id="external-svgs-don-t-work-across-domains">External svgs don&rsquo;t work across domains.</h2>
 
-<ul>
-<li><a href="http://susy.oddbird.net">Susy</a>, great for robust grids</li>
-<li><a href="http://bourbon.io">Bourbon</a>, awesome set of mixins</li>
-<li><a href="http://breakpoint-sass.com">Breakpoint</a>, used with a custom mixin to make breakpoints easy</li>
-<li><a href="https://github.com/britco/node-sass-globbing">Node Sass Globbing</a>, so you don&rsquo;t have to add custom partials to the main.scss. Be careful of casscading rules!!</li>
-</ul>
+<p>They have to be on the same domain.</p>
 
-<h2 id="structure">Structure</h2>
-
-<pre><code class="language-bash">skeletor
-|-- Static
-    |-- dist
-    |   |-- css
-    |   |   |-- main.css # Your Sass gets compiled here
-    |-- src
-        |-- scss
-            |-- main.scss
-            |-- partials
-                |-- _settings.scss
-                |-- base
-                |   |-- _buttons.scss
-                |   |-- _fonts.scss
-                |   |-- _inputs.scss
-                |   |-- _scaffolding.scss
-                |   |-- _sprites.scss
-                |   |-- _svg.scss
-                |   |-- _typography.scss
-                |-- components
-                |   |-- # Your sites Sass components
-                |-- layout
-                    |-- _footer.scss
-                    |-- _forms.scss
-                    |-- _header.scss
-                    |-- _sidebar.scss
-</code></pre>
-
-<p><em><code>main.scss</code></em></p>
-
-<p>The <code>main.scss</code> file contains the entries points for the sites sass partials.</p>
-
-<p><em><code>partials</code></em></p>
-
-<ul>
-<li><code>_settings.scss</code> site settings defined here, it contains variables for all of the colors, font stacks, breakpoints, and sizing.</li>
-<li><code>base</code> holds global and base styles.</li>
-<li><code>components</code> holds site components styles. Any partial added here is automatically imported with the globbing plugin.</li>
-<li><code>layout</code> holds global layout styles.</li>
-</ul>
-
-<h2 id="philosophies">Philosophies</h2>
-
-<ul>
-<li><a href="http://www.zell-weekeat.com/how-to-write-mobile-first-css">Mobile First</a>, mobile first approach</li>
-<li><a href="https://smacss.com">SMACSS</a>, css design process</li>
-<li><a href="https://css-tricks.com/bem-101">BEM</a>, naming convention for CSS.</li>
-</ul>
+<h3 id="workarounds">Workarounds</h3>
 
 
 				<div class="footer-panel">
