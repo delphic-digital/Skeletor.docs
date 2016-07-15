@@ -44,3 +44,8 @@ theme = "skeletor"
     identifier = "tutorials"
     pre = ""
     weight = -50
+[[menu.main]]
+    name = "Troubleshooting"
+    identifier = "troubleshooting"
+    pre = ""
+    weight = -40
