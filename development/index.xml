@@ -258,7 +258,9 @@ define(function (require){
 
 &lt;h2 id=&#34;using-plugins&#34;&gt;Using plugins&lt;/h2&gt;
 
-&lt;p&gt;Using Skeletor plugins (components and behaviors) is simple. If you&amp;rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: &lt;code&gt;bower search skeletor&lt;/code&gt; or by going to the private bower repo at &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com&#34;&gt;http://bowerregistry-delphic.rhcloud.com&lt;/a&gt;. These skeletor plugins will automatically be wired up for use in requirejs. To use:&lt;/p&gt;
+&lt;p&gt;Skeletor has a library of plugins you can use easily for your website components.&lt;/p&gt;
+
+&lt;p&gt;Using Skeletor plugins is simple. If you&amp;rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: &lt;code&gt;bower search skeletor&lt;/code&gt; or by going to the private bower repo at &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com&#34;&gt;http://bowerregistry-delphic.rhcloud.com&lt;/a&gt;. These skeletor plugins will automatically be wired up for use in requirejs. To use:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.accordion&#39;], function(){
 
