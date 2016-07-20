@@ -256,11 +256,60 @@ To load a JS component for only certain media queries, add a data-component-cont
 
 These components are aynced in after page load and will remain separate modules in the build process.
 
-## Using plugins
+## Bower
+
+Skeletor integrates with bower package management very nicely for vendor components. See http://bower.io for more info.
+
+
+```sh
+# install a vendor component with bower
+# main component files are automatically wired up to Skeletor
+# js main is added to requirejs paths config.
+# css/scss is added to main.scss
+$ bower install <package>
+```
+
+There is some automation that happens when you use bower. Please take care to understand these steps.
+The files are determined by what's declared as a **main** file by the `bower.json` spec.
+
+**JavaScript files are added to the requirejs paths config:**
+
+```js
+// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+	paths: {
+		"bower-example": "../../../bower_components/bower-example",
+	},
+	packages: [
+
+	],
+	shim: {
+
+	}
+});
+```
+
+**CSS/SASS files are added to the main.scss:**
+
+```scss
+// Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
+// bower:css
+@import "../../../bower_components/bower-example.css";
+// endbower
+
+// Automatically injected Bower SCSS dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../../bower_components/bower-example.scss";
+// endbower
+```
+
+If something goes wrong (correct files aren't wired up), check the components bower.json file to make sure the `"main": []` is declared correctly. If not, you can add an override for your project's `bower.json` file. See https://github.com/ck86/main-bower-files#overrides-options for how to do this.
+
+## Using Skeletor plugins
 
 Skeletor has a library of plugins you can use easily for your website components.
 
-Using Skeletor plugins is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by going to the private bower repo at http://bowerregistry-delphic.rhcloud.com. These skeletor plugins will automatically be wired up for use in requirejs. To use:
+Using Skeletor plugins is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by going to the private bower repo at http://bowerregistry-delphic.rhcloud.com. These skeletor plugins will automatically be wired up like any other bower component. To use:
 
 ```javascript
 require(['skeletor.accordion'], function(){
