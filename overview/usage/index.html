@@ -56,14 +56,7 @@
 		<div class="toc-wrapper">
 			<div class="toc">
 				<h4>In this section:</h4>
-				<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#installing-components">Installing components</a></li>
-</ul></li>
-</ul>
-</nav>
+				
 			</div>
 		</div>
 	</div>
@@ -235,8 +228,6 @@
 </aside>
 			<section class="content-section">
 
-
-
 <p>Skeletor uses gulp as a task runner and several commands are available to use:</p>
 
 <pre><code class="language-sh"># run Gulp in development mode (does not minify your JS for quicker response),
@@ -251,51 +242,6 @@ $ gulp
 # will not start any server or watch.
 $ gulp build
 </code></pre>
-
-<h2 id="installing-components">Installing components</h2>
-
-<p>Skeletor integrates with bower package management very nicely for vendor components. See <a href="http://bower.io">http://bower.io</a> for more info.</p>
-
-<pre><code class="language-sh"># install a vendor component with bower
-# main component files are automatically wired up to Skeletor
-# js main is added to requirejs paths config.
-# css/scss is added to main.scss
-$ bower install &lt;package&gt;
-</code></pre>
-
-<p>There is some automation that happens when you use bower. Please take care to understand these steps.
-The files are determined by what&rsquo;s declared as a <strong>main</strong> file by the <code>bower.json</code> spec.</p>
-
-<p><strong>JavaScript files are added to the requirejs paths config:</strong></p>
-
-<pre><code class="language-js">// Automatically injected Bower JS dependencies via bowerRequireJS
-require.config({
-    paths: {
-        &quot;bower-example&quot;: &quot;../../../bower_components/bower-example&quot;,
-    },
-    packages: [
-
-    ],
-    shim: {
-
-    }
-});
-</code></pre>
-
-<p><strong>CSS/SASS files are added to the main.scss:</strong></p>
-
-<pre><code class="language-scss">// Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
-// bower:css
-@import &quot;../../../bower_components/bower-example.css&quot;;
-// endbower
-
-// Automatically injected Bower SCSS dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import &quot;../../../bower_components/bower-example.scss&quot;;
-// endbower
-</code></pre>
-
-<p>If something goes wrong (correct files aren&rsquo;t wired up), check the components bower.json file to make sure the <code>&quot;main&quot;: []</code> is declared correctly. If not, you can add an override for your project&rsquo;s <code>bower.json</code> file. See <a href="https://github.com/ck86/main-bower-files#overrides-options">https://github.com/ck86/main-bower-files#overrides-options</a> for how to do this.</p>
 
 
 				<div class="footer-panel">

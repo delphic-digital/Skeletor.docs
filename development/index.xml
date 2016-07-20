@@ -256,11 +256,56 @@ define(function (require){
 
 &lt;p&gt;These components are aynced in after page load and will remain separate modules in the build process.&lt;/p&gt;
 
-&lt;h2 id=&#34;using-plugins&#34;&gt;Using plugins&lt;/h2&gt;
+&lt;h2 id=&#34;bower&#34;&gt;Bower&lt;/h2&gt;
+
+&lt;p&gt;Skeletor integrates with bower package management very nicely for vendor components. See &lt;a href=&#34;http://bower.io&#34;&gt;http://bower.io&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# install a vendor component with bower
+# main component files are automatically wired up to Skeletor
+# js main is added to requirejs paths config.
+# css/scss is added to main.scss
+$ bower install &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There is some automation that happens when you use bower. Please take care to understand these steps.
+The files are determined by what&amp;rsquo;s declared as a &lt;strong&gt;main&lt;/strong&gt; file by the &lt;code&gt;bower.json&lt;/code&gt; spec.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JavaScript files are added to the requirejs paths config:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// Automatically injected Bower JS dependencies via bowerRequireJS
+require.config({
+    paths: {
+        &amp;quot;bower-example&amp;quot;: &amp;quot;../../../bower_components/bower-example&amp;quot;,
+    },
+    packages: [
+
+    ],
+    shim: {
+
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS/SASS files are added to the main.scss:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;// Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
+// bower:css
+@import &amp;quot;../../../bower_components/bower-example.css&amp;quot;;
+// endbower
+
+// Automatically injected Bower SCSS dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import &amp;quot;../../../bower_components/bower-example.scss&amp;quot;;
+// endbower
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If something goes wrong (correct files aren&amp;rsquo;t wired up), check the components bower.json file to make sure the &lt;code&gt;&amp;quot;main&amp;quot;: []&lt;/code&gt; is declared correctly. If not, you can add an override for your project&amp;rsquo;s &lt;code&gt;bower.json&lt;/code&gt; file. See &lt;a href=&#34;https://github.com/ck86/main-bower-files#overrides-options&#34;&gt;https://github.com/ck86/main-bower-files#overrides-options&lt;/a&gt; for how to do this.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-skeletor-plugins&#34;&gt;Using Skeletor plugins&lt;/h2&gt;
 
 &lt;p&gt;Skeletor has a library of plugins you can use easily for your website components.&lt;/p&gt;
 
-&lt;p&gt;Using Skeletor plugins is simple. If you&amp;rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: &lt;code&gt;bower search skeletor&lt;/code&gt; or by going to the private bower repo at &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com&#34;&gt;http://bowerregistry-delphic.rhcloud.com&lt;/a&gt;. These skeletor plugins will automatically be wired up for use in requirejs. To use:&lt;/p&gt;
+&lt;p&gt;Using Skeletor plugins is simple. If you&amp;rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: &lt;code&gt;bower search skeletor&lt;/code&gt; or by going to the private bower repo at &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com&#34;&gt;http://bowerregistry-delphic.rhcloud.com&lt;/a&gt;. These skeletor plugins will automatically be wired up like any other bower component. To use:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.accordion&#39;], function(){
 
