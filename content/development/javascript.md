@@ -258,7 +258,9 @@ These components are aynced in after page load and will remain separate modules 
 
 ## Using plugins
 
-Using Skeletor plugins (components and behaviors) is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by going to the private bower repo at http://bowerregistry-delphic.rhcloud.com. These skeletor plugins will automatically be wired up for use in requirejs. To use:
+Skeletor has a library of plugins you can use easily for your website components.
+
+Using Skeletor plugins is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by going to the private bower repo at http://bowerregistry-delphic.rhcloud.com. These skeletor plugins will automatically be wired up for use in requirejs. To use:
 
 ```javascript
 require(['skeletor.accordion'], function(){
