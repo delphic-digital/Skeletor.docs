@@ -201,7 +201,7 @@ Create requirejs components in the `./components` folder. These won't be concate
 
 #### Example component
 
-Components are standard requirejs modules, and it's syntax should be used. For components that rely on the `data-component` loading, there require a couple functions.
+Components are standard requirejs modules, and it's syntax should be used. For components that rely on the `data-component` loading, they require a couple functions.
 
 1. An init function for encapsulating code that should run with the component is fully loaded into the page.
 2. A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.
@@ -258,21 +258,18 @@ These components are aynced in after page load and will remain separate modules 
 
 ## Bower
 
-Skeletor integrates with bower package management very nicely for vendor components. See http://bower.io for more info.
+Skeletor uses [bower](http://bower.io) for front end package management.
 
 
 ```sh
-# install a vendor component with bower
-# main component files are automatically wired up to Skeletor
-# js main is added to requirejs paths config.
-# css/scss is added to main.scss
+# Install a component with bower.
 $ bower install <package>
 ```
 
-There is some automation that happens when you use bower. Please take care to understand these steps.
-The files are determined by what's declared as a **main** file by the `bower.json` spec.
+There is some automation specific to Skeletor that happens when you use bower. Please take care to understand these steps.
+Files that are determined by what's declared in the components `bower.json` as a **main** file are automatically wired up.
 
-**JavaScript files are added to the requirejs paths config:**
+**Main JavaScript files are added to the requirejs paths config:**
 
 ```js
 // Automatically injected Bower JS dependencies via bowerRequireJS
@@ -289,7 +286,7 @@ require.config({
 });
 ```
 
-**CSS/SASS files are added to the main.scss:**
+**Main CSS/SASS files are added to the main.scss:**
 
 ```scss
 // Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
@@ -305,11 +302,12 @@ require.config({
 
 If something goes wrong (correct files aren't wired up), check the components bower.json file to make sure the `"main": []` is declared correctly. If not, you can add an override for your project's `bower.json` file. See https://github.com/ck86/main-bower-files#overrides-options for how to do this.
 
+
 ## Using Skeletor plugins
 
-Skeletor has a library of plugins you can use easily for your website components.
+Skeletor has a library of plugins you can use easily for your website. These plugins integrate into the Skeletor namespace and add nice organization to your code.
 
-Using Skeletor plugins is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by going to the private bower repo at http://bowerregistry-delphic.rhcloud.com. These skeletor plugins will automatically be wired up like any other bower component. To use:
+Using Skeletor plugins is simple. If you're familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: `bower search skeletor` or by viewing the [private bower repo](http://bowerregistry-delphic.rhcloud.com) through the browser. These skeletor plugins will automatically be wired up like any other bower component. To use:
 
 ```javascript
 require(['skeletor.accordion'], function(){

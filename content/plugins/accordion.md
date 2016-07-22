@@ -38,12 +38,15 @@ Now you can require and initialize the accordion.
 
 ```javascript
 require(['skeletor.accordion'], function(){
-  var accordion = new Skeletor.Accordion($('.js-accordion'));
 
-  //For multiple instances on the same page
+  //attach to multiple elements
   $('.js-accordion').each(function(){
     new Skeletor.Accordion($(this));
   })
+
+  //Or attach to single element with options
+  new Skeletor.Accordion($('.js-accordion-another'),{singleOpen: false});
+
 })
 ```
 
@@ -51,7 +54,7 @@ require(['skeletor.accordion'], function(){
 
 |Option             |Type      |Default       |Description                                                            |
 |-------------------|----------|--------------|-----------------------------------------------------------------------|
-|singleOpen         |boolean   |true          |Browser versions to notify                                             |
+|singleOpen         |boolean   |true          |Allow only one item open at a time                                     |
 |duration           |int       |200           |Animation length between transitions                                   |
 |easing             |string    |'swing'       |Animation easing supports Velocty: http://velocityjs.org/#easing       |
 |active             |int       |0             |Animation length between transitions                                   |
