@@ -45,12 +45,15 @@
 &lt;p&gt;Now you can require and initialize the accordion.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.accordion&#39;], function(){
-  var accordion = new Skeletor.Accordion($(&#39;.js-accordion&#39;));
 
-  //For multiple instances on the same page
+  //attach to multiple elements
   $(&#39;.js-accordion&#39;).each(function(){
     new Skeletor.Accordion($(this));
   })
+
+  //Or attach to single element with options
+  new Skeletor.Accordion($(&#39;.js-accordion-another&#39;),{singleOpen: false});
+
 })
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -71,7 +74,7 @@
 &lt;td&gt;singleOpen&lt;/td&gt;
 &lt;td&gt;boolean&lt;/td&gt;
 &lt;td&gt;true&lt;/td&gt;
-&lt;td&gt;Browser versions to notify&lt;/td&gt;
+&lt;td&gt;Allow only one item open at a time&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
