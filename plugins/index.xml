@@ -9,6 +9,138 @@
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/plugins/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Skeletor.accordion</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/plugins/accordion/</link>
+      <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/plugins/accordion/</guid>
+      <description>
+
+&lt;p&gt;Allows collapsing and expanding of multiple sections of content.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Requires:&lt;/strong&gt; &lt;code&gt;skeletor.core&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;bower install skeletor.accordion&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;An accordion must be structured using the example markup. Every item should have an accompanying header and section. The header will be bound with a click event that toggles the display of its sibling section, while also closing other sections (can be changed through options).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;accordion js-accordion&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;accordion__item&amp;quot;&amp;gt;
+    &amp;lt;header class=&amp;quot;accordion__header&amp;quot;&amp;gt;
+      Lorem ipsum dolor sit amet
+    &amp;lt;/header&amp;gt;
+    &amp;lt;section class=&amp;quot;accordion__section&amp;quot;&amp;gt;
+      &amp;lt;div class=&amp;quot;accordion__body&amp;quot;&amp;gt;
+        Qui offendit convenire ea. Vis eirmod graecis mentitum in. Scripta delectus an quo. Equidem elaboraret nam et,
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/section&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can require and initialize the accordion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.accordion&#39;], function(){
+  var accordion = new Skeletor.Accordion($(&#39;.js-accordion&#39;));
+
+  //For multiple instances on the same page
+  $(&#39;.js-accordion&#39;).each(function(){
+    new Skeletor.Accordion($(this));
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;options&#34;&gt;Options&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Option&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Default&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;singleOpen&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;Browser versions to notify&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;duration&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Animation length between transitions&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;easing&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;&amp;lsquo;swing&amp;rsquo;&lt;/td&gt;
+&lt;td&gt;Animation easing supports Velocty: &lt;a href=&#34;http://velocityjs.org/#easing&#34;&gt;http://velocityjs.org/#easing&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;active&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;Animation length between transitions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;open(int:index)&lt;/td&gt;
+&lt;td&gt;Open accordion item at specified index. 0 based.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;close(int:index)&lt;/td&gt;
+&lt;td&gt;Close accordion item at specified index. 0 based.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;closeall()&lt;/td&gt;
+&lt;td&gt;Close all items&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;keyboard&#34;&gt;Keyboard&lt;/h2&gt;
+
+&lt;p&gt;Keyboard navigation is supported:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If you focus in the accordion &amp;ldquo;buttons&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;use Up/Left to put focus on previous accordion button,&lt;/li&gt;
+&lt;li&gt;use Down/Right to put focus on next accordion button&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And hit return on an accordion button to open/close it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Skeletor.browsehappy</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/plugins/browsehappy/</link>
       <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
