@@ -264,6 +264,8 @@ Skeletor uses [bower](http://bower.io) for front end package management.
 ```sh
 # Install a component with bower.
 $ bower install <package>
+# or with an individual file.
+$ bower install https://code.jquery.com/jquery-3.1.0.min.js
 ```
 
 There is some automation specific to Skeletor that happens when you use bower. Please take care to understand these steps.
