@@ -325,7 +325,7 @@ require(['skeletor.accordion'], function(){
 })
 ```
 
-### Accessing Instances
+#### Calling methods
 To access methods or properties on a plugin, the plugin instance will need to be retrieved. This can be achieved through the skeletor() method. You can pass public methods to the plugin this way.
 
 ```javascript
