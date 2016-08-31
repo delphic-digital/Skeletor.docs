@@ -1170,11 +1170,11 @@ $breadcrumb.disable();
       <guid>https://delphic-digital.github.io/Skeletor.docs/contribute/registering-a-plugin/</guid>
       <description>
 
-&lt;p&gt;Skeletor has a private bower repo to host all it&amp;rsquo;s components using &lt;a href=&#34;https://www.npmjs.com/package/private-bower&#34;&gt;private-bower&lt;/a&gt; hosted here: &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com/&#34;&gt;http://bowerregistry-delphic.rhcloud.com/&lt;/a&gt;. Registering it follows normal bower steps with an extra config.&lt;/p&gt;
+&lt;p&gt;Skeletor has a private bower repo to host all it&amp;rsquo;s components using &lt;a href=&#34;https://www.npmjs.com/package/private-bower&#34;&gt;private-bower&lt;/a&gt; hosted here: &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com/&#34;&gt;http://bowerregistry-delphic.rhcloud.com/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;register&#34;&gt;Register&lt;/h2&gt;
 
-&lt;p&gt;Create a bower config file at the root of your plugin directory: &lt;code&gt;.bowerrc&lt;/code&gt; with the following settings.&lt;/p&gt;
+&lt;p&gt;To register your plugin for Skeletor, you need to point bower to the private bower repo. Create a bower config file, &lt;code&gt;.bowerrc&lt;/code&gt;, at the root of your plugin directory with the following settings.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
     &amp;quot;registry&amp;quot;: &amp;quot;http://bowerregistry-delphic.rhcloud.com&amp;quot;,
@@ -1182,9 +1182,15 @@ $breadcrumb.disable();
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You can read more about the &lt;code&gt;.bowerrc&lt;/code&gt; from the bower site: &lt;a href=&#34;https://bower.io/docs/config/&#34;&gt;https://bower.io/docs/config/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Create a &lt;code&gt;bower.json&lt;/code&gt; at the root of your project with &lt;code&gt;bower init&lt;/code&gt;.
+Then use &lt;code&gt;bower register&lt;/code&gt;:&lt;/p&gt;
 
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ bower register &amp;lt;my-package-name&amp;gt; &amp;lt;git-endpoint&amp;gt;
+# for example
+$ bower register example git://github.com/user/example.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage-in-skeletor&#34;&gt;Usage in Skeletor&lt;/h2&gt;
 
 &lt;p&gt;Skeletor includes a &lt;code&gt;.bowerrc&lt;/code&gt; file that points to the private bower registery already. Installing a Skeletor component is a simple as running bower commands.&lt;/p&gt;
 
