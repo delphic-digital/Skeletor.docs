@@ -7,11 +7,11 @@ title: Registering a plugin
 weight: 6
 ---
 
-Skeletor has a private bower repo to host all it's components using [private-bower](https://www.npmjs.com/package/private-bower) hosted here: http://bowerregistry-delphic.rhcloud.com/. Registering it follows normal bower steps with an extra config.
+Skeletor has a private bower repo to host all it's components using [private-bower](https://www.npmjs.com/package/private-bower) hosted here: http://bowerregistry-delphic.rhcloud.com/.
 
 ## Register
 
-Create a bower config file at the root of your plugin directory: `.bowerrc` with the following settings.
+To register your plugin for Skeletor, you need to point bower to the private bower repo. Create a bower config file, `.bowerrc`, at the root of your plugin directory with the following settings.
 
 ```javascript
 {
@@ -19,9 +19,18 @@ Create a bower config file at the root of your plugin directory: `.bowerrc` with
     "timeout": 300000,
 }
 ```
-You can read more about the `.bowerrc` from the bower site: https://bower.io/docs/config/
 
-## Usage
+Create a `bower.json` at the root of your project with `bower init`.
+Then use `bower register`:
+
+```bash
+$ bower register <my-package-name> <git-endpoint>
+# for example
+$ bower register example git://github.com/user/example.git
+```
+
+
+## Usage in Skeletor
 
 Skeletor includes a `.bowerrc` file that points to the private bower registery already. Installing a Skeletor component is a simple as running bower commands.
 
