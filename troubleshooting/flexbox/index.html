@@ -8,7 +8,7 @@
 		<meta name="generator" content="Hugo 0.17-DEV" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		
-		<title>Skeletor - Javascript</title>
+		<title>Skeletor - Flexbox</title>
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -28,12 +28,12 @@
 			
 				<div class="header-top-buttons">
 					
-						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/development/javascript.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
+						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/troubleshooting/flexbox.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
 					
 					<a title="Search this site" href="" class="js-toggle-search"><i class="zmdi zmdi-search zmdi-hc-lg"></i></a>
 				</div>
 				<a href="" class="header-menu-button js-toggle-sidebar"><i class="zmdi zmdi-menu zmdi-hc"></i></a>
-				<h1 class="page-title">Javascript</h1>
+				<h1 class="page-title">Flexbox</h1>
 				<div class="search-form">
 	<div class="search-form-content">
 		<a href="" class="search-form-close js-search-close"><i class="zmdi zmdi-arrow-left zmdi-hc-lg"></i></a>
@@ -52,42 +52,6 @@
 		
 		<main>
 			
-	<div class="toc-container">
-		<div class="toc-wrapper">
-			<div class="toc">
-				<h4>In this section:</h4>
-				<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#brief-overview-of-structure">Brief overview of structure</a>
-<ul>
-<li><a href="#main">Main</a></li>
-</ul></li>
-<li><a href="#dynamic-components">Dynamic components</a>
-<ul>
-<li><a href="#example-component">Example component</a></li>
-<li><a href="#component-loading">Component loading</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#bower">Bower</a></li>
-<li><a href="#using-skeletor-plugins">Using Skeletor plugins</a>
-<ul>
-<li>
-<ul>
-<li><a href="#calling-methods">Calling methods</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#skeletor-object">Skeletor Object</a></li>
-</ul></li>
-</ul>
-</nav>
-			</div>
-		</div>
-	</div>
-
 			<aside>
 	<div id="sidebar" class="nav-collapse">
 		<div class="sidebar-header">
@@ -161,16 +125,16 @@
 		  
 				
 
-			<li class="sub-menu active">
+			<li class="sub-menu">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Development</span>
-				<span class="menu-arrow fa fa-angle-down"></span>
+				<span class="menu-arrow fa fa-angle-right"></span>
 			</a>
-				<ul class="sub open">
+				<ul class="sub">
 					
-					<li class="active"><a href="/Skeletor.docs/development/javascript/">Javascript</a> </li>
+					<li><a href="/Skeletor.docs/development/javascript/">Javascript</a> </li>
 					
 					<li><a href="/Skeletor.docs/development/sass/">Sass</a> </li>
 					
@@ -237,18 +201,18 @@
 		  
 				
 
-			<li class="sub-menu">
+			<li class="sub-menu active">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Troubleshooting</span>
-				<span class="menu-arrow fa fa-angle-right"></span>
+				<span class="menu-arrow fa fa-angle-down"></span>
 			</a>
-				<ul class="sub">
+				<ul class="sub open">
 					
 					<li><a href="/Skeletor.docs/troubleshooting/external-svgs/">External svgs</a> </li>
 					
-					<li><a href="/Skeletor.docs/troubleshooting/flexbox/">Flexbox</a> </li>
+					<li class="active"><a href="/Skeletor.docs/troubleshooting/flexbox/">Flexbox</a> </li>
 					
 				</ul>
 			  
@@ -259,322 +223,14 @@
 </aside>
 			<section class="content-section">
 
+<p>There are 3 different versions of flexbox. Skeletor can detect and adds a body class if flexbox is supported.</p>
 
-
-<p>Skeletor comes with a JavaScript structure that utilizes <a href="http://requirejs.org">RequireJS</a> for dependency and module loading. There are a couple reasons for this:</p>
-
-<ul>
-<li><strong>Performance</strong>: Skeletor uses best practices for loading JavaScript with a multi-page site. There is a <em>core</em>, or commmon file that gets loading on everypage. After that, there are component level scripts that get loaded in after page load. These components are only loaded if that component exists on the page. It&rsquo;s another way of doing page specific scripts, except this is refined down to the component level.</li>
-<li><strong>Dependency managment</strong> can become a big problem with JavaScript, AMD solves this.</li>
-</ul>
-
-<h3 id="brief-overview-of-structure">Brief overview of structure</h3>
-
-<pre><code class="language-bash">skeletor
-|-- Static
-    |-- dist
-    |   |-- js
-    |       |-- # Your custom javascript is compiled here
-    |       |-- lib
-    |           |-- require.js
-    |-- src
-        |-- js
-            |-- skeletor.main.js
-            |-- components
-            |-- common.js
-            |-- common
-                |-- # Your common components here
-
+<pre><code class="language-CSS">display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 </code></pre>
-
-<h4 id="main">Main</h4>
-
-<p>This is the <code>core</code> and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.</p>
-
-<pre><code>// Automatically injected Bower JS dependencies via bowerRequireJS
-require.config({
-    paths: {
-    },
-    packages: [
-
-    ],
-    shim: {
-
-    }
-});
-// endbower
-
-//Need a second config so the optimizer doesn't try and evaluate the browser only jquery conditional.
-
-require.config({
-    paths: {
-        'jquery': (document.addEventListener) ?
-            ['//code.jquery.com/jquery-3.0.0.min']
-            :
-            ['//code.jquery.com/jquery-1.12.4.min'] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
-    }
-})
-
-define(function (require){
-
-    var componentLoader   = require('skeletor.util.componentLoader'),
-        browsehappy       = require('skeletor.browsehappy'),
-        svg4everybody     = require('svg4everybody'),
-        picturefill       = require('picturefill'),
-        commonComponents  = require('./components/common');
-
-    svg4everybody();
-    commonComponents.init();
-
-});
-</code></pre>
-
-<div class="admonition note">
-	<p class="admonition-title">Note</p>
-	<p class="admonition-desc">Be sure to rename <code>skeletor.main.js</code> with your siteShortName config setting, so it&rsquo;s <code>nameofsite.main.js</code>. Also update this name in your base template.</p>
-</div>
-
-<p>Here is a breakdown of all the parts:</p>
-
-<pre><code>/*---------------------------------------------------------------
-
-    Here is where bower packages get automatically wired up.
-    You should never edit anything in here manually, unless
-    you need to delete a path.
-
------------------------------------------------------------------*/
-
-
-// Automatically injected Bower JS dependencies via bowerRequireJS
-require.config({
-    paths: {
-    },
-    packages: [
-
-    ],
-    shim: {
-
-    }
-});
-// endbower
-</code></pre>
-
-<pre><code>/*---------------------------------------------------------------
-
-    This is some logic to load different verisons of jquery based
-    on browser support. jQuery 3.x supports IE 9+ only.
-
------------------------------------------------------------------*/
-
-
-//Need a second config so the optimizer doesn't try and evaluate the browser only jquery conditional.
-
-require.config({
-    paths: {
-        'jquery': (document.addEventListener) ?
-            ['//code.jquery.com/jquery-3.0.0.min']
-            :
-            ['//code.jquery.com/jquery-1.12.4.min'] // https://github.com/rnsloan/requirejs-conditionally-load-jquery2
-    }
-})
-
-</code></pre>
-
-<pre><code>/*---------------------------------------------------------------
-
-    Here is where some predownloaded components are already
-    required. These are loaded and initiliazed on page load.
-
------------------------------------------------------------------*/
-
-define(function (require){
-
-    var componentLoader   = require('skeletor.util.componentLoader'),
-        browsehappy       = require('skeletor.browsehappy'),
-        svg4everybody     = require('svg4everybody'),
-        picturefill       = require('picturefill'),
-        commonComponents  = require('./components/common');
-
-    svg4everybody();
-    commonComponents.init();
-
-});
-</code></pre>
-
-<p>Here is a breakdown on the preloaded components:</p>
-
-<pre><code>var componentLoader   = require('skeletor.util.componentLoader'),
-/*
-    This is a Skeletor utility that handles component loading
-    through data attributes on elements in your html. By loading
-    javascript this way, the component is essitianly loaded
-    &quot;on demand&quot; and loaded only when it's needed. It also supports
-    context, so components can be loaded only on mobile, tablet, or desktop.
-    See below for example's on how to use this.
-*/
-</code></pre>
-
-<pre><code>browsehappy       = require('skeletor.browsehappy')
-/*
-    Detects old versions of browsers and shows a prompt bar for
-    the user to upgrade.
-*/
-</code></pre>
-
-<pre><code>svg4everybody     = require('svg4everybody'),
-/*
-    External SVG spritesheets polyfill. One of Skeletors key features.
-*/
-</code></pre>
-
-<pre><code>picturefill       = require('picturefill'),
-/*
-    Picture element pollyfill. Use picture element and srset without
-    crossbrowser worry.
-*/
-</code></pre>
-
-<pre><code>commonComponents  = require('./components/common');
-/*
-    For your sites custom common (global) components. This is where
-    code lives that you want loaded on every page and will be
-    concatenated to the main.js when built.
-*/
-</code></pre>
-
-<h3 id="dynamic-components">Dynamic components</h3>
-
-<p>Create requirejs components in the <code>./components</code> folder. These won&rsquo;t be concatenated with the main (common) JS and these can be loaded directly with the HTML.</p>
-
-<h4 id="example-component">Example component</h4>
-
-<p>Components are standard requirejs modules, and it&rsquo;s syntax should be used. For components that rely on the <code>data-component</code> loading, they require a couple functions.</p>
-
-<ol>
-<li>An init function for encapsulating code that should run with the component is fully loaded into the page.</li>
-<li>A destroy function to run when the component is unloaded on the page. For instance, when it leaves a mobile context and enters tablet.</li>
-</ol>
-
-<p>Here&rsquo;s an example:</p>
-
-<pre><code>define(['jquery'],function($) {
-
-    return {
-        settings: {
-            $elm : $('.js-skeletor-guy')
-        },
-
-        init: function() {
-
-            console.log('Init skeletor guy.');
-
-            this.settings.$elm.click(function(){
-                $(this).toggleClass('flipped')
-            })
-        },
-
-        destroy: function() {
-            console.log('Destroy skeletor guy.')
-        }
-
-    };
-
-});
-</code></pre>
-
-<h4 id="component-loading">Component loading</h4>
-
-<p>Add a data-component to the html element that the component will be attached to:</p>
-
-<pre><code class="language-HTML">&lt;!-- component-example.js will be loaded anytime this HTML is present on the page --&gt;
-&lt;div class=&quot;component-example&quot; data-component=&quot;component-example&quot;&gt;
-    Lorem ipsum
-&lt;/div&gt;
-</code></pre>
-
-<p>To load a JS component for only certain media queries, add a data-component-context to the html element. For multiple states, comma separate the values.</p>
-
-<pre><code class="language-HTML">&lt;!-- component-example.js will be loaded only in tablet and desktop --&gt;
-&lt;div class=&quot;component-example&quot; data-component=&quot;component-example&quot; data-component-context=&quot;tablet,desktop&quot;&gt;
-    Lorem ipsum
-&lt;/div&gt;
-</code></pre>
-
-<p>These components are aynced in after page load and will remain separate modules in the build process.</p>
-
-<h2 id="bower">Bower</h2>
-
-<p>Skeletor uses <a href="http://bower.io">bower</a> for front end package management.</p>
-
-<pre><code class="language-sh"># Install a component with bower.
-$ bower install &lt;package&gt;
-# or with an individual file.
-$ bower install https://code.jquery.com/jquery-3.1.0.min.js
-</code></pre>
-
-<p>There is some automation specific to Skeletor that happens when you use bower. Please take care to understand these steps.
-Files that are determined by what&rsquo;s declared in the components <code>bower.json</code> as a <strong>main</strong> file are automatically wired up.</p>
-
-<p><strong>Main JavaScript files are added to the requirejs paths config:</strong></p>
-
-<pre><code class="language-js">// Automatically injected Bower JS dependencies via bowerRequireJS
-require.config({
-    paths: {
-        &quot;bower-example&quot;: &quot;../../../bower_components/bower-example&quot;,
-    },
-    packages: [
-
-    ],
-    shim: {
-
-    }
-});
-</code></pre>
-
-<p><strong>Main CSS/SASS files are added to the main.scss:</strong></p>
-
-<pre><code class="language-scss">// Automatically injected Bower CSS dependencies via wiredep (never manually edit this block)
-// bower:css
-@import &quot;../../../bower_components/bower-example.css&quot;;
-// endbower
-
-// Automatically injected Bower SCSS dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import &quot;../../../bower_components/bower-example.scss&quot;;
-// endbower
-</code></pre>
-
-<p>If something goes wrong (correct files aren&rsquo;t wired up), check the components bower.json file to make sure the <code>&quot;main&quot;: []</code> is declared correctly. If not, you can add an override for your project&rsquo;s <code>bower.json</code> file. See <a href="https://github.com/ck86/main-bower-files#overrides-options">https://github.com/ck86/main-bower-files#overrides-options</a> for how to do this.</p>
-
-<h2 id="using-skeletor-plugins">Using Skeletor plugins</h2>
-
-<p>Skeletor has a library of plugins you can use easily for your website. These plugins integrate into the Skeletor namespace and add nice organization to your code.</p>
-
-<p>Using Skeletor plugins is simple. If you&rsquo;re familiar with jQuery plugins, it works almost the same. Skeletor plugins are registered with bower and can be found by using bower on the command line: <code>bower search skeletor</code> or by viewing the <a href="http://bowerregistry-delphic.rhcloud.com">private bower repo</a> through the browser. These skeletor plugins will automatically be wired up like any other bower component. To use:</p>
-
-<pre><code class="language-javascript">require(['skeletor.accordion'], function(){
-
-  //attach to multiple elements
-  $('.js-accordion').each(function(){
-    new Skeletor.Accordion($(this));
-  })
-
-  //Or attach to single element
-  new Skeletor.Accordion($('.js-accordion-another'),{singleOpen: false});
-
-})
-</code></pre>
-
-<h4 id="calling-methods">Calling methods</h4>
-
-<p>To access methods or properties on a plugin, the plugin instance will need to be retrieved. This can be achieved through the skeletor() method. You can pass public methods to the plugin this way.</p>
-
-<pre><code class="language-javascript">$('.js-accordion:eq(1)').skeletor('open',1)
-</code></pre>
-
-<h2 id="skeletor-object">Skeletor Object</h2>
-
-<p>The global <code>Skeletor</code> object is used extensively by and created for the plugin system. It defines global options, localized messages, feature detection, and device support. It also acts as a namespace for plugins by housing a top level name to avoid global conflicts. Each plugin class definition can be found on the <code>Skeletor</code> object, for example, the accordion class is found under <code>Skeletor.Accordion</code>.</p>
 
 
 				<div class="footer-panel">

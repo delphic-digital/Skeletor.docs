@@ -1163,6 +1163,23 @@ $breadcrumb.disable();
     </item>
     
     <item>
+      <title>Flexbox</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/flexbox/</link>
+      <pubDate>Thu, 01 Sep 2016 11:49:49 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/flexbox/</guid>
+      <description>&lt;p&gt;There are 3 different versions of flexbox. Skeletor can detect and adds a body class if flexbox is supported.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Registering a plugin</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/contribute/registering-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
@@ -1331,22 +1348,6 @@ $ bower register example git://github.com/user/example.git
 &lt;h2 id=&#34;0-1-0-oct-15-2014&#34;&gt;0.1.0, Oct 15, 2014&lt;/h2&gt;
 
 &lt;p&gt;Skeletor is usable.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Skeletor Roadmap</title>
-      <link>https://delphic-digital.github.io/Skeletor.docs/meta/roadmap/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://delphic-digital.github.io/Skeletor.docs/meta/roadmap/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Accordion component&lt;/li&gt;
-&lt;li&gt;Tab component&lt;/li&gt;
-&lt;li&gt;Flyouts component&lt;/li&gt;
-&lt;li&gt;Accessibility enhancements&lt;/li&gt;
-&lt;li&gt;Better handling of multiple data-components on a page&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

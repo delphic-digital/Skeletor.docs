@@ -90,6 +90,12 @@
         "tags": []
     },
     {
+        "uri": "/troubleshooting/flexbox",
+        "title": "Flexbox",
+        "content": "\r\n\r\nThere are 3 different versions of flexbox. Skeletor can detect and adds a body class if flexbox is supported.\r\n\r\n`CSS\r\ndisplay: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */\r\ndisplay: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */\r\ndisplay: -ms-flexbox;      /* TWEENER - IE 10 */\r\ndisplay: -webkit-flex;     /* NEW - Chrome */\r\ndisplay: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */\r\n`",
+        "tags": []
+    },
+    {
         "uri": "/tutorials/mobile-first-sass",
         "title": "Mobile first sass",
         "content": "\nWe found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.\n\n.main-nav {\n\n  &__list {}\n  &__item {}\n\n  @include breakpoint($medium){\n    &__list {}\n    &__item {}\n  }\n}\n\ninstead of\n\n.main-nav {\n\n  @include breakpoint($medium){}\n\n  &__list {\n    @include breakpoint($medium){}\n  }\n\n  &__item {\n    @include breakpoint($medium){}\n  }\n}\n",
