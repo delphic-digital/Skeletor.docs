@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Troubleshooting on The Skeletor Project</title>
-    <link>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/</link>
-    <description>Recent content in Troubleshooting on The Skeletor Project</description>
+    <title>Troubleshooting-rss on The Skeletor Project</title>
+    <link>https://delphic-digital.github.io/Skeletor.docs/troubleshooting/index.xml</link>
+    <description>Recent content in Troubleshooting-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 15 Jul 2016 11:33:43 -0400</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/troubleshooting/index.xml" rel="self" type="application/rss+xml" />

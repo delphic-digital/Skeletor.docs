@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Skeletor Project</title>
-    <link>https://delphic-digital.github.io/Skeletor.docs/</link>
+    <link>https://delphic-digital.github.io/Skeletor.docs/index.xml</link>
     <description>Recent content on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Jun 2016 08:45:46 -0400</lastBuildDate>

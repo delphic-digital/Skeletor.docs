@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Meta on The Skeletor Project</title>
-    <link>https://delphic-digital.github.io/Skeletor.docs/meta/</link>
-    <description>Recent content in Meta on The Skeletor Project</description>
+    <title>Meta-rss on The Skeletor Project</title>
+    <link>https://delphic-digital.github.io/Skeletor.docs/meta/index.xml</link>
+    <description>Recent content in Meta-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/meta/index.xml" rel="self" type="application/rss+xml" />
@@ -134,11 +134,12 @@
       
       <guid>https://delphic-digital.github.io/Skeletor.docs/meta/roadmap/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;Accordion component&lt;/li&gt;
-&lt;li&gt;Tab component&lt;/li&gt;
-&lt;li&gt;Flyouts component&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Accordion plugin&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Tab plugin&lt;/li&gt;
+&lt;li&gt;Flyouts plugin&lt;/li&gt;
 &lt;li&gt;Accessibility enhancements&lt;/li&gt;
 &lt;li&gt;Better handling of multiple data-components on a page&lt;/li&gt;
+&lt;li&gt;Installing Skeletor tutorial&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

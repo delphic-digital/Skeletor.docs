@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on The Skeletor Project</title>
-    <link>https://delphic-digital.github.io/Skeletor.docs/development/</link>
-    <description>Recent content in Development on The Skeletor Project</description>
+    <title>Development-rss on The Skeletor Project</title>
+    <link>https://delphic-digital.github.io/Skeletor.docs/development/index.xml</link>
+    <description>Recent content in Development-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/development/index.xml" rel="self" type="application/rss+xml" />
     
