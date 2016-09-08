@@ -98,7 +98,7 @@
     {
         "uri": "/troubleshooting/external-svgs",
         "title": "External svgs",
-        "content": "\nExternal svgs don't work across domains.\n\nThey have to be on the same domain.\n\n Workarounds",
+        "content": "\nExternal svgs don't work across domains.\n\nThey have to be on the same domain.\n\n Workarounds\n\nEmbed the sprite at the top of the page.",
         "tags": []
     },
     {
