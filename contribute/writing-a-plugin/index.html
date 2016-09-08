@@ -174,9 +174,13 @@
 			</a>
 				<ul class="sub open">
 					
+					<li><a href="/Skeletor.docs/contribute/get-started/">Getting started</a> </li>
+					
 					<li class="active"><a href="/Skeletor.docs/contribute/writing-a-plugin/">Creating a plugin</a> </li>
 					
 					<li><a href="/Skeletor.docs/contribute/registering-a-plugin/">Registering a plugin</a> </li>
+					
+					<li><a href="/Skeletor.docs/contribute/writing-docs/">Writing docs</a> </li>
 					
 				</ul>
 			  
@@ -230,20 +234,32 @@
 <h2 id="requirements">Requirements</h2>
 
 <ul>
-<li>Skeletor.core (included in Skeletor by default)</li>
+<li>You have cloned the Skeletor.framework repo. If you have not see <a href="../get-started">Get Started</a>.</li>
 </ul>
 
-<h2 id="usage">Usage</h2>
+<h2 id="creating-the-repository">Creating the repository</h2>
 
-<p>The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.</p>
+<p>You&rsquo;re going to want to create a submodule of the Skeletor.framework. This is really just for organization purposes, and to easily include <code>Skeletor.core</code> as a dependency.</p>
+
+<ul>
+<li>Start off with creating a new repo for your plugin in github, for instance named <code>delphic-digital/Skeletor.breadcrumb</code>. Make sure you initiliaze it with readme file.</li>
+<li><code>cd</code> into the working directory of <code>Skeletore.framework</code> and add your new repo as
+a submodule: <code>git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb</code></li>
+</ul>
+
+<p>That&rsquo;s it! Your new repo should be cloned into the <code>Skeletor.plugins</code> directory ready for development. You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent <code>skeletor.framework</code> repo.</p>
+
+<p>There is a sample plugin repo at <a href="https://github.com/delphic-digital/Skeletor.pluginTemplate">delphic-digital/Skeletor.pluginTemplate</a> with files to get you started.</p>
+
+<h2 id="creating-your-plugin">Creating your plugin</h2>
+
+<p>Skeletor.core includes a plugin factory. The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.</p>
 
 <ol>
 <li>Your plugin&rsquo;s constructor, calling <code>__super__</code></li>
 <li>A <code>DEFAULTS</code> static property on your plugin&rsquo;s constructor</li>
 <li>A <code>VERSION</code> static property on your plugin&rsquo;s constructor</li>
 </ol>
-
-<h2 id="creating-your-plugin">Creating your plugin</h2>
 
 <p>Here is an example of creating a <code>breadcrumb</code> plugin.</p>
 

@@ -8,7 +8,7 @@
 		<meta name="generator" content="Hugo 0.17-DEV" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		
-		<title>Skeletor - Mobile first sass</title>
+		<title>Skeletor - Writing docs</title>
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -28,12 +28,12 @@
 			
 				<div class="header-top-buttons">
 					
-						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/tutorials/mobile-first-sass.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
+						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/contribute/writing-docs.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
 					
 					<a title="Search this site" href="" class="js-toggle-search"><i class="zmdi zmdi-search zmdi-hc-lg"></i></a>
 				</div>
 				<a href="" class="header-menu-button js-toggle-sidebar"><i class="zmdi zmdi-menu zmdi-hc"></i></a>
-				<h1 class="page-title">Mobile first sass</h1>
+				<h1 class="page-title">Writing docs</h1>
 				<div class="search-form">
 	<div class="search-form-content">
 		<a href="" class="search-form-close js-search-close"><i class="zmdi zmdi-arrow-left zmdi-hc-lg"></i></a>
@@ -165,14 +165,14 @@
 		  
 				
 
-			<li class="sub-menu">
+			<li class="sub-menu active">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Contributing</span>
-				<span class="menu-arrow fa fa-angle-right"></span>
+				<span class="menu-arrow fa fa-angle-down"></span>
 			</a>
-				<ul class="sub">
+				<ul class="sub open">
 					
 					<li><a href="/Skeletor.docs/contribute/get-started/">Getting started</a> </li>
 					
@@ -180,7 +180,7 @@
 					
 					<li><a href="/Skeletor.docs/contribute/registering-a-plugin/">Registering a plugin</a> </li>
 					
-					<li><a href="/Skeletor.docs/contribute/writing-docs/">Writing docs</a> </li>
+					<li class="active"><a href="/Skeletor.docs/contribute/writing-docs/">Writing docs</a> </li>
 					
 				</ul>
 			  
@@ -188,16 +188,16 @@
 		  
 				
 
-			<li class="sub-menu active">
+			<li class="sub-menu">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Tutorials</span>
-				<span class="menu-arrow fa fa-angle-down"></span>
+				<span class="menu-arrow fa fa-angle-right"></span>
 			</a>
-				<ul class="sub open">
+				<ul class="sub">
 					
-					<li class="active"><a href="/Skeletor.docs/tutorials/mobile-first-sass/">Mobile first sass</a> </li>
+					<li><a href="/Skeletor.docs/tutorials/mobile-first-sass/">Mobile first sass</a> </li>
 					
 				</ul>
 			  
@@ -227,35 +227,18 @@
 </aside>
 			<section class="content-section">
 
-<p>We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.</p>
+<p>This documentation site is coded with <a href="http://gohugo.io/">Hugo</a> static site generator. It&rsquo;s easy to contribute to by following these steps:</p>
 
-<pre><code class="language-scss">.main-nav {
+<ul>
+<li><a href="http://gohugo.io/overview/installing/">Install Hugo</a></li>
+<li>Clone the <a href="https://github.com/delphic-digital/Skeletor.docs">Skeletor.docs</a> repo.</li>
+</ul>
 
-  &amp;__list {}
-  &amp;__item {}
+<p>From the command line <code>cd</code> into your clonned directory and run <code>hugo server</code>.</p>
 
-  @include breakpoint($medium){
-    &amp;__list {}
-    &amp;__item {}
-  }
-}
-</code></pre>
+<p>Browse to localhost:1313 and the Skeletor documentation site should be up and running! In the content directory are all the markdown files that make up the pages. There is a special meta at the top that the site relys on to build out the nav.</p>
 
-<p>instead of</p>
-
-<pre><code class="language-scss">.main-nav {
-
-  @include breakpoint($medium){}
-
-  &amp;__list {
-    @include breakpoint($medium){}
-  }
-
-  &amp;__item {
-    @include breakpoint($medium){}
-  }
-}
-</code></pre>
+<p>After you commit, a script will auto deploy the changes to github pages, for live website updates!</p>
 
 
 				<div class="footer-panel">

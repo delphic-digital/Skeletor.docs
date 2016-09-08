@@ -8,7 +8,7 @@
 		<meta name="generator" content="Hugo 0.17-DEV" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		
-		<title>Skeletor - Mobile first sass</title>
+		<title>Skeletor - Getting started</title>
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -28,12 +28,12 @@
 			
 				<div class="header-top-buttons">
 					
-						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/tutorials/mobile-first-sass.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
+						  <a title="Edit this page" href="https://github.com/delphic-digital/Skeletor.docs/edit/master/content/contribute/get-started.md" target="blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a>
 					
 					<a title="Search this site" href="" class="js-toggle-search"><i class="zmdi zmdi-search zmdi-hc-lg"></i></a>
 				</div>
 				<a href="" class="header-menu-button js-toggle-sidebar"><i class="zmdi zmdi-menu zmdi-hc"></i></a>
-				<h1 class="page-title">Mobile first sass</h1>
+				<h1 class="page-title">Getting started</h1>
 				<div class="search-form">
 	<div class="search-form-content">
 		<a href="" class="search-form-close js-search-close"><i class="zmdi zmdi-arrow-left zmdi-hc-lg"></i></a>
@@ -52,6 +52,26 @@
 		
 		<main>
 			
+	<div class="toc-container">
+		<div class="toc-wrapper">
+			<div class="toc">
+				<h4>In this section:</h4>
+				<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#delphic-digital-skeletor-https-github-com-delphic-digital-skeletor"><a href="https://github.com/delphic-digital/Skeletor">delphic-digital/Skeletor</a></a></li>
+<li><a href="#delphic-digital-skeletor-framework-delphic-digital-skeletor-framework"><a href="delphic-digital/Skeletor.framework">delphic-digital/Skeletor.framework</a></a>
+<ul>
+<li><a href="#to-get-started">To get started&hellip;</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+			</div>
+		</div>
+	</div>
+
 			<aside>
 	<div id="sidebar" class="nav-collapse">
 		<div class="sidebar-header">
@@ -165,16 +185,16 @@
 		  
 				
 
-			<li class="sub-menu">
+			<li class="sub-menu active">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Contributing</span>
-				<span class="menu-arrow fa fa-angle-right"></span>
+				<span class="menu-arrow fa fa-angle-down"></span>
 			</a>
-				<ul class="sub">
+				<ul class="sub open">
 					
-					<li><a href="/Skeletor.docs/contribute/get-started/">Getting started</a> </li>
+					<li class="active"><a href="/Skeletor.docs/contribute/get-started/">Getting started</a> </li>
 					
 					<li><a href="/Skeletor.docs/contribute/writing-a-plugin/">Creating a plugin</a> </li>
 					
@@ -188,16 +208,16 @@
 		  
 				
 
-			<li class="sub-menu active">
+			<li class="sub-menu">
 			<a href="javascript:;" class="">
 				
 				
 				<span>Tutorials</span>
-				<span class="menu-arrow fa fa-angle-down"></span>
+				<span class="menu-arrow fa fa-angle-right"></span>
 			</a>
-				<ul class="sub open">
+				<ul class="sub">
 					
-					<li class="active"><a href="/Skeletor.docs/tutorials/mobile-first-sass/">Mobile first sass</a> </li>
+					<li><a href="/Skeletor.docs/tutorials/mobile-first-sass/">Mobile first sass</a> </li>
 					
 				</ul>
 			  
@@ -227,34 +247,32 @@
 </aside>
 			<section class="content-section">
 
-<p>We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.</p>
 
-<pre><code class="language-scss">.main-nav {
 
-  &amp;__list {}
-  &amp;__item {}
+<p>The Skeletor code is separated into multiple Git repos.</p>
 
-  @include breakpoint($medium){
-    &amp;__list {}
-    &amp;__item {}
-  }
-}
-</code></pre>
+<h2 id="delphic-digital-skeletor-https-github-com-delphic-digital-skeletor"><a href="https://github.com/delphic-digital/Skeletor">delphic-digital/Skeletor</a></h2>
 
-<p>instead of</p>
+<p>This is the main Skeletor boilerplate code and contains all the base files, structure and gulp tasks.</p>
 
-<pre><code class="language-scss">.main-nav {
+<h2 id="delphic-digital-skeletor-framework-delphic-digital-skeletor-framework"><a href="delphic-digital/Skeletor.framework">delphic-digital/Skeletor.framework</a></h2>
 
-  @include breakpoint($medium){}
+<p>This is the parent repo for Skeletor&rsquo;s javascript framework and contains sub repos of all the javascript components.</p>
 
-  &amp;__list {
-    @include breakpoint($medium){}
-  }
+<h3 id="to-get-started">To get started&hellip;</h3>
 
-  &amp;__item {
-    @include breakpoint($medium){}
-  }
-}
+<p>Clone the Skeletor.framework. This should fetch all the sub repositories also. You should end up with a repo structured like this:</p>
+
+<pre><code class="language-bash">Skeletor.framework
+|-- Skeletor.core
+|   |-- # This is the main Skeletor JavaScript file that contains the namespace,
+|       # and other utility functions to create plugins
+|-- Skeletor.plugins
+|   |-- # These are plugins such as accordions and modals
+|-- Skeletor.sass
+|   |-- # These are specifically sass plugins
+|-- Skeletor.util
+|   |-- # These are utilities such as feature detects and the component loader
 </code></pre>
 
 

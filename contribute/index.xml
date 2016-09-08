@@ -9,6 +9,42 @@
     <atom:link href="https://delphic-digital.github.io/Skeletor.docs/contribute/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Getting started</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/contribute/get-started/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/contribute/get-started/</guid>
+      <description>
+
+&lt;p&gt;The Skeletor code is separated into multiple Git repos.&lt;/p&gt;
+
+&lt;h2 id=&#34;delphic-digital-skeletor-https-github-com-delphic-digital-skeletor&#34;&gt;&lt;a href=&#34;https://github.com/delphic-digital/Skeletor&#34;&gt;delphic-digital/Skeletor&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is the main Skeletor boilerplate code and contains all the base files, structure and gulp tasks.&lt;/p&gt;
+
+&lt;h2 id=&#34;delphic-digital-skeletor-framework-delphic-digital-skeletor-framework&#34;&gt;&lt;a href=&#34;delphic-digital/Skeletor.framework&#34;&gt;delphic-digital/Skeletor.framework&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is the parent repo for Skeletor&amp;rsquo;s javascript framework and contains sub repos of all the javascript components.&lt;/p&gt;
+
+&lt;h3 id=&#34;to-get-started&#34;&gt;To get started&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Clone the Skeletor.framework. This should fetch all the sub repositories also. You should end up with a repo structured like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Skeletor.framework
+|-- Skeletor.core
+|   |-- # This is the main Skeletor JavaScript file that contains the namespace,
+|       # and other utility functions to create plugins
+|-- Skeletor.plugins
+|   |-- # These are plugins such as accordions and modals
+|-- Skeletor.sass
+|   |-- # These are specifically sass plugins
+|-- Skeletor.util
+|   |-- # These are utilities such as feature detects and the component loader
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Creating a plugin</title>
       <link>https://delphic-digital.github.io/Skeletor.docs/contribute/writing-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
@@ -21,20 +57,32 @@
 &lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Skeletor.core (included in Skeletor by default)&lt;/li&gt;
+&lt;li&gt;You have cloned the Skeletor.framework repo. If you have not see &lt;a href=&#34;../get-started&#34;&gt;Get Started&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;h2 id=&#34;creating-the-repository&#34;&gt;Creating the repository&lt;/h2&gt;
 
-&lt;p&gt;The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re going to want to create a submodule of the Skeletor.framework. This is really just for organization purposes, and to easily include &lt;code&gt;Skeletor.core&lt;/code&gt; as a dependency.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start off with creating a new repo for your plugin in github, for instance named &lt;code&gt;delphic-digital/Skeletor.breadcrumb&lt;/code&gt;. Make sure you initiliaze it with readme file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; into the working directory of &lt;code&gt;Skeletore.framework&lt;/code&gt; and add your new repo as
+a submodule: &lt;code&gt;git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s it! Your new repo should be cloned into the &lt;code&gt;Skeletor.plugins&lt;/code&gt; directory ready for development. You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent &lt;code&gt;skeletor.framework&lt;/code&gt; repo.&lt;/p&gt;
+
+&lt;p&gt;There is a sample plugin repo at &lt;a href=&#34;https://github.com/delphic-digital/Skeletor.pluginTemplate&#34;&gt;delphic-digital/Skeletor.pluginTemplate&lt;/a&gt; with files to get you started.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-your-plugin&#34;&gt;Creating your plugin&lt;/h2&gt;
+
+&lt;p&gt;Skeletor.core includes a plugin factory. The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Your plugin&amp;rsquo;s constructor, calling &lt;code&gt;__super__&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;A &lt;code&gt;DEFAULTS&lt;/code&gt; static property on your plugin&amp;rsquo;s constructor&lt;/li&gt;
 &lt;li&gt;A &lt;code&gt;VERSION&lt;/code&gt; static property on your plugin&amp;rsquo;s constructor&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h2 id=&#34;creating-your-plugin&#34;&gt;Creating your plugin&lt;/h2&gt;
 
 &lt;p&gt;Here is an example of creating a &lt;code&gt;breadcrumb&lt;/code&gt; plugin.&lt;/p&gt;
 
@@ -199,6 +247,27 @@ $ bower register example git://github.com/user/example.git
     var $plugin = new Skeletor.plugin($(&#39;.plugin__list&#39;));
 })
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing docs</title>
+      <link>https://delphic-digital.github.io/Skeletor.docs/contribute/writing-docs/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>https://delphic-digital.github.io/Skeletor.docs/contribute/writing-docs/</guid>
+      <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to by following these steps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/overview/installing/&#34;&gt;Install Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clone the &lt;a href=&#34;https://github.com/delphic-digital/Skeletor.docs&#34;&gt;Skeletor.docs&lt;/a&gt; repo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the command line &lt;code&gt;cd&lt;/code&gt; into your clonned directory and run &lt;code&gt;hugo server&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Browse to localhost:1313 and the Skeletor documentation site should be up and running! In the content directory are all the markdown files that make up the pages. There is a special meta at the top that the site relys on to build out the nav.&lt;/p&gt;
+
+&lt;p&gt;After you commit, a script will auto deploy the changes to github pages, for live website updates!&lt;/p&gt;
 </description>
     </item>
     
