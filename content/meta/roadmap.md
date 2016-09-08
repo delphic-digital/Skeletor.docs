@@ -14,4 +14,4 @@ weight: 20
 * Flyouts plugin
 * Accessibility enhancements
 * Better handling of multiple data-components on a page
-* Installing Skeletor tutorial
+* Styleguide generation
