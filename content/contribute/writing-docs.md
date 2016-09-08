@@ -12,8 +12,8 @@ This documentation site is coded with [Hugo](http://gohugo.io/) static site gene
 * [Install Hugo](http://gohugo.io/overview/installing/)
 * Clone the [Skeletor.docs](https://github.com/delphic-digital/Skeletor.docs) repo.
 
-From the command line `cd` into your clonned directory and run `hugo server`.
+From the command line, `cd` into your cloned directory and run `hugo server`.
 
-Browse to localhost:1313 and the Skeletor documentation site should be up and running! In the content directory are all the markdown files that make up the pages. There is a special meta at the top that the site relys on to build out the nav.
+Browse to localhost:1313 and the Skeletor documentation site should be up and running! The content directory contains all the markdown files that make up the pages. There is a special meta at the top for defining nav structure and page title.
 
-After you commit, a script will auto deploy the changes to github pages, for live website updates!
+After you commit, a script will auto deploy the changes to github pages for live website updates!
