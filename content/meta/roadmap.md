@@ -12,6 +12,5 @@ weight: 20
 * ~~Accordion plugin~~
 * Tab plugin
 * Flyouts plugin
-* Accessibility enhancements
 * Better handling of multiple data-components on a page
 * Styleguide generation
