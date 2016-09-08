@@ -611,6 +611,8 @@ require.config({
 |-- Skeletor.util
 |   |-- # These are utilities such as feature detects and the component loader
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See creating a plugin next.&lt;/p&gt;
 </description>
     </item>
     
