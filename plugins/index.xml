@@ -151,7 +151,7 @@
       <guid>https://delphic-digital.github.io/Skeletor.docs/plugins/browsehappy/</guid>
       <description>
 
-&lt;p&gt;Show an unobstrusive notification bar if your browser is out dated. This is a wrapper around &lt;a href=&#34;http://browser-update.org&#39;s&#34;&gt;http://browser-update.org&#39;s&lt;/a&gt; service. Lot&amp;rsquo;s of this information here is repeated from their service.&lt;/p&gt;
+&lt;p&gt;Show an unobstrusive notification bar if your browser is out dated.&lt;/p&gt;
 
 &lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
@@ -166,7 +166,7 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.browsehappy&#39;], function(){
   new Skeletor.BrowseHappy($(document),{
-    test: true
+    min: { ie:9, firefox:25, opera:15, safari:6, chrome:40 }
   })
 })
 &lt;/code&gt;&lt;/pre&gt;
@@ -190,127 +190,13 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;vs&lt;/td&gt;
+&lt;td&gt;min&lt;/td&gt;
 &lt;td&gt;object&lt;/td&gt;
-&lt;td&gt;{i:9,f:25,o:12.1,s:2,c:10}&lt;/td&gt;
+&lt;td&gt;{ie:9,firefox:25,opera:15,safari:6,chrome:40}&lt;/td&gt;
 &lt;td&gt;Browser versions to notify&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;reminder&lt;/td&gt;
-&lt;td&gt;int&lt;/td&gt;
-&lt;td&gt;24&lt;/td&gt;
-&lt;td&gt;after how many hours should the message reappear, 0 = show all the time&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;reminderClosed&lt;/td&gt;
-&lt;td&gt;int&lt;/td&gt;
-&lt;td&gt;150&lt;/td&gt;
-&lt;td&gt;If the user closes message it reappears after x hours&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;onshow&lt;/td&gt;
-&lt;td&gt;function&lt;/td&gt;
-&lt;td&gt;function(infos){}&lt;/td&gt;
-&lt;td&gt;Callback function after the bar has appeared&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;onclick&lt;/td&gt;
-&lt;td&gt;function&lt;/td&gt;
-&lt;td&gt;function(infos){}&lt;/td&gt;
-&lt;td&gt;Callback function if bar was clicked&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;onclose&lt;/td&gt;
-&lt;td&gt;function&lt;/td&gt;
-&lt;td&gt;function(infos){}&lt;/td&gt;
-&lt;td&gt;Callback function after the bar is closed&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;l&lt;/td&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;false&lt;/td&gt;
-&lt;td&gt;set a language for the message, e.g. &amp;ldquo;en&amp;rdquo;, overrides the default detection&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;test&lt;/td&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;false&lt;/td&gt;
-&lt;td&gt;true = always show the bar (for testing)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;text&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&amp;rdquo;&amp;rdquo;&lt;/td&gt;
-&lt;td&gt;Custom notification html text,  Optionally include up to two placeholders &amp;ldquo;%s&amp;rdquo; which will be replaced with the browser version and contents of the link tag. Example: &amp;ldquo;Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;&amp;ldquo;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;text_xx&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&amp;rdquo;&amp;rdquo;&lt;/td&gt;
-&lt;td&gt;Custom notification text for language &amp;ldquo;xx&amp;rdquo;, e.g. text_de for german and text_it for italian&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;newwindow&lt;/td&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;true&lt;/td&gt;
-&lt;td&gt;Open link in new window/tab&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;url&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://browsehappy.com/&#34;&gt;http://browsehappy.com/&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;The url to go to after clicking the notification&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;css&#34;&gt;CSS&lt;/h2&gt;
-
-&lt;p&gt;The following CSS rules are applied by the script. You can overwrite them in your own CSS.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;.buorg {
-  position:absolute;
-  width:100%;
-  top:0px;
-  left:0px;
-  border-bottom:1px solid #A29330;
-  background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);
-  text-align:left;
-  cursor:pointer;
-  font-family: Arial,Helvetica,sans-serif; color:#000;
-  font-size: 12px;
-}
-
-.buorg div {
-  padding:5px 36px 5px 40px;
-}
-
-.buorg a {
-  color:#E25600;
-}
-
-#buorgclose {
-  position: absolute;
-  right: .5em;
-  top:.2em;
-  height: 20px;
-  width: 12px;
-  font-weight: bold;
-  font-size:14px;
-  padding:0;
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
