@@ -263,11 +263,11 @@ $ bower register example git://github.com/user/example.git
 &lt;li&gt;Clone the &lt;a href=&#34;https://github.com/delphic-digital/Skeletor.docs&#34;&gt;Skeletor.docs&lt;/a&gt; repo.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;From the command line &lt;code&gt;cd&lt;/code&gt; into your clonned directory and run &lt;code&gt;hugo server&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;From the command line, &lt;code&gt;cd&lt;/code&gt; into your cloned directory and run &lt;code&gt;hugo server&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Browse to localhost:1313 and the Skeletor documentation site should be up and running! In the content directory are all the markdown files that make up the pages. There is a special meta at the top that the site relys on to build out the nav.&lt;/p&gt;
+&lt;p&gt;Browse to localhost:1313 and the Skeletor documentation site should be up and running! The content directory contains all the markdown files that make up the pages. There is a special meta at the top for defining nav structure and page title.&lt;/p&gt;
 
-&lt;p&gt;After you commit, a script will auto deploy the changes to github pages, for live website updates!&lt;/p&gt;
+&lt;p&gt;After you commit, a script will auto deploy the changes to github pages for live website updates!&lt;/p&gt;
 </description>
     </item>
     

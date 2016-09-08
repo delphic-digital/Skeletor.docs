@@ -20,7 +20,7 @@
     {
         "uri": "/contribute/writing-docs",
         "title": "Writing docs",
-        "content": "\nThis documentation site is coded with Hugo static site generator. It's easy to contribute to by following these steps:\n\nInstall Hugo\nClone the Skeletor.docs repo.\n\nFrom the command line cd into your clonned directory and run hugo server.\n\nBrowse to localhost:1313 and the Skeletor documentation site should be up and running! In the content directory are all the markdown files that make up the pages. There is a special meta at the top that the site relys on to build out the nav.\n\nAfter you commit, a script will auto deploy the changes to github pages, for live website updates!",
+        "content": "\nThis documentation site is coded with Hugo static site generator. It's easy to contribute to by following these steps:\n\nInstall Hugo\nClone the Skeletor.docs repo.\n\nFrom the command line, cd into your cloned directory and run hugo server.\n\nBrowse to localhost:1313 and the Skeletor documentation site should be up and running! The content directory contains all the markdown files that make up the pages. There is a special meta at the top for defining nav structure and page title.\n\nAfter you commit, a script will auto deploy the changes to github pages for live website updates!",
         "tags": []
     },
     {
