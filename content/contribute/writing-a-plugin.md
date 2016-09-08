@@ -12,19 +12,29 @@ Creating a plugin for Skeletor is easy. There is a plugin factory included in `S
 
 ## Requirements
 
-* Skeletor.core (included in Skeletor by default)
+* You have cloned the Skeletor.framework repo. If you have not see [Get Started](../get-started).
 
 
-## Usage
+## Creating the repository
 
-The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.
+You're going to want to create a submodule of the Skeletor.framework. This is really just for organization purposes, and to easily include `Skeletor.core` as a dependency.
+
+* Start off with creating a new repo for your plugin in github, for instance named `delphic-digital/Skeletor.breadcrumb`. Make sure you initiliaze it with readme file.
+* `cd` into the working directory of `Skeletore.framework` and add your new repo as
+a submodule: `git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb`
+
+That's it! Your new repo should be cloned into the `Skeletor.plugins` directory ready for development. You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent `skeletor.framework` repo.
+
+There is a sample plugin repo at [delphic-digital/Skeletor.pluginTemplate](https://github.com/delphic-digital/Skeletor.pluginTemplate) with files to get you started.
+
+
+## Creating your plugin
+
+Skeletor.core includes a plugin factory. The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.
 
 1. Your plugin's constructor, calling `__super__`
 2. A `DEFAULTS` static property on your plugin's constructor
 3. A `VERSION` static property on your plugin's constructor
-
-
-## Creating your plugin
 
 
 Here is an example of creating a `breadcrumb` plugin.
