@@ -12,3 +12,5 @@ weight: 5
 They have to be on the same domain.
 
 ### Workarounds
+
+Embed the sprite at the top of the page.
