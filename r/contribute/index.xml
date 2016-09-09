@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contribute-rss on The Skeletor Project</title>
-    <link>http://skele.to/contribute/index.xml</link>
+    <link>http://skele.to/r/contribute/index.xml</link>
     <description>Recent content in Contribute-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Jun 2016 16:37:49 -0400</lastBuildDate>
-    <atom:link href="http://skele.to/contribute/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/r/contribute/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting started</title>
-      <link>http://skele.to/contribute/get-started/</link>
+      <link>http://skele.to/r/contribute/get-started/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/contribute/get-started/</guid>
+      <guid>http://skele.to/r/contribute/get-started/</guid>
       <description>
 
 &lt;p&gt;The Skeletor code is separated into multiple Git repos.&lt;/p&gt;
@@ -48,10 +48,10 @@
     
     <item>
       <title>Creating a plugin</title>
-      <link>http://skele.to/contribute/writing-a-plugin/</link>
+      <link>http://skele.to/r/contribute/writing-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/contribute/writing-a-plugin/</guid>
+      <guid>http://skele.to/r/contribute/writing-a-plugin/</guid>
       <description>
 
 &lt;p&gt;Creating a plugin for Skeletor is easy. There is a plugin factory included in &lt;code&gt;Skeletor.core&lt;/code&gt;.&lt;/p&gt;
@@ -201,10 +201,10 @@ $breadcrumb.disable();
     
     <item>
       <title>Registering a plugin</title>
-      <link>http://skele.to/contribute/registering-a-plugin/</link>
+      <link>http://skele.to/r/contribute/registering-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/contribute/registering-a-plugin/</guid>
+      <guid>http://skele.to/r/contribute/registering-a-plugin/</guid>
       <description>
 
 &lt;p&gt;Skeletor has a private bower repo to host all it&amp;rsquo;s components using &lt;a href=&#34;https://www.npmjs.com/package/private-bower&#34;&gt;private-bower&lt;/a&gt; hosted here: &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com/&#34;&gt;http://bowerregistry-delphic.rhcloud.com/&lt;/a&gt;.&lt;/p&gt;
@@ -254,10 +254,10 @@ $ bower register example git://github.com/user/example.git
     
     <item>
       <title>Writing docs</title>
-      <link>http://skele.to/contribute/writing-docs/</link>
+      <link>http://skele.to/r/contribute/writing-docs/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/contribute/writing-docs/</guid>
+      <guid>http://skele.to/r/contribute/writing-docs/</guid>
       <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to by following these steps:&lt;/p&gt;
 
 &lt;ul&gt;

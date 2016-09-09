@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plugins-rss on The Skeletor Project</title>
-    <link>http://skele.to/plugins/index.xml</link>
+    <link>http://skele.to/r/plugins/index.xml</link>
     <description>Recent content in Plugins-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Jun 2016 09:27:49 -0400</lastBuildDate>
-    <atom:link href="http://skele.to/plugins/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/r/plugins/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Skeletor.accordion</title>
-      <link>http://skele.to/plugins/accordion/</link>
+      <link>http://skele.to/r/plugins/accordion/</link>
       <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
       
-      <guid>http://skele.to/plugins/accordion/</guid>
+      <guid>http://skele.to/r/plugins/accordion/</guid>
       <description>
 
 &lt;p&gt;Allows collapsing and expanding of multiple sections of content.&lt;/p&gt;
@@ -145,10 +145,10 @@
     
     <item>
       <title>Skeletor.browsehappy</title>
-      <link>http://skele.to/plugins/browsehappy/</link>
+      <link>http://skele.to/r/plugins/browsehappy/</link>
       <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
       
-      <guid>http://skele.to/plugins/browsehappy/</guid>
+      <guid>http://skele.to/r/plugins/browsehappy/</guid>
       <description>
 
 &lt;p&gt;Show an unobstrusive notification bar if your browser is out dated.&lt;/p&gt;
