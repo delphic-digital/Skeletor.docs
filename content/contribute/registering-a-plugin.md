@@ -54,3 +54,7 @@ require(['skeletor.plugin'], function(){
     var $plugin = new Skeletor.plugin($('.plugin__list'));
 })
 ```
+
+Next you should write documentation for your plugin.
+
+Next: [Writing documentation](/contribute/writing-docs/)

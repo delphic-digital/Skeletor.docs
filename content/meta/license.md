@@ -13,7 +13,7 @@ Skeletor is released under the BSD 3-Clause License.
 ## The BSD 3-Clause License
 https://opensource.org/licenses/BSD-3-Clause
 
-Copyright (c) 2016, Jeff Mills
+Copyright (c) 2016, Delphic Digital
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

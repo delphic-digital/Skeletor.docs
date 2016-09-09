@@ -14,3 +14,5 @@ weight: 20
 * Flyouts plugin
 * Better handling of multiple data-components on a page
 * Styleguide generation
+* Component demos
+* Better homepage for this site

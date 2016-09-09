@@ -154,3 +154,5 @@ var $breadcrumb = new Skeletor.Breadcrumb($('.breadcrumb__list'));
 
 $breadcrumb.disable();
 ```
+
+Next: [Registering a plugin](/contribute/registering-a-plugin/)

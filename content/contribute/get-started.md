@@ -33,4 +33,4 @@ Skeletor.framework
 |   |-- # These are utilities such as feature detects and the component loader
 ```
 
-See creating a plugin next.
+Next: [Writing a plugin](/contribute/writing-a-plugin/)
