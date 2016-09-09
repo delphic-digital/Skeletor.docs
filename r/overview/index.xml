@@ -8,49 +8,6 @@
     <atom:link href="http://skele.to/r/overview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Introduction to Skeletor</title>
-      <link>http://skele.to/r/overview/introduction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://skele.to/r/overview/introduction/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as a starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
-
-&lt;p&gt;Skeletor tries to achieve a very minimalistic design to remain as flexible as possible. Everything included is very basic skeleton code to give you a headstart. There isn&amp;rsquo;t much templated code, but there are the tools and patterns in place to quickly prototype anything. This framework is meant for intermediate to advanced front end developers.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-s-included&#34;&gt;What&amp;rsquo;s included?&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Gulp&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tasks for everything from compiling Sass to live browser reloading.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sass&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Folder stucture with predefined partials.&lt;/li&gt;
-&lt;li&gt;Globbling to automatically include component partials.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Context aware component loading for on demand/aync loading&lt;/li&gt;
-&lt;li&gt;RequireJS module loading for easy dependency management.&lt;/li&gt;
-&lt;li&gt;Extensible JavaScript framework like Zurb&amp;rsquo;s Foundation or Twitter Bootstrap.&lt;/li&gt;
-&lt;li&gt;Compatible component plugins.&lt;/li&gt;
-&lt;li&gt;Bower for vendor package management.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h4&gt;
-
-&lt;p&gt;This project and site gets updated as more best practices or discoveries are implemented.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Setup</title>
       <link>http://skele.to/r/overview/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

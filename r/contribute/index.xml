@@ -42,7 +42,7 @@
 |   |-- # These are utilities such as feature detects and the component loader
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;See creating a plugin next.&lt;/p&gt;
+&lt;p&gt;Next: &lt;a href=&#34;http://skele.to/r/contribute/writing-a-plugin/&#34;&gt;Writing a plugin&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -196,6 +196,8 @@ define([&#39;jquery&#39;, &#39;skeletor.core&#39;],function ($, Skeletor){
 
 $breadcrumb.disable();
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next: &lt;a href=&#34;http://skele.to/r/contribute/registering-a-plugin/&#34;&gt;Registering a plugin&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -249,6 +251,10 @@ $ bower register example git://github.com/user/example.git
     var $plugin = new Skeletor.plugin($(&#39;.plugin__list&#39;));
 })
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next you should write documentation for your plugin.&lt;/p&gt;
+
+&lt;p&gt;Next: &lt;a href=&#34;http://skele.to/r/contribute/writing-docs/&#34;&gt;Writing documentation&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

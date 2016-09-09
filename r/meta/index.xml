@@ -137,8 +137,11 @@
 &lt;li&gt;&lt;del&gt;Accordion plugin&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;Tab plugin&lt;/li&gt;
 &lt;li&gt;Flyouts plugin&lt;/li&gt;
+&lt;li&gt;Carousel plugin&lt;/li&gt;
 &lt;li&gt;Better handling of multiple data-components on a page&lt;/li&gt;
 &lt;li&gt;Styleguide generation&lt;/li&gt;
+&lt;li&gt;Component demos&lt;/li&gt;
+&lt;li&gt;Better homepage for this site&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -157,7 +160,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://opensource.org/licenses/BSD-3-Clause&#34;&gt;https://opensource.org/licenses/BSD-3-Clause&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Copyright &amp;copy; 2016, Jeff Mills
+&lt;p&gt;Copyright &amp;copy; 2016, Delphic Digital
 All rights reserved.&lt;/p&gt;
 
 &lt;p&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/p&gt;

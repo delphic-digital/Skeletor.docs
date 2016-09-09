@@ -169,7 +169,7 @@ tr:nth-child(even) { background-color:rgba(0, 0, 0, .2); }
 }
 
 .site-logo {
-	display: block;
+	display: inline-block;
 	margin: 0 0 20px 10px;
 	width: 70px;
 
@@ -201,11 +201,11 @@ tr:nth-child(even) { background-color:rgba(0, 0, 0, .2); }
 	transition: all 0.3s ease;
 }
 
-.sidebar-header:hover .hood {
+.sidebar-header__link:hover .hood {
 	fill: #673ab7;
 }
 
-.sidebar-header:hover .skull {
+.sidebar-header__link:hover .skull {
 	fill: #e3c376;
 }
 
@@ -229,7 +229,7 @@ tr:nth-child(even) { background-color:rgba(0, 0, 0, .2); }
 	font-weight: 500;
 }
 
-.sidebar-header:hover { color:  #a466dc; }
+.sidebar-header span:hover { color:  #a466dc; }
 
 #sidebar {
 	position: fixed;
