@@ -20,10 +20,12 @@ Creating a plugin for Skeletor is easy. There is a plugin factory included in `S
 You're going to want to create a submodule of the Skeletor.framework. This is really just for organization purposes, and to easily include `Skeletor.core` as a dependency.
 
 * Start off with creating a new repo for your plugin in github, for instance named `delphic-digital/Skeletor.breadcrumb`. Make sure you initiliaze it with readme file.
-* `cd` into the working directory of `Skeletore.framework` and add your new repo as
+* `cd` into the working directory of `Skeletor.framework` and add your new repo as
 a submodule: `git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb`
 
-That's it! Your new repo should be cloned into the `Skeletor.plugins` directory ready for development. You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent `skeletor.framework` repo.
+Your new repo should be cloned into the `Skeletor.plugins` directory ready for development. Now run `dev` (a windows batch file) in the `Skeletor.framework` working directory to launch browsersync. You should get a directory listing where you can browse and click on the index.html file of your pligin for testing.
+
+You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent `skeletor.framework` repo.
 
 There is a sample plugin repo at [delphic-digital/Skeletor.pluginTemplate](https://github.com/delphic-digital/Skeletor.pluginTemplate) with files to get you started.
 
