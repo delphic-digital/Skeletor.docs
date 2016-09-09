@@ -61,6 +61,7 @@ main{
 .header-menu-button { display: none; }
 
 .content-section {
+	position: relative;
 	margin: 0 0 0 260px;
 	padding: 120px 40px;
 	min-height: 100%;

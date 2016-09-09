@@ -8,7 +8,7 @@ toc: true
 weight: 3
 ---
 
-The Skeletor code is separated into multiple Git repos.
+So you would like to contribute to the Skeletor code?? See below for the code repos and how to set that up. To contribute to this site, see: [Writing Documentation](/contribute/writing-docs/)
 
 ## [delphic-digital/Skeletor](https://github.com/delphic-digital/Skeletor)
 This is the main Skeletor boilerplate code and contains all the base files, structure and gulp tasks.
