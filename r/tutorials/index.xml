@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials-rss on The Skeletor Project</title>
-    <link>http://skele.to/r/tutorials/index.xml</link>
+    <link>http://skele.to/tutorials/index.xml</link>
     <description>Recent content in Tutorials-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 01 Jul 2016 09:39:50 -0400</lastBuildDate>
-    <atom:link href="http://skele.to/r/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mobile first sass</title>
-      <link>http://skele.to/r/tutorials/mobile-first-sass/</link>
+      <link>http://skele.to/tutorials/mobile-first-sass/</link>
       <pubDate>Fri, 01 Jul 2016 09:39:50 -0400</pubDate>
       
-      <guid>http://skele.to/r/tutorials/mobile-first-sass/</guid>
+      <guid>http://skele.to/tutorials/mobile-first-sass/</guid>
       <description>&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {

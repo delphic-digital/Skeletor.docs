@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development-rss on The Skeletor Project</title>
-    <link>http://skele.to/r/development/index.xml</link>
+    <link>http://skele.to/development/index.xml</link>
     <description>Recent content in Development-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://skele.to/r/development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Javascript</title>
-      <link>http://skele.to/r/development/javascript/</link>
+      <link>http://skele.to/development/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/development/javascript/</guid>
+      <guid>http://skele.to/development/javascript/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt; for dependency and module loading. There are a couple reasons for this:&lt;/p&gt;
@@ -334,10 +334,10 @@ require.config({
     
     <item>
       <title>Sass</title>
-      <link>http://skele.to/r/development/sass/</link>
+      <link>http://skele.to/development/sass/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/development/sass/</guid>
+      <guid>http://skele.to/development/sass/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:&lt;/p&gt;
@@ -403,10 +403,10 @@ require.config({
     
     <item>
       <title>Sprites</title>
-      <link>http://skele.to/r/development/sprites/</link>
+      <link>http://skele.to/development/sprites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/development/sprites/</guid>
+      <guid>http://skele.to/development/sprites/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with easy ways to create 3 different types of sprites.&lt;/p&gt;

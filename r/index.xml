@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Skeletor Project</title>
-    <link>http://skele.to/r/index.xml</link>
+    <link>http://skele.to/index.xml</link>
     <description>Recent content on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Jun 2016 08:45:46 -0400</lastBuildDate>
-    <atom:link href="http://skele.to/r/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Skeletor Project test</title>
-      <link>http://skele.to/r/</link>
+      <link>http://skele.to/</link>
       <pubDate>Fri, 24 Jun 2016 08:45:46 -0400</pubDate>
       
-      <guid>http://skele.to/r/</guid>
+      <guid>http://skele.to/</guid>
       <description>
 
 &lt;h3 id=&#34;extensible-front-end-html-css-and-javascript-framework-constantly-being-update-to-the-bleeding-edge-of-web-technologies&#34;&gt;Extensible front-end HTML, CSS, and JavaScript framework. Constantly being update to the bleeding edge of web technologies.&lt;/h3&gt;
@@ -22,10 +22,10 @@
     
     <item>
       <title>Introduction to Skeletor</title>
-      <link>http://skele.to/r/overview/introduction/</link>
+      <link>http://skele.to/overview/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/overview/introduction/</guid>
+      <guid>http://skele.to/overview/introduction/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as a starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
@@ -65,10 +65,10 @@
     
     <item>
       <title>Javascript</title>
-      <link>http://skele.to/r/development/javascript/</link>
+      <link>http://skele.to/development/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/development/javascript/</guid>
+      <guid>http://skele.to/development/javascript/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with a JavaScript structure that utilizes &lt;a href=&#34;http://requirejs.org&#34;&gt;RequireJS&lt;/a&gt; for dependency and module loading. There are a couple reasons for this:&lt;/p&gt;
@@ -390,10 +390,10 @@ require.config({
     
     <item>
       <title>Sass</title>
-      <link>http://skele.to/r/development/sass/</link>
+      <link>http://skele.to/development/sass/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/development/sass/</guid>
+      <guid>http://skele.to/development/sass/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with Sass and a structure setup. The following Sass helper libraries and plugins are preinstalled:&lt;/p&gt;
@@ -459,10 +459,10 @@ require.config({
     
     <item>
       <title>Setup</title>
-      <link>http://skele.to/r/overview/setup/</link>
+      <link>http://skele.to/overview/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/overview/setup/</guid>
+      <guid>http://skele.to/overview/setup/</guid>
       <description>
 
 &lt;p&gt;Skeletor uses open source tools for its workflow. If you haven&amp;rsquo;t installed these requirements please do so.&lt;/p&gt;
@@ -580,10 +580,10 @@ require.config({
     
     <item>
       <title>Getting started</title>
-      <link>http://skele.to/r/contribute/get-started/</link>
+      <link>http://skele.to/contribute/get-started/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/r/contribute/get-started/</guid>
+      <guid>http://skele.to/contribute/get-started/</guid>
       <description>
 
 &lt;p&gt;The Skeletor code is separated into multiple Git repos.&lt;/p&gt;
@@ -618,10 +618,10 @@ require.config({
     
     <item>
       <title>Sprites</title>
-      <link>http://skele.to/r/development/sprites/</link>
+      <link>http://skele.to/development/sprites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/development/sprites/</guid>
+      <guid>http://skele.to/development/sprites/</guid>
       <description>
 
 &lt;p&gt;Skeletor comes with easy ways to create 3 different types of sprites.&lt;/p&gt;
@@ -678,10 +678,10 @@ require.config({
     
     <item>
       <title>Usage</title>
-      <link>http://skele.to/r/overview/usage/</link>
+      <link>http://skele.to/overview/usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/overview/usage/</guid>
+      <guid>http://skele.to/overview/usage/</guid>
       <description>&lt;p&gt;Skeletor uses gulp as a task runner and several commands are available to use:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# run Gulp in development mode (does not minify your JS for quicker response),
@@ -701,10 +701,10 @@ $ gulp build
     
     <item>
       <title>External svgs</title>
-      <link>http://skele.to/r/troubleshooting/external-svgs/</link>
+      <link>http://skele.to/troubleshooting/external-svgs/</link>
       <pubDate>Fri, 15 Jul 2016 11:33:43 -0400</pubDate>
       
-      <guid>http://skele.to/r/troubleshooting/external-svgs/</guid>
+      <guid>http://skele.to/troubleshooting/external-svgs/</guid>
       <description>
 
 &lt;h2 id=&#34;external-svgs-don-t-work-across-domains&#34;&gt;External svgs don&amp;rsquo;t work across domains.&lt;/h2&gt;
@@ -719,10 +719,10 @@ $ gulp build
     
     <item>
       <title>Mobile first sass</title>
-      <link>http://skele.to/r/tutorials/mobile-first-sass/</link>
+      <link>http://skele.to/tutorials/mobile-first-sass/</link>
       <pubDate>Fri, 01 Jul 2016 09:39:50 -0400</pubDate>
       
-      <guid>http://skele.to/r/tutorials/mobile-first-sass/</guid>
+      <guid>http://skele.to/tutorials/mobile-first-sass/</guid>
       <description>&lt;p&gt;We found using a traditional mobile first structure within each component partial is better for maintainability, than inlining media queries into each class. This way, there is only one of each breakpoints defined in each component, instead of scattered throughout. This makes a big difference on large scale sites.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.main-nav {
@@ -757,10 +757,10 @@ $ gulp build
     
     <item>
       <title>Creating a plugin</title>
-      <link>http://skele.to/r/contribute/writing-a-plugin/</link>
+      <link>http://skele.to/contribute/writing-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/r/contribute/writing-a-plugin/</guid>
+      <guid>http://skele.to/contribute/writing-a-plugin/</guid>
       <description>
 
 &lt;p&gt;Creating a plugin for Skeletor is easy. There is a plugin factory included in &lt;code&gt;Skeletor.core&lt;/code&gt;.&lt;/p&gt;
@@ -910,10 +910,10 @@ $breadcrumb.disable();
     
     <item>
       <title>Skeletor.accordion</title>
-      <link>http://skele.to/r/plugins/accordion/</link>
+      <link>http://skele.to/plugins/accordion/</link>
       <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
       
-      <guid>http://skele.to/r/plugins/accordion/</guid>
+      <guid>http://skele.to/plugins/accordion/</guid>
       <description>
 
 &lt;p&gt;Allows collapsing and expanding of multiple sections of content.&lt;/p&gt;
@@ -1045,10 +1045,10 @@ $breadcrumb.disable();
     
     <item>
       <title>Skeletor.browsehappy</title>
-      <link>http://skele.to/r/plugins/browsehappy/</link>
+      <link>http://skele.to/plugins/browsehappy/</link>
       <pubDate>Fri, 24 Jun 2016 09:27:49 -0400</pubDate>
       
-      <guid>http://skele.to/r/plugins/browsehappy/</guid>
+      <guid>http://skele.to/plugins/browsehappy/</guid>
       <description>
 
 &lt;p&gt;Show an unobstrusive notification bar if your browser is out dated.&lt;/p&gt;
@@ -1102,10 +1102,10 @@ $breadcrumb.disable();
     
     <item>
       <title>Flexbox</title>
-      <link>http://skele.to/r/troubleshooting/flexbox/</link>
+      <link>http://skele.to/troubleshooting/flexbox/</link>
       <pubDate>Thu, 01 Sep 2016 11:49:49 -0400</pubDate>
       
-      <guid>http://skele.to/r/troubleshooting/flexbox/</guid>
+      <guid>http://skele.to/troubleshooting/flexbox/</guid>
       <description>&lt;p&gt;There are 3 different versions of flexbox. Skeletor can detect and adds a body class if flexbox is supported.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -1119,10 +1119,10 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     
     <item>
       <title>Registering a plugin</title>
-      <link>http://skele.to/r/contribute/registering-a-plugin/</link>
+      <link>http://skele.to/contribute/registering-a-plugin/</link>
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
-      <guid>http://skele.to/r/contribute/registering-a-plugin/</guid>
+      <guid>http://skele.to/contribute/registering-a-plugin/</guid>
       <description>
 
 &lt;p&gt;Skeletor has a private bower repo to host all it&amp;rsquo;s components using &lt;a href=&#34;https://www.npmjs.com/package/private-bower&#34;&gt;private-bower&lt;/a&gt; hosted here: &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com/&#34;&gt;http://bowerregistry-delphic.rhcloud.com/&lt;/a&gt;.&lt;/p&gt;

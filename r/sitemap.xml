@@ -2,96 +2,96 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://skele.to/r/</loc>
+    <loc>http://skele.to/</loc>
     <lastmod>2016-06-24T08:45:46-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/</loc>
+    <loc>http://skele.to/</loc>
     <lastmod>2016-06-24T08:45:46-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/overview/introduction/</loc>
+    <loc>http://skele.to/overview/introduction/</loc>
   </url>
   
   <url>
-    <loc>http://skele.to/r/development/javascript/</loc>
+    <loc>http://skele.to/development/javascript/</loc>
   </url>
   
   <url>
-    <loc>http://skele.to/r/development/sass/</loc>
+    <loc>http://skele.to/development/sass/</loc>
   </url>
   
   <url>
-    <loc>http://skele.to/r/overview/setup/</loc>
+    <loc>http://skele.to/overview/setup/</loc>
   </url>
   
   <url>
-    <loc>http://skele.to/r/contribute/get-started/</loc>
+    <loc>http://skele.to/contribute/get-started/</loc>
     <lastmod>2016-06-24T16:37:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/development/sprites/</loc>
+    <loc>http://skele.to/development/sprites/</loc>
   </url>
   
   <url>
-    <loc>http://skele.to/r/overview/usage/</loc>
+    <loc>http://skele.to/overview/usage/</loc>
   </url>
   
   <url>
-    <loc>http://skele.to/r/troubleshooting/external-svgs/</loc>
+    <loc>http://skele.to/troubleshooting/external-svgs/</loc>
     <lastmod>2016-07-15T11:33:43-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/tutorials/mobile-first-sass/</loc>
+    <loc>http://skele.to/tutorials/mobile-first-sass/</loc>
     <lastmod>2016-07-01T09:39:50-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/contribute/writing-a-plugin/</loc>
+    <loc>http://skele.to/contribute/writing-a-plugin/</loc>
     <lastmod>2016-06-24T16:37:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/plugins/accordion/</loc>
+    <loc>http://skele.to/plugins/accordion/</loc>
     <lastmod>2016-06-24T09:27:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/plugins/browsehappy/</loc>
+    <loc>http://skele.to/plugins/browsehappy/</loc>
     <lastmod>2016-06-24T09:27:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/troubleshooting/flexbox/</loc>
+    <loc>http://skele.to/troubleshooting/flexbox/</loc>
     <lastmod>2016-09-01T11:49:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/contribute/registering-a-plugin/</loc>
+    <loc>http://skele.to/contribute/registering-a-plugin/</loc>
     <lastmod>2016-06-24T16:37:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/contribute/writing-docs/</loc>
+    <loc>http://skele.to/contribute/writing-docs/</loc>
     <lastmod>2016-06-24T16:37:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/meta/release-notes/</loc>
+    <loc>http://skele.to/meta/release-notes/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/meta/roadmap/</loc>
+    <loc>http://skele.to/meta/roadmap/</loc>
     <lastmod>2015-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://skele.to/r/meta/license/</loc>
+    <loc>http://skele.to/meta/license/</loc>
   </url>
   
 </urlset>

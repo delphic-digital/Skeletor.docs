@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview-rss on The Skeletor Project</title>
-    <link>http://skele.to/r/overview/index.xml</link>
+    <link>http://skele.to/overview/index.xml</link>
     <description>Recent content in Overview-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://skele.to/r/overview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/overview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to Skeletor</title>
-      <link>http://skele.to/r/overview/introduction/</link>
+      <link>http://skele.to/overview/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/overview/introduction/</guid>
+      <guid>http://skele.to/overview/introduction/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Skeletor&lt;/em&gt; is a powerful framework designed as a starting point for front end development of projects. It was designed to give you a quick and organized way to start developing web sites with best practices and patterns in mind. It makes use of the latest and greatest web technology and performance.&lt;/p&gt;
@@ -52,10 +52,10 @@
     
     <item>
       <title>Setup</title>
-      <link>http://skele.to/r/overview/setup/</link>
+      <link>http://skele.to/overview/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/overview/setup/</guid>
+      <guid>http://skele.to/overview/setup/</guid>
       <description>
 
 &lt;p&gt;Skeletor uses open source tools for its workflow. If you haven&amp;rsquo;t installed these requirements please do so.&lt;/p&gt;
@@ -173,10 +173,10 @@
     
     <item>
       <title>Usage</title>
-      <link>http://skele.to/r/overview/usage/</link>
+      <link>http://skele.to/overview/usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/r/overview/usage/</guid>
+      <guid>http://skele.to/overview/usage/</guid>
       <description>&lt;p&gt;Skeletor uses gulp as a task runner and several commands are available to use:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# run Gulp in development mode (does not minify your JS for quicker response),
