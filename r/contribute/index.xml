@@ -68,11 +68,13 @@
 
 &lt;ul&gt;
 &lt;li&gt;Start off with creating a new repo for your plugin in github, for instance named &lt;code&gt;delphic-digital/Skeletor.breadcrumb&lt;/code&gt;. Make sure you initiliaze it with readme file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; into the working directory of &lt;code&gt;Skeletore.framework&lt;/code&gt; and add your new repo as
+&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; into the working directory of &lt;code&gt;Skeletor.framework&lt;/code&gt; and add your new repo as
 a submodule: &lt;code&gt;git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;That&amp;rsquo;s it! Your new repo should be cloned into the &lt;code&gt;Skeletor.plugins&lt;/code&gt; directory ready for development. You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent &lt;code&gt;skeletor.framework&lt;/code&gt; repo.&lt;/p&gt;
+&lt;p&gt;Your new repo should be cloned into the &lt;code&gt;Skeletor.plugins&lt;/code&gt; directory ready for development. Now run &lt;code&gt;dev&lt;/code&gt; (a windows batch file) in the &lt;code&gt;Skeletor.framework&lt;/code&gt; working directory to launch browsersync. You should get a directory listing where you can browse and click on the index.html file of your pligin for testing.&lt;/p&gt;
+
+&lt;p&gt;You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent &lt;code&gt;skeletor.framework&lt;/code&gt; repo.&lt;/p&gt;
 
 &lt;p&gt;There is a sample plugin repo at &lt;a href=&#34;https://github.com/delphic-digital/Skeletor.pluginTemplate&#34;&gt;delphic-digital/Skeletor.pluginTemplate&lt;/a&gt; with files to get you started.&lt;/p&gt;
 
