@@ -13,7 +13,6 @@ weight: 20
 * Tab plugin
 * Flyouts plugin
 * Carousel plugin
-* Better handling of multiple data-components on a page
 * Styleguide generation
 * Component demos
 * Better homepage for this site
