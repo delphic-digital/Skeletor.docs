@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troubleshooting-rss on The Skeletor Project</title>
+    <link>http://skele.to/troubleshooting/index.xml</link>
+    <description>Recent content in Troubleshooting-rss on The Skeletor Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Jul 2016 11:33:43 -0400</lastBuildDate>
+    <atom:link href="http://skele.to/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>External svgs</title>
+      <link>http://skele.to/troubleshooting/external-svgs/</link>
+      <pubDate>Fri, 15 Jul 2016 11:33:43 -0400</pubDate>
+      
+      <guid>http://skele.to/troubleshooting/external-svgs/</guid>
+      <description>
+
+&lt;h2 id=&#34;external-svgs-don-t-work-across-domains&#34;&gt;External svgs don&amp;rsquo;t work across domains.&lt;/h2&gt;
+
+&lt;p&gt;They have to be on the same domain.&lt;/p&gt;
+
+&lt;h3 id=&#34;workarounds&#34;&gt;Workarounds&lt;/h3&gt;
+
+&lt;p&gt;Embed the sprite at the top of the page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Flexbox</title>
+      <link>http://skele.to/troubleshooting/flexbox/</link>
+      <pubDate>Thu, 01 Sep 2016 11:49:49 -0400</pubDate>
+      
+      <guid>http://skele.to/troubleshooting/flexbox/</guid>
+      <description>&lt;p&gt;There are 3 different versions of flexbox. Skeletor can detect and adds a body class if flexbox is supported.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

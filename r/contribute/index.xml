@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contribute-rss on The Skeletor Project</title>
+    <link>http://skele.to/contribute/index.xml</link>
+    <description>Recent content in Contribute-rss on The Skeletor Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Jun 2016 16:37:49 -0400</lastBuildDate>
+    <atom:link href="http://skele.to/contribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting started</title>
+      <link>http://skele.to/contribute/get-started/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>http://skele.to/contribute/get-started/</guid>
+      <description>
+
+&lt;p&gt;The Skeletor code is separated into multiple Git repos.&lt;/p&gt;
+
+&lt;h2 id=&#34;delphic-digital-skeletor-https-github-com-delphic-digital-skeletor&#34;&gt;&lt;a href=&#34;https://github.com/delphic-digital/Skeletor&#34;&gt;delphic-digital/Skeletor&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is the main Skeletor boilerplate code and contains all the base files, structure and gulp tasks.&lt;/p&gt;
+
+&lt;h2 id=&#34;delphic-digital-skeletor-framework-delphic-digital-skeletor-framework&#34;&gt;&lt;a href=&#34;delphic-digital/Skeletor.framework&#34;&gt;delphic-digital/Skeletor.framework&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is the parent repo for Skeletor&amp;rsquo;s javascript framework and contains sub repos of all the javascript components.&lt;/p&gt;
+
+&lt;h3 id=&#34;to-get-started&#34;&gt;To get started&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Clone the Skeletor.framework. This should fetch all the sub repositories also. You should end up with a repo structured like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Skeletor.framework
+|-- Skeletor.core
+|   |-- # This is the main Skeletor JavaScript file that contains the namespace,
+|       # and other utility functions to create plugins
+|-- Skeletor.plugins
+|   |-- # These are plugins such as accordions and modals
+|-- Skeletor.sass
+|   |-- # These are specifically sass plugins
+|-- Skeletor.util
+|   |-- # These are utilities such as feature detects and the component loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See creating a plugin next.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a plugin</title>
+      <link>http://skele.to/contribute/writing-a-plugin/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>http://skele.to/contribute/writing-a-plugin/</guid>
+      <description>
+
+&lt;p&gt;Creating a plugin for Skeletor is easy. There is a plugin factory included in &lt;code&gt;Skeletor.core&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You have cloned the Skeletor.framework repo. If you have not see &lt;a href=&#34;../get-started&#34;&gt;Get Started&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;creating-the-repository&#34;&gt;Creating the repository&lt;/h2&gt;
+
+&lt;p&gt;You&amp;rsquo;re going to want to create a submodule of the Skeletor.framework. This is really just for organization purposes, and to easily include &lt;code&gt;Skeletor.core&lt;/code&gt; as a dependency.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start off with creating a new repo for your plugin in github, for instance named &lt;code&gt;delphic-digital/Skeletor.breadcrumb&lt;/code&gt;. Make sure you initiliaze it with readme file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; into the working directory of &lt;code&gt;Skeletore.framework&lt;/code&gt; and add your new repo as
+a submodule: &lt;code&gt;git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s it! Your new repo should be cloned into the &lt;code&gt;Skeletor.plugins&lt;/code&gt; directory ready for development. You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent &lt;code&gt;skeletor.framework&lt;/code&gt; repo.&lt;/p&gt;
+
+&lt;p&gt;There is a sample plugin repo at &lt;a href=&#34;https://github.com/delphic-digital/Skeletor.pluginTemplate&#34;&gt;delphic-digital/Skeletor.pluginTemplate&lt;/a&gt; with files to get you started.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-your-plugin&#34;&gt;Creating your plugin&lt;/h2&gt;
+
+&lt;p&gt;Skeletor.core includes a plugin factory. The plugin factory requires a few things to be defined in your plugin prior to calling the plugin factory function.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Your plugin&amp;rsquo;s constructor, calling &lt;code&gt;__super__&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;DEFAULTS&lt;/code&gt; static property on your plugin&amp;rsquo;s constructor&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;VERSION&lt;/code&gt; static property on your plugin&amp;rsquo;s constructor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here is an example of creating a &lt;code&gt;breadcrumb&lt;/code&gt; plugin.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//skeletor.breadcrumb.js
+
+define([&#39;jquery&#39;, &#39;skeletor.core&#39;],function ($, Skeletor){
+    function Breadcrumb(element, options) {
+        Breadcrumb.__super__.call(this, element, options, Breadcrumb.DEFAULTS);
+
+        Breadcrumb.VERSION = &#39;0.0.1&#39;;
+
+        Breadcrumb.DEFAULTS = {
+          cssClass = &#39;breadcrumb&#39;
+        };
+
+        Skeletor.Plugin.create(&#39;breadcrumb&#39;, Breadcrumb, {
+            _init: function(element) {
+            	this.$element = $(element);
+            }
+        });
+    }
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First, we declare a &lt;code&gt;Breadcrumb&lt;/code&gt; constructor, and VERSION and DEFAULTS properties. We then invoke the static &lt;code&gt;Skeletor.Plugin.create&lt;/code&gt; function for Skeletor&amp;rsquo;s core. Through prototypal inheritance, this function extends the &lt;code&gt;Breadcrumb&lt;/code&gt; prototype with the &lt;code&gt;Plugin&lt;/code&gt; prototype. Additionally, it creates our jQuery plugin interface.&lt;/p&gt;
+
+&lt;p&gt;To create a breadcrumb instance, you merely need to use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var $breadcrumb = new Skeletor.Breadcrumb($(&#39;.breadcrumb__list&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;passing-options-to-a-plugin&#34;&gt;Passing options to a plugin.&lt;/h2&gt;
+
+&lt;p&gt;You can extend the default options on plugin in typical jQuery format. Pass your options as the second argument.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var $breadcrumb = new Skeletor.Breadcrumb($(&#39;.breadcrumb__list&#39;), {
+   size: &#39;large&#39;,
+   spacer: &#39;|&#39;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Your options are passed through to the &lt;code&gt;options&lt;/code&gt; object inside your plugin and extend the defaults. you can also overwrite the defaults.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//skeletor.breadcrumb.js
+
+define([&#39;jquery&#39;, &#39;skeletor.core&#39;],function ($, Skeletor){
+    function Breadcrumb(element, options) {
+        Breadcrumb.__super__.call(this, element, options, Breadcrumb.DEFAULTS);
+
+        Breadcrumb.VERSION = &#39;0.0.1&#39;;
+
+        Breadcrumb.DEFAULTS = {
+          cssClass = &#39;breadcrumb&#39;
+        };
+
+        Skeletor.Plugin.create(&#39;breadcrumb&#39;, Breadcrumb, {
+            _init: function(element) {
+            	this.$element = $(element);
+            	console.log(this.options.cssClass)
+            	console.log(this.options.spacer)
+            	console.log(this.options.large)
+            }
+        });
+    }
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;invoking-methods-on-a-plugin&#34;&gt;Invoking methods on a plugin.&lt;/h2&gt;
+
+&lt;p&gt;The plugin factory facilitates invoking methods via the plugin interface. This means that once a plugin is initialized, public methods can be invoked by passing the name of the method as the first parameter to the plugin function.&lt;/p&gt;
+
+&lt;p&gt;Public methods are methods defined on the object passed into the &lt;code&gt;Skeletor.Plugin.create&lt;/code&gt; factory method that aren&amp;rsquo;t preceded by an &lt;em&gt;underscore&lt;/em&gt; character. Methods preceded by an &lt;em&gt;underscore&lt;/em&gt; are considered private methods.&lt;/p&gt;
+
+&lt;p&gt;Using our &lt;code&gt;breadcrumb&lt;/code&gt; example above, here&amp;rsquo;s what public methods would look like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//skeletor.breadcrumb.js
+
+define([&#39;jquery&#39;, &#39;skeletor.core&#39;],function ($, Skeletor){
+    function Breadcrumb(element, options) {
+        Breadcrumb.__super__.call(this, element, options, Breadcrumb.DEFAULTS);
+
+        Breadcrumb.VERSION = &#39;0.0.1&#39;;
+
+        Breadcrumb.DEFAULTS = {
+          cssClass = &#39;breadcrumb&#39;
+        };
+
+        Skeletor.Plugin.create(&#39;breadcrumb&#39;, Breadcrumb, {
+            _init: function(element) {
+                this.$element = $(element);
+            },
+            enable: function() {
+                this.$element.removeAttr(&#39;disabled&#39;);
+            },
+            disable: function() {
+                this.$element.attr(&#39;disabled&#39;, &#39;disabled&#39;);
+            },
+            isEnabled: function() {
+                return !this.$element[0].hasAttribute(&#39;disabled&#39;);
+            }
+        });
+    }
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the above example, the &lt;code&gt;enable&lt;/code&gt; and &lt;code&gt;disable&lt;/code&gt; functions are public. To invoke the method, simply call it on the saved instance:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var $breadcrumb = new Skeletor.Breadcrumb($(&#39;.breadcrumb__list&#39;));
+
+$breadcrumb.disable();
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Registering a plugin</title>
+      <link>http://skele.to/contribute/registering-a-plugin/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>http://skele.to/contribute/registering-a-plugin/</guid>
+      <description>
+
+&lt;p&gt;Skeletor has a private bower repo to host all it&amp;rsquo;s components using &lt;a href=&#34;https://www.npmjs.com/package/private-bower&#34;&gt;private-bower&lt;/a&gt; hosted here: &lt;a href=&#34;http://bowerregistry-delphic.rhcloud.com/&#34;&gt;http://bowerregistry-delphic.rhcloud.com/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;register&#34;&gt;Register&lt;/h2&gt;
+
+&lt;p&gt;To register your plugin for Skeletor, you need to point bower to the private bower repo. Create a bower config file, &lt;code&gt;.bowerrc&lt;/code&gt;, at the root of your plugin directory with the following settings.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+    &amp;quot;registry&amp;quot;: &amp;quot;http://bowerregistry-delphic.rhcloud.com&amp;quot;,
+    &amp;quot;timeout&amp;quot;: 300000,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a &lt;code&gt;bower.json&lt;/code&gt; at the root of your project with &lt;code&gt;bower init&lt;/code&gt;.
+Then use &lt;code&gt;bower register&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ bower register &amp;lt;my-package-name&amp;gt; &amp;lt;git-endpoint&amp;gt;
+# for example
+$ bower register example git://github.com/user/example.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage-in-skeletor&#34;&gt;Usage in Skeletor&lt;/h2&gt;
+
+&lt;p&gt;Skeletor includes a &lt;code&gt;.bowerrc&lt;/code&gt; file that points to the private bower registery already. Installing a Skeletor component is a simple as running bower commands.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bower install plugin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Skeletor will auto wire it up to your require.js config file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &#39;paths&#39;: {
+    &#39;skeletor.plugin&#39;: &#39;bower_components/skeletor.plugin&#39;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can load it with requirejs in a component:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require([&#39;skeletor.plugin&#39;], function(){
+    var $plugin = new Skeletor.plugin($(&#39;.plugin__list&#39;));
+})
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing docs</title>
+      <link>http://skele.to/contribute/writing-docs/</link>
+      <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
+      
+      <guid>http://skele.to/contribute/writing-docs/</guid>
+      <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to by following these steps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/overview/installing/&#34;&gt;Install Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clone the &lt;a href=&#34;https://github.com/delphic-digital/Skeletor.docs&#34;&gt;Skeletor.docs&lt;/a&gt; repo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the command line, &lt;code&gt;cd&lt;/code&gt; into your cloned directory and run &lt;code&gt;hugo server&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Browse to localhost:1313 and the Skeletor documentation site should be up and running! The content directory contains all the markdown files that make up the pages. There is a special meta at the top for defining nav structure and page title.&lt;/p&gt;
+
+&lt;p&gt;After you commit, a script will auto deploy the changes to github pages for live website updates!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
