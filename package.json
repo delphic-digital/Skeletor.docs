@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "index": "lunr-hugo -o dist/lunr.json -l yaml"
+    "index": "lunr-hugo -o dist/r/lunr.json -l yaml"
   },
   "repository": {
     "type": "git",

@@ -12,7 +12,7 @@ install:
     - npm install git+https://github.com/gwleclerc/hugo-lunr.git
     - go get -u -v github.com/spf13/hugo
 before_script:
-    - hugo -b "https://delphic-digital.github.io/Skeletor.docs/" -d dist
+    - hugo -b "http://skele.to" -d dist/r
     - npm run index
 script:
     - ./deploy.sh
