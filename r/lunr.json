@@ -62,7 +62,7 @@
     {
         "uri": "/meta/roadmap",
         "title": "Skeletor Roadmap",
-        "content": "\nAccordion plugin\nTab plugin\nFlyouts plugin\nCarousel plugin\nBetter handling of multiple data-components on a page\nStyleguide generation\nComponent demos\nBetter homepage for this site",
+        "content": "\nAccordion plugin\nTab plugin\nFlyouts plugin\nCarousel plugin\nStyleguide generation\nComponent demos\nBetter homepage for this site",
         "tags": []
     },
     {
