@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meta-rss on The Skeletor Project</title>
-    <link>http://skele.to/meta/index.xml</link>
+    <link>http://skele.to/r/meta/index.xml</link>
     <description>Recent content in Meta-rss on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://skele.to/meta/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skele.to/r/meta/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Release Notes</title>
-      <link>http://skele.to/meta/release-notes/</link>
+      <link>http://skele.to/r/meta/release-notes/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/meta/release-notes/</guid>
+      <guid>http://skele.to/r/meta/release-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;0-14-0-jun-16-2016&#34;&gt;0.14.0, Jun 16, 2016&lt;/h2&gt;
@@ -129,10 +129,10 @@
     
     <item>
       <title>Skeletor Roadmap</title>
-      <link>http://skele.to/meta/roadmap/</link>
+      <link>http://skele.to/r/meta/roadmap/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/meta/roadmap/</guid>
+      <guid>http://skele.to/r/meta/roadmap/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;del&gt;Accordion plugin&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;Tab plugin&lt;/li&gt;
@@ -145,10 +145,10 @@
     
     <item>
       <title>License</title>
-      <link>http://skele.to/meta/license/</link>
+      <link>http://skele.to/r/meta/license/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://skele.to/meta/license/</guid>
+      <guid>http://skele.to/r/meta/license/</guid>
       <description>
 
 &lt;p&gt;Skeletor is released under the BSD 3-Clause License.&lt;/p&gt;
