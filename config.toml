@@ -7,8 +7,8 @@ theme = "skeletor"
   plainIDAnchors = true
 
 [params]
-  description = "Documentation of Hugo, a fast and flexible static site generator built with love by spf13, bep and friends in Go"
-  author = "Steve Francia (spf13) and friends"
+  description = "Skeletor Documentation"
+  author = "Delphic Digital"
 
 [taxonomies]
   tag = "tags"
