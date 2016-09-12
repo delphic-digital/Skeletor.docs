@@ -7,7 +7,7 @@ title: Writing docs
 weight: 7
 ---
 
-This documentation site is coded with [Hugo](http://gohugo.io/) static site generator. It's easy to contribute to by following these steps:
+This documentation site is coded with [Hugo](http://gohugo.io/) static site generator. It's easy to contribute to it by following these steps:
 
 * [Install Hugo](http://gohugo.io/overview/installing/)
 * Clone the [Skeletor.docs](https://github.com/delphic-digital/Skeletor.docs) repo.

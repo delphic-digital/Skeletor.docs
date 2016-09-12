@@ -64,7 +64,6 @@ require.config({
 define(function (require){
 
 	var componentLoader   = require('skeletor.util.componentLoader'),
-	    browsehappy       = require('skeletor.browsehappy'),
 	    svg4everybody     = require('svg4everybody'),
 	    picturefill       = require('picturefill'),
 	    commonComponents  = require('./components/common');
@@ -139,7 +138,6 @@ require.config({
 define(function (require){
 
 	var componentLoader   = require('skeletor.util.componentLoader'),
-	    browsehappy       = require('skeletor.browsehappy'),
 	    svg4everybody     = require('svg4everybody'),
 	    picturefill       = require('picturefill'),
 	    commonComponents  = require('./components/common');
@@ -163,14 +161,6 @@ var componentLoader   = require('skeletor.util.componentLoader'),
 	See below for example's on how to use this.
 */
 ```
-```
-browsehappy       = require('skeletor.browsehappy')
-/*
-	Detects old versions of browsers and shows a prompt bar for
-	the user to upgrade.
-*/
-```
-
 ```
 svg4everybody     = require('svg4everybody'),
 /*

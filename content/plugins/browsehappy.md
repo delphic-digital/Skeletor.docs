@@ -9,9 +9,14 @@ weight: 5
 
 Show an unobstrusive notification bar if your browser is out dated.
 
+**Requires:** `skeletor.core`
+
+## Installing
+
+`bower install skeletor.browsehappy`
+
 ## Usage
 
-This plugin is included by default in Skeletor. There isn't anything extra you need to do unless you want to change options. The relevant initialization code is in the `skeletor.main.js`
 
 ```javascript
 require(['skeletor.browsehappy'], function(){
