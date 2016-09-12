@@ -64,7 +64,7 @@
 <ul>
 <li><a href="#brief-overview-of-structure">Brief overview of structure</a>
 <ul>
-<li><a href="#main">Main</a></li>
+<li><a href="#skeletor-main-js">skeletor.main.js</a></li>
 </ul></li>
 <li><a href="#dynamic-components">Dynamic components</a>
 <ul>
@@ -280,20 +280,20 @@
     |   |-- js
     |       |-- # Your custom javascript is compiled here
     |       |-- lib
-    |           |-- require.js
+    |           |-- # RequireJS support files, you shouldn't need to touch anything here
     |-- src
         |-- js
-            |-- skeletor.main.js
-            |-- components
-            |-- common.js
+            |-- skeletor.main.js # Entry point for your sites JavaScript. This file is included on every page.
+            |-- components  # Your custom components go here
+            |-- common.js # Parent loader for your common modules
             |-- common
                 |-- # Your common components here
 
 </code></pre>
 
-<h4 id="main">Main</h4>
+<h4 id="skeletor-main-js">skeletor.main.js</h4>
 
-<p>This is the <code>core</code> and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.</p>
+<p>This is the main file and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.</p>
 
 <pre><code>// Automatically injected Bower JS dependencies via bowerRequireJS
 require.config({
