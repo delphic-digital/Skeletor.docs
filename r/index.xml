@@ -120,7 +120,6 @@ require.config({
 define(function (require){
 
     var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
-        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
         svg4everybody     = require(&#39;svg4everybody&#39;),
         picturefill       = require(&#39;picturefill&#39;),
         commonComponents  = require(&#39;./components/common&#39;);
@@ -192,7 +191,6 @@ require.config({
 define(function (require){
 
     var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
-        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
         svg4everybody     = require(&#39;svg4everybody&#39;),
         picturefill       = require(&#39;picturefill&#39;),
         commonComponents  = require(&#39;./components/common&#39;);
@@ -213,13 +211,6 @@ define(function (require){
     &amp;quot;on demand&amp;quot; and loaded only when it&#39;s needed. It also supports
     context, so components can be loaded only on mobile, tablet, or desktop.
     See below for example&#39;s on how to use this.
-*/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;browsehappy       = require(&#39;skeletor.browsehappy&#39;)
-/*
-    Detects old versions of browsers and shows a prompt bar for
-    the user to upgrade.
 */
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1049,9 +1040,13 @@ $breadcrumb.disable();
 
 &lt;p&gt;Show an unobstrusive notification bar if your browser is out dated.&lt;/p&gt;
 
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Requires:&lt;/strong&gt; &lt;code&gt;skeletor.core&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;This plugin is included by default in Skeletor. There isn&amp;rsquo;t anything extra you need to do unless you want to change options. The relevant initialization code is in the &lt;code&gt;skeletor.main.js&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;bower install skeletor.browsehappy&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require([&#39;skeletor.browsehappy&#39;], function(){
   new Skeletor.BrowseHappy()
@@ -1176,7 +1171,7 @@ $ bower register example git://github.com/user/example.git
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
       <guid>http://skele.to/r/contribute/writing-docs/</guid>
-      <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to by following these steps:&lt;/p&gt;
+      <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to it by following these steps:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://gohugo.io/overview/installing/&#34;&gt;Install Hugo&lt;/a&gt;&lt;/li&gt;

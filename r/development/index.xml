@@ -72,7 +72,6 @@ require.config({
 define(function (require){
 
     var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
-        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
         svg4everybody     = require(&#39;svg4everybody&#39;),
         picturefill       = require(&#39;picturefill&#39;),
         commonComponents  = require(&#39;./components/common&#39;);
@@ -144,7 +143,6 @@ require.config({
 define(function (require){
 
     var componentLoader   = require(&#39;skeletor.util.componentLoader&#39;),
-        browsehappy       = require(&#39;skeletor.browsehappy&#39;),
         svg4everybody     = require(&#39;svg4everybody&#39;),
         picturefill       = require(&#39;picturefill&#39;),
         commonComponents  = require(&#39;./components/common&#39;);
@@ -165,13 +163,6 @@ define(function (require){
     &amp;quot;on demand&amp;quot; and loaded only when it&#39;s needed. It also supports
     context, so components can be loaded only on mobile, tablet, or desktop.
     See below for example&#39;s on how to use this.
-*/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;browsehappy       = require(&#39;skeletor.browsehappy&#39;)
-/*
-    Detects old versions of browsers and shows a prompt bar for
-    the user to upgrade.
 */
 &lt;/code&gt;&lt;/pre&gt;
 

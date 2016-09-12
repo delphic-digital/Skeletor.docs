@@ -266,7 +266,7 @@ $ bower register example git://github.com/user/example.git
       <pubDate>Fri, 24 Jun 2016 16:37:49 -0400</pubDate>
       
       <guid>http://skele.to/r/contribute/writing-docs/</guid>
-      <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to by following these steps:&lt;/p&gt;
+      <description>&lt;p&gt;This documentation site is coded with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. It&amp;rsquo;s easy to contribute to it by following these steps:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://gohugo.io/overview/installing/&#34;&gt;Install Hugo&lt;/a&gt;&lt;/li&gt;
