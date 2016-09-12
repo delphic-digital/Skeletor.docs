@@ -21,20 +21,20 @@ skeletor
     |   |-- js
     |       |-- # Your custom javascript is compiled here
     |       |-- lib
-    |           |-- require.js
+    |           |-- # RequireJS support files, you shouldn't need to touch anything here
     |-- src
         |-- js
-            |-- skeletor.main.js
-            |-- components
-            |-- common.js
+            |-- skeletor.main.js # Entry point for your sites JavaScript. This file is included on every page.
+            |-- components  # Your custom components go here
+            |-- common.js # Parent loader for your common modules
             |-- common
                 |-- # Your common components here
 
 ```
 
-#### Main
+#### skeletor.main.js
 
-This is the `core` and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.
+This is the main file and gets loaded on every page. It takes care of global utilities, global components, polyfills, and including the component loader.
 
 ```
 // Automatically injected Bower JS dependencies via bowerRequireJS
