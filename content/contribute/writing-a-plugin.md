@@ -23,7 +23,7 @@ You're going to want to create a submodule of the Skeletor.framework. This is re
 * `cd` into the working directory of `Skeletor.framework` and add your new repo as
 a submodule: `git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb`
 
-Your new repo should be cloned into the `Skeletor.plugins` directory ready for development. Now run `dev` (a windows batch file) in the `Skeletor.framework` working directory to launch browsersync. You should get a directory listing where you can browse and click on the index.html file of your pligin for testing.
+Your new repo should be cloned into the `Skeletor.plugins` directory ready for development. Now run `gulp` in the `Skeletor.framework` working directory to launch browsersync. You should get a directory listing where you can browse and click on the index.html file of your plugin for testing.
 
 You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent `skeletor.framework` repo.
 

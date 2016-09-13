@@ -32,5 +32,6 @@ Skeletor.framework
 |-- Skeletor.util
 |   |-- # These are utilities such as feature detects and the component loader
 ```
+Now run `npm install` to install the development dependencies.
 
 Next: [Writing a plugin](/contribute/writing-a-plugin/)
