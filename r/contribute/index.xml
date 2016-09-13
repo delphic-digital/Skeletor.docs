@@ -42,6 +42,8 @@
 |   |-- # These are utilities such as feature detects and the component loader
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;Now run &lt;code&gt;npm install&lt;/code&gt; to install the development dependencies.&lt;/p&gt;
+
 &lt;p&gt;Next: &lt;a href=&#34;http://skele.to/r/contribute/writing-a-plugin/&#34;&gt;Writing a plugin&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
@@ -72,7 +74,7 @@
 a submodule: &lt;code&gt;git submodule https://github.com/delphic-digital/Skeletor.breadcrumb.git Skeletor.plugins/Skeletor.breadcrumb&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Your new repo should be cloned into the &lt;code&gt;Skeletor.plugins&lt;/code&gt; directory ready for development. Now run &lt;code&gt;dev&lt;/code&gt; (a windows batch file) in the &lt;code&gt;Skeletor.framework&lt;/code&gt; working directory to launch browsersync. You should get a directory listing where you can browse and click on the index.html file of your pligin for testing.&lt;/p&gt;
+&lt;p&gt;Your new repo should be cloned into the &lt;code&gt;Skeletor.plugins&lt;/code&gt; directory ready for development. Now run &lt;code&gt;gulp&lt;/code&gt; in the &lt;code&gt;Skeletor.framework&lt;/code&gt; working directory to launch browsersync. You should get a directory listing where you can browse and click on the index.html file of your plugin for testing.&lt;/p&gt;
 
 &lt;p&gt;You can check in your changes to that sub module like a normal git commit, but you will also have to commit the sub module update to the parent &lt;code&gt;skeletor.framework&lt;/code&gt; repo.&lt;/p&gt;
 
