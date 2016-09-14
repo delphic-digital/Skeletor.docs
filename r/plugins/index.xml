@@ -78,6 +78,13 @@
 &lt;/tr&gt;
 
 &lt;tr&gt;
+&lt;td&gt;collapsible&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;Allow only all items to collapse or not&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
 &lt;td&gt;duration&lt;/td&gt;
 &lt;td&gt;int&lt;/td&gt;
 &lt;td&gt;200&lt;/td&gt;
@@ -95,7 +102,7 @@
 &lt;td&gt;active&lt;/td&gt;
 &lt;td&gt;int&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;Animation length between transitions&lt;/td&gt;
+&lt;td&gt;Which item to show on page load&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
