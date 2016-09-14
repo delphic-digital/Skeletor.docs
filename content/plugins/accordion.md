@@ -55,9 +55,10 @@ require(['skeletor.accordion'], function(){
 |Option             |Type      |Default       |Description                                                            |
 |-------------------|----------|--------------|-----------------------------------------------------------------------|
 |singleOpen         |boolean   |true          |Allow only one item open at a time                                     |
+|collapsible        |boolean   |true          |Allow only all items to collapse or not                                |
 |duration           |int       |200           |Animation length between transitions                                   |
 |easing             |string    |'swing'       |Animation easing supports Velocty: http://velocityjs.org/#easing       |
-|active             |int       |0             |Animation length between transitions                                   |
+|active             |int       |0             |Which item to show on page load                                        |
 
 
 ## Methods
