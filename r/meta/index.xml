@@ -16,6 +16,10 @@
       <guid>http://skele.to/r/meta/release-notes/</guid>
       <description>
 
+&lt;h2 id=&#34;0-15-0-sept-14-2016&#34;&gt;0.15.0, Sept 14, 2016&lt;/h2&gt;
+
+&lt;p&gt;Remove extension of imported .css to support loaded css content into sass&lt;/p&gt;
+
 &lt;h2 id=&#34;0-14-0-jun-16-2016&#34;&gt;0.14.0, Jun 16, 2016&lt;/h2&gt;
 
 &lt;p&gt;Skeletor 0.14 release has an all new JavaScript framework.&lt;/p&gt;
