@@ -7,6 +7,10 @@ title: Release Notes
 weight: 10
 ---
 
+## 0.15.0, Sept 14, 2016
+
+Remove extension of imported .css to support loaded css content into sass
+
 ## 0.14.0, Jun 16, 2016
 
 Skeletor 0.14 release has an all new JavaScript framework.
