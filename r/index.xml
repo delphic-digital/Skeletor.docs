@@ -917,7 +917,7 @@ $breadcrumb.disable();
 
 &lt;p&gt;An accordion must be structured using the example markup. Every item should have an accompanying header and section. The header will be bound with a click event that toggles the display of its sibling section, while also closing other sections (can be changed through options).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;accordion js-accordion&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;accordion js-accordion&amp;quot; data-component=&amp;quot;accordion&amp;quot;&amp;gt;
   &amp;lt;div class=&amp;quot;accordion__item&amp;quot;&amp;gt;
     &amp;lt;header class=&amp;quot;accordion__header&amp;quot;&amp;gt;
       Lorem ipsum dolor sit amet
