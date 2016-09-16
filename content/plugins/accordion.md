@@ -20,7 +20,7 @@ Allows collapsing and expanding of multiple sections of content.
 An accordion must be structured using the example markup. Every item should have an accompanying header and section. The header will be bound with a click event that toggles the display of its sibling section, while also closing other sections (can be changed through options).
 
 ```html
-<div class="accordion js-accordion">
+<div class="accordion js-accordion" data-component="accordion">
   <div class="accordion__item">
     <header class="accordion__header">
       Lorem ipsum dolor sit amet
