@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorials-rss on The Skeletor Project</title>
+    <title>Tutorials on The Skeletor Project</title>
     <link>http://skele.to/r/tutorials/index.xml</link>
-    <description>Recent content in Tutorials-rss on The Skeletor Project</description>
+    <description>Recent content in Tutorials on The Skeletor Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 01 Jul 2016 09:39:50 -0400</lastBuildDate>
     <atom:link href="http://skele.to/r/tutorials/index.xml" rel="self" type="application/rss+xml" />

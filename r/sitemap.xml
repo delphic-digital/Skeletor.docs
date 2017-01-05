@@ -2,16 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://skele.to/r/</loc>
-    <lastmod>2016-06-24T08:45:46-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://skele.to/r/</loc>
-    <lastmod>2016-06-24T08:45:46-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://skele.to/r/development/javascript/</loc>
   </url>
   
@@ -88,6 +78,57 @@
   
   <url>
     <loc>http://skele.to/r/meta/license/</loc>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/</loc>
+    <lastmod>2016-06-24T08:45:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/contribute/</loc>
+    <lastmod>2016-06-24T16:37:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/development/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/meta/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/overview/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/plugins/</loc>
+    <lastmod>2016-06-24T09:27:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/</loc>
+    <lastmod>2016-06-24T16:37:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/troubleshooting/</loc>
+    <lastmod>2016-07-15T11:33:43-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://skele.to/r/tutorials/</loc>
+    <lastmod>2016-07-01T09:39:50-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
