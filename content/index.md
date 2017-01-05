@@ -25,7 +25,7 @@ Skeletor tries to achieve a very minimalistic design to remain as flexible as po
   * Compatible component plugins.
   * Bower for vendor package management.
 
-## [Get Started!](/overview/setup/)
+## [Get Started!](overview/setup/)
 
 
 
